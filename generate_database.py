@@ -10,6 +10,11 @@ from collections import defaultdict
 
 import requests
 
+try:
+    from icecream import ic
+except ImportError:
+    ic = lambda *a: None if not a else (a[0] if len(a) == 1 else a)  # noqa
+
 #  ╭────────────────────────────────────────────────────────────────────╮
 #  │ TODO: Look through plugin categories and check whether they have   │
 #  │  "Neovim" in them                                                  │
@@ -58,8 +63,83 @@ class GenerateData:
             "topics",
             "owner",
         ]
+        # Edge cases like lspconfig will be included in this
+        # this is not accurate but it will be good enough for now.
+        self.unwanted_config = [
+            "dotfiles",
+            "dots",
+            "nvim-dotfiles",
+            "nvim-qt",
+            "nvim-config",
+            "config",
+            "configuration",
+        ]
+        self.unwanted_field_count = 1
+
         self.plugins = {}
         self.count = 1
+        self.plugin_count = 1
+        self.generator()
+
+        self.get_stats()
+
+    def get_stats(self) -> None:
+        """Get stats for the data"""
+        print("\n\n")
+        print("Stats")
+        print("-----")
+        ic("Success! Dumped", self.count - 1, "pages worth of plugins")
+        ic("Total plugins:", self.plugin_count)
+        ic("Total unwanted fields:", self.unwanted_field_count)
+        ic(
+            "Percentage of unwanted fields:",
+            (self.unwanted_field_count / self.plugin_count) * 100,
+        )
+        # Mean
+        ic("Mean number of plugins per page:", self.plugin_count / self.count)
+        print("\n\n")
+
+    def check_unwanted_fields(self, plugin_data: dict) -> None:
+        """Check if the plugin has unwanted fields
+
+        Parameters
+        ----------
+        plugin_data_json: dict
+            The json data for the plugin
+
+        Returns
+        -------
+        bool
+            True if the plugin has unwanted fields, False otherwise
+        """
+        if any(
+            [
+                unwanted_field in plugin_data["full_name"]
+                or (
+                    plugin_data["description"]
+                    and unwanted_field in plugin_data["description"]
+                )
+                for unwanted_field in self.unwanted_config
+            ]
+        ):
+            self.unwanted_field_count += 1
+
+            if plugin_data["description"]:
+                ic(
+                    "Plugin",
+                    plugin_data["full_name"],
+                    plugin_data["description"],
+                    self.unwanted_field_count,
+                    self.plugin_count,
+                )
+
+            else:
+                ic(
+                    "Plugin",
+                    plugin_data["full_name"],
+                    self.unwanted_field_count,
+                    self.plugin_count,
+                )
 
     def extract_data(self, plugin_data_json: dict) -> None:
         """Extract data from the json
@@ -79,15 +159,25 @@ class GenerateData:
             if field in self.wanted_fields:
                 plugin_data[field] = plugin_data_json[field]
 
+        # Sorry ntb, this format is not ideal but it works for now.
+        self.check_unwanted_fields(plugin_data)
+
+        self.plugin_count += 1
         if "commits_url" in plugin_data:
             commit_req = requests.get(
                 plugin_data["commits_url"][:-6],
                 auth=(self.client_id, self.client_secret),
             )
 
-            commit = commit_req.json()[-1]
-            plugin_data["commit"] = commit["sha"]
+            # This gives a key error if the plugin has no commits
+            # This is a bug in the github api or when api intrupt happens
+            # ensure that status is 200
+            # ic(commit_req.status_code)
+            if commit_req.status_code == 200:
+                commit = commit_req.json()[-1]
+                plugin_data["commit"] = commit["sha"]
 
+        # TODO: Should the following code be in the if statement ?
         del plugin_data["commits_url"]
         plugin_data = {k: v for k, v in plugin_data.items()}
         self.plugins = {**self.plugins, f"{plugin_name}": {**plugin_data}}
@@ -132,11 +222,6 @@ class GenerateData:
 
             file.write(json.dumps(self.plugins, sort_keys=True, indent=4))
 
-    def main(self) -> None:
-        # You can add extra stuff here
-        self.generator()
-        print("Success! Dumped", self.count - 1, "pages worth of plugins")
-
 
 if __name__ == "__main__":
-    GenerateData().main()
+    GenerateData()
