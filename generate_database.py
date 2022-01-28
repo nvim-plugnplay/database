@@ -1,53 +1,142 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim:fenc=utf-8
+#
+# File Name: generate_data.py
+
+import json
 import os
-import requests, json
+from collections import defaultdict
 
-# TODO: Look through plugin categories and check whether they have "Neovim" in them
-# or just implement some sort of smarter filtering in general
+import requests
 
-client_id = os.getenv("CLIENT_ID")
-client_secret = os.getenv("CLIENT_SECRET")
+#  ╭────────────────────────────────────────────────────────────────────╮
+#  │ TODO: Look through plugin categories and check whether they have   │
+#  │  "Neovim" in them                                                  │
+#  │ or just implement some sort of smarter filtering in general        │
+#  ╰────────────────────────────────────────────────────────────────────╯
 
-with open("database.json", "+w") as file:
-    plugins = {}
-    count = 1
 
-    while True:
-        req = requests.get("https://api.github.com/users/budswa/starred?per-page=1&page=" + str(count), auth=(client_id, client_secret))
-        print("Grabbed page", count)
-        count += 1
-        if req.text.find("API rate limit exceeded") != -1:
-            print("We are being rate limited!")
-            print(req.text)
+class GenerateData:
+    """Generate data for plugins
+
+    Attributes
+    ----------
+    client_id: str
+        The client id for the github api
+    client_secret: str
+        The client secret for the github api
+    wanted_fields: list
+        The fields that we want to extract from the json
+    plugins: dict
+        The plugins that we want to extract data from
+    count: int
+        The current page we are on
+    plugins: dict
+        The plugins that we want to extract data from
+    """
+
+    def __init__(self):
+        self.client_id = os.getenv("CLIENT_ID")
+        self.client_secret = os.getenv("CLIENT_SECRET")
+        self.wanted_fields = [
+            "full_name",
+            "description",
+            "default_branch",
+            "fork",
+            "archived",
+            "private",
+            "clone_url",
+            "commits_url",
+            "created_at",
+            "updated_at",
+            "stargazers_count",
+            "subscribers_count",
+            "forks_count",
+            "language",
+            "open_issues_count",
+            "topics",
+            "owner",
+        ]
+        self.plugins = {}
+        self.count = 1
+
+    def extract_data(self, plugin_data_json: dict) -> None:
+        """Extract data from the json
+
+        Parameters
+        ----------
+        plugin_data_json: dict
+            The json data for the plugin
+        """
+        # This should avoid key error
+        plugin_data = defaultdict()
+        plugin_name = ""
+
+        for field in plugin_data_json.keys():
+            if field == "name":
+                plugin_name = plugin_data_json[field]
+            if field in self.wanted_fields:
+                plugin_data[field] = plugin_data_json[field]
+
+        if "commits_url" in plugin_data:
+            commit_req = requests.get(
+                plugin_data["commits_url"][:-6],
+                auth=(self.client_id, self.client_secret),
+            )
+
+            commit = commit_req.json()[-1]
+            plugin_data["commit"] = commit["sha"]
+
+        del plugin_data["commits_url"]
+        plugin_data = {k: v for k, v in plugin_data.items()}
+        self.plugins = {**self.plugins, f"{plugin_name}": {**plugin_data}}
+        print("Parsed", plugin_data["full_name"])
+
+    def check_rate(self, req: requests) -> None:
+        """Check rate is being limited.
+
+        Parameters
+        ----------
+        req: requests
+                Request type to check limits.
+        """
+        if req.find("API rate limit exceeded") != -1:
+            print("API rate limit exceeded")
+            print(req)
             exit(-1)
-        for plugin_data_json in req.json():
-            if not plugin_data_json["language"] or plugin_data_json["language"] != "Lua":
-                continue
 
-            # Extract only the data that we need
-            plugin_data = {}
-            plugin_name = ""
+    def generator(self) -> None:
+        """Generate the data for the plugins"""
+        with open("database.json", "+w") as file:
+            while True:
+                req = requests.get(
+                    "https://api.github.com/users/budswa/starred?per-page=1&page="
+                    + str(self.count),
+                    auth=(self.client_id, self.client_secret),
+                )
+                print("Grabbed page", self.count)
+                self.count += 1
+                self.check_rate(req.text)
 
-            wanted_fields = ["full_name", "description", "default_branch", "fork", "archived", "private", "clone_url", "commits_url", "created_at", "updated_at", "stargazers_count", "subscribers_count", "forks_count", "language", "open_issues_count", "topics", "owner"]
+                for plugin_data_json in req.json():
+                    if (
+                        not plugin_data_json["language"]
+                        or plugin_data_json["language"] == "lua"
+                    ):
+                        continue
+                    self.extract_data(plugin_data_json)
 
-            for field in plugin_data_json.keys():
-                if field == "name":
-                    plugin_name = plugin_data_json[field]
-                if field in wanted_fields:
-                    plugin_data[field] = plugin_data_json[field]
+                if "next" not in req.links:
+                    break
 
-            if "commits_url" in plugin_data:
-                commit_req = requests.get(plugin_data["commits_url"][:-6], auth=(client_id, client_secret))
-                commit = commit_req.json()[-1]
-                plugin_data["commit"] = commit["sha"]
+            file.write(json.dumps(self.plugins, sort_keys=True, indent=4))
 
-            # Remove unneeded stuff from plugin data and merge plugin and commit data
-            del plugin_data["commits_url"]
-            plugin_data = { **plugin_data }
-            plugins = { **plugins, f"{plugin_name}": { **plugin_data } }
-            print("Parsed", plugin_data["full_name"])
-        if not 'next' in req.links:
-            break
+    def main(self) -> None:
+        # You can add extra stuff here
+        self.generator()
+        print("Success! Dumped", self.count - 1, "pages worth of plugins")
 
-    file.write(json.dumps(plugins, sort_keys=True, indent=4))
 
-print("Success! Dumped", count - 1, "pages worth of plugins")
+if __name__ == "__main__":
+    GenerateData().main()
