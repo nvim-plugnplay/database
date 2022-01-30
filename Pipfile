@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 requests = "*"
 icecream = "*"
+rich = "*"
 
 [dev-packages]
 
