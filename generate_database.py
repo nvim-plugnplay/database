@@ -12,6 +12,7 @@ import os
 from collections import defaultdict
 
 import requests
+from bs4 import BeautifulSoup
 from rich import print
 
 try:
@@ -80,7 +81,6 @@ class GenerateData:
             "neovim-lua",
             "vim-config",
         ]
-        # Ignore list for plugins like lspconfig
         self.ignore_list = ["lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"]
         self.dotfile_count = 1
         self.not_plugin_or_dotfile = 1
@@ -99,13 +99,13 @@ class GenerateData:
         print("-----")
         ic("Success! Dumped", self.count - 1, "pages worth of plugins")
         ic("Total plugins:", self.plugin_count)
-        ic("Total unwanted fields:", self.not_plugin_or_dotfile)
-        ic(
-            "Percentage of unwanted fields:",
-            (self.unwanted_field_count / self.plugin_count) * 100,
-        )
-        # Mean
-        ic("Mean number of plugins per page:", self.plugin_count / self.count)
+        # ic("Total unwanted fields:", self.not_plugin_or_dotfile)
+        # ic(
+        #     "Percentage of unwanted fields:",
+        #     (self.unwanted_field_count / self.plugin_count) * 100,
+        # )
+        # # Mean
+        # ic("Mean number of plugins per page:", self.plugin_count / self.count)
         print("\n\n")
 
     def filter_plugin(self, plugin_data: dict) -> int:
@@ -175,7 +175,6 @@ class GenerateData:
             exit(-1)
 
     def generator(self) -> None:
-        """ """
         """Generate the data for the plugins"""
         countter = 0
         with open("database.json", "+w") as file, open(
@@ -196,42 +195,22 @@ class GenerateData:
                 countter += 1
                 self.count += 1
                 self.check_rate(req.text)
-
                 for plugin_data_json in req.json():
 
-                    # saving time - just dont extract data for the time just
-                    if any(
-                        [
-                            ignore_field in plugin_data_json["full_name"]
-                            or (
-                                plugin_data_json["description"]
-                                and ignore_field in plugin_data_json["description"]
-                            )
-                            for ignore_field in self.ignore_list
-                        ]
-                    ):
-                        ic("Plugins from ignore list", plugin_data_json["full_name"])
+                    current_url_info = defaultdict(str)
+                    soup = BeautifulSoup(
+                        requests.get(plugin_data_json["html_url"]).content,
+                        "html.parser",
+                    )
+                    for item in soup.find_all("a", {"class", "js-navigation-open"}):
 
-                    # Check if dotfile bad method
-                    if any(
-                        [
-                            unwanted_field in plugin_data_json["full_name"]
-                            or (
-                                plugin_data_json["description"]
-                                and unwanted_field in plugin_data_json["description"]
-                            )
-                            for unwanted_field in self.unwanted_config
-                        ]
-                        or plugin_data_json["full_name"] == "nvim"
-                    ):
-                        self.dotfile_count += 1
-                        ic("Dotfiles : ", plugin_data_json["full_name"])
+                        dir_info = item.get("href")
+                        if "/" in dir_info:
+                            current_url_info[item.text] = item.get("href")
 
-                    if (
-                        not plugin_data_json["language"]
-                        or plugin_data_json["language"] == "lua"
-                    ):
-                        continue
+                    ic(current_url_info)
+
+                    __import__("pdb").set_trace()
 
                     # self.extract_data(plugin_data_json)
 
