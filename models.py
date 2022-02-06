@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Any
 
 
 class BaseRequestResponseItem(BaseModel):
@@ -8,83 +8,83 @@ class BaseRequestResponseItem(BaseModel):
         Item which represents the base request response.
         All fields required and statically typed except where explicitly listed
     """
-    id: int
-    node_id:  str
-    name:  str
-    full_name:  str
-    private:  bool
-    owner:  dict
-    html_url:  str
+    id: Optional[int] = None
+    node_id:  Optional[str] = None
+    name:  Optional[str] = None
+    full_name:  Optional[str] = None
+    private:  Optional[bool] = None
+    owner:  Optional[Any] = None
+    html_url:  Optional[str] = None
     description:  Optional[str] = None
-    fork:  bool
-    url:  str
-    forks_url:  str
-    keys_url:  str
-    collaborators_url:  str
-    teams_url:  str
-    hooks_url:  str
-    issue_events_url:  str
-    events_url:  str
-    assignees_url:  str
-    branches_url:  str
-    tags_url:  str
-    blobs_url:  str
-    git_tags_url:  str
-    git_refs_url:  str
-    trees_url:  str
-    statuses_url:  str
-    languages_url:  str
-    stargazers_url:  str
-    contributors_url:  str
-    subscribers_url:  str
-    subscription_url:  str
-    commits_url:  str
-    git_commits_url:  str
-    comments_url:  str
-    issue_comment_url:  str
-    contents_url:  str
-    compare_url:  str
-    merges_url:  str
-    archive_url:  str
-    downloads_url:  str
-    issues_url:  str
-    pulls_url:  str
-    milestones_url:  str
-    notifications_url:  str
-    labels_url:  str
-    releases_url:  str
-    deployments_url:  str
-    created_at:  str
-    updated_at:  str
-    pushed_at:  str
-    git_url:  str
-    ssh_url:  str
-    clone_url:  str
-    svn_url:  str
+    fork:  Optional[bool] = None
+    url:  Optional[str] = None
+    forks_url:  Optional[str] = None
+    keys_url:  Optional[str] = None
+    collaborators_url:  Optional[str] = None
+    teams_url:  Optional[str] = None
+    hooks_url:  Optional[str] = None
+    issue_events_url:  Optional[str] = None
+    events_url:  Optional[str] = None
+    assignees_url:  Optional[str] = None
+    branches_url:  Optional[str] = None
+    tags_url:  Optional[str] = None
+    blobs_url:  Optional[str] = None
+    git_tags_url:  Optional[str] = None
+    git_refs_url:  Optional[str] = None
+    trees_url:  Optional[str] = None
+    statuses_url:  Optional[str] = None
+    languages_url:  Optional[str] = None
+    stargazers_url:  Optional[str] = None
+    contributors_url:  Optional[str] = None
+    subscribers_url:  Optional[str] = None
+    subscription_url:  Optional[str] = None
+    commits_url:  Optional[str] = None
+    git_commits_url:  Optional[str] = None
+    comments_url:  Optional[str] = None
+    issue_comment_url:  Optional[str] = None
+    contents_url:  Optional[str] = None
+    compare_url:  Optional[str] = None
+    merges_url:  Optional[str] = None
+    archive_url:  Optional[str] = None
+    downloads_url:  Optional[str] = None
+    issues_url:  Optional[str] = None
+    pulls_url:  Optional[str] = None
+    milestones_url:  Optional[str] = None
+    notifications_url:  Optional[str] = None
+    labels_url:  Optional[str] = None
+    releases_url:  Optional[str] = None
+    deployments_url:  Optional[str] = None
+    created_at:  Optional[str] = None
+    updated_at:  Optional[str] = None
+    pushed_at:  Optional[str] = None
+    git_url:  Optional[str] = None
+    ssh_url:  Optional[str] = None
+    clone_url:  Optional[str] = None
+    svn_url:  Optional[str] = None
     homepage:  Optional[str] = None
-    size:  int
-    stargazers_count:  int
-    watchers_count:  int
-    language:  str
-    has_issues:  bool
-    has_projects:  bool
-    has_downloads:  bool
-    has_wiki:  bool
-    has_pages:  bool
-    forks_count:  int
+    size:  Optional[int] = None
+    stargazers_count:  Optional[int] = None
+    watchers_count:  Optional[int] = None
+    language:  Optional[str] = None
+    has_issues:  Optional[bool] = None
+    has_projects:  Optional[bool] = None
+    has_downloads:  Optional[bool] = None
+    has_wiki:  Optional[bool] = None
+    has_pages:  Optional[bool] = None
+    forks_count:  Optional[int] = None
     mirror_url: Optional[str] = None
-    archived:  bool
-    disabled:  bool
-    open_issues_count:  int
-    license:  Optional[dict] = None
-    allow_forking:  bool
-    is_template:  bool
-    topics:  list
-    visibility:  str
-    forks:  int
-    open_issues:  int
-    watchers:  int
-    default_branch:  str
+    archived:  Optional[bool] = None
+    disabled:  Optional[bool] = None
+    open_issues_count:  Optional[int] = None
+    license:  Optional[Any] = None
+    allow_forking:  Optional[bool] = None
+    is_template:  Optional[bool] = None
+    topics:  Optional[list] = None
+    visibility:  Optional[str] = None
+    forks:  Optional[int] = None
+    open_issues:  Optional[int] = None
+    watchers:  Optional[int] = None
+    default_branch:  Optional[str] = None
 
 class BaseRequestResponse(BaseModel):
     """

@@ -12,10 +12,12 @@ import functools
 import itertools as it
 import json
 import logging
+from asyncio.tasks import gather
 from collections import defaultdict
 from typing import Any
 
 import requests
+import tqdm
 from bs4 import BeautifulSoup
 from icecream import ic
 from rich import print
@@ -32,7 +34,7 @@ FORMAT = "%(message)s"
 logging.basicConfig(level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
 
 
-def get_or_create_eventloop():
+def get_or_create_eventloop() -> Any:
     try:
         return asyncio.get_event_loop()
     except RuntimeError as ex:
@@ -62,7 +64,7 @@ class GenerateData(object):
         self.user = user
         self.user_fmt = ic.format(self.user)
         # just grab whole thing not page by page!
-        self.base_url = "https://api.github.com/users/{}/starred".format(self.user)
+        self.base_url = "https://api.github.com/users/{}/starred?per-page=1&page=".format(self.user)
         self.client_id = "7fe0a33f01d1a6b60b08"
         self.client_secret = "f4abd5a32d99a3f48a16743f134fcdd55e967eaa"
 
@@ -89,7 +91,7 @@ class GenerateData(object):
         self.req = 0
         self.extract_jobs: list[tuple[dict, bool]] = []
 
-    def load_stars(self) -> BaseRequestResponse:
+    def load_stars_by_page(self, page: int) -> BaseRequestResponse:
         """
 
         Returns
@@ -97,14 +99,31 @@ class GenerateData(object):
         BaseRequestResponse
 
         """
-        logging.info("Querying github stars for {}".format(self.user_fmt))
-        response = requests.get(self.base_url, auth=(self.client_id, self.client_secret))
-        out = BaseRequestResponse(responses=response.json()
-                                 )  # validates the response is good, otherwise will raise an error
+        logging.info("Querying github stars for {}, {}".format(self.user_fmt, ic.format(page)))
+        response = requests.get(
+            self.base_url + str(page), auth=(self.client_id, self.client_secret))
+        out = BaseRequestResponse(responses=response.json(), )  # validates the response is good, otherwise will raise an error
         if len(out.responses) == 0:
-            logging.warning("No stars for {} found!".format(self.user_fmt))
+            logging.warning("No stars for {}, {} found!".format(self.user_fmt, ic.format(page)))
         logging.info("Star query: done!")
         return out
+
+    async def get_pages(self):
+        loop = get_or_create_eventloop()
+        results = []
+        finished = False
+        start = 0
+        batchsize = 10
+        while not finished:
+            tmp = await asyncio.gather(*[
+                loop.run_in_executor(None, functools.partial(self.load_stars_by_page, start + i),
+                                    ) for i in range(1, batchsize+1) ])
+            tmp = BaseRequestResponse(responses = list(it.chain(*[t.responses for t in tmp])))
+            if len(tmp.responses) == 0:
+                finished = True
+            results += tmp.responses
+            start += batchsize
+        return BaseRequestResponse(responses = results)
 
     def extract_data(self, plugin_dict: dict, is_plugin: bool) -> dict:
         plugin_data = defaultdict()
@@ -162,7 +181,7 @@ class GenerateData(object):
             (1, 0): "plugin_count",
             (0, 1): "dotfile_count"
         }
-        for response in base.responses:
+        for response in tqdm.tqdm(base.responses):
             plugin_data = response.dict()
             case = tuple(map(lambda c: sum(cn(plugin_data) for cn in c), conds))
             case = tuple(map(lambda x: min(1, x), case))
@@ -190,7 +209,7 @@ class GenerateData(object):
         logging.info(ic.format(len(self.extract_jobs)))
 
     async def run_jobs(self):
-        loop = asyncio.get_running_loop()
+        loop = get_or_create_eventloop()
         results = await asyncio.gather(*[
             loop.run_in_executor(None, functools.partial(self.extract_data, *j),
                                 ) for j in self.extract_jobs
@@ -226,7 +245,9 @@ class GenerateData(object):
             f.write(json.dumps(dotfile_dict, sort_keys=True, indent=4))
 
     def __call__(self, *args: Any, write_results: bool = True, **kwds: Any) -> Any:
-        base = self.load_stars()
+        loop = get_or_create_eventloop()
+        base = loop.run_until_complete(self.get_pages())
+        __import__('pdb').set_trace()
         self.make_jobs(base)
         logging.info("Running jobs!")
         loop = get_or_create_eventloop()
