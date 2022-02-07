@@ -3,6 +3,7 @@
 # vim:fenc=utf-8
 #
 # File Name: generate_data.py
+
 __orgname__ = "PlugNPlay"
 __docformat__ = "numpy"
 __version__ = "0.0.2"
@@ -77,6 +78,7 @@ def key_mapper(key):
     key : key to map a function over
 
 
+
     Returns
     -------
     cond_mapper : function which takes in a function which asserts a condition over an iterable, and returns a function which runs the supplied function over the supplied iterable and the input
@@ -126,6 +128,7 @@ class GenerateData(object):
     html_jobs : jobs to extract html data
     """
 
+
     def __init__(self, user: str = "budswa", batch_size: int = -1) -> None:
         """
 
@@ -149,6 +152,7 @@ class GenerateData(object):
         self.client_secret = os.environ['SECRET_ID']
 
         # perhaps export to a `constants` module
+
         self.wanted_fields = [
             "full_name", "description", "default_branch", "fork", "archived", "private",
             "clone_url", "commits_url", "created_at", "updated_at", "stargazers_count",
@@ -231,6 +235,7 @@ class GenerateData(object):
         -------
         response: BaseRequestResponse
 
+
         """
         loop = get_or_create_eventloop()
         results = []
@@ -275,7 +280,9 @@ class GenerateData(object):
             if field in self.wanted_fields:
                 plugin_data[field] = plugin_dict[field]
 
+
         if "commits_url" in plugin_dict:
+
             commit_req = requests.get(
                 plugin_dict["commits_url"][:-6], auth=(self.client_id, self.client_secret),
             )
@@ -285,6 +292,7 @@ class GenerateData(object):
                 plugin_data["commit"] = commit["sha"]
 
             del plugin_data["commits_url"]
+
         plugin_data = {k: v for k, v in plugin_data.items()}
 
         # iS there  a better way of doing this ?
@@ -489,4 +497,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     __import__('dotenv').load_dotenv('dev.env')
+
     main()

@@ -8,8 +8,11 @@ requests = "*"
 icecream = "*"
 pydantic = "*"
 tqdm = "*"
+rich = "*"
+
 
 [dev-packages]
+dotenv = "*"
 
 [requires]
 python_version = "3.10"
