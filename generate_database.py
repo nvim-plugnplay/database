@@ -16,6 +16,7 @@ import logging
 from collections import defaultdict
 from typing import Any, Callable
 import os
+import sys
 
 import requests
 import tqdm
@@ -220,6 +221,11 @@ class GenerateData(object):
         logging.debug("Querying github stars for {}, {}".format(self.user_fmt, ic.format(page)))
         response = requests.get(
             self.base_url + str(page), auth=(self.client_id, self.client_secret))
+        if response.status_code != 200:
+            logging.info("using load stars by page")
+            logging.critical("Bad request {}".format(ic.format(response.json)))
+            sys.exit("Cannot create database")
+
         out = BaseRequestResponse(
             responses=response.json(),
         )  # validates the response is good, otherwise will raise an error
@@ -290,6 +296,10 @@ class GenerateData(object):
             if commit_req.status_code == 200:
                 commit = commit_req.json()[-1]
                 plugin_data["commit"] = commit["sha"]
+            else:
+                logging.info("using extractdata ")
+                logging.critical("Bad request {}".format(ic.format(commit_req.json())))
+                sys.exit("Cannot create database")
 
             del plugin_data["commits_url"]
 
@@ -305,6 +315,18 @@ class GenerateData(object):
         logging.debug(ic.format(out['name']))
 
         return out
+
+    @staticmethod
+
+    def make_html_request(d: dict):
+        "https://api.github.com/repos/[USER]/[REPO]/git/trees/[BRANCH]?recursive=1"
+        response = requests.get(d['html_url'])
+        if response.status_code != 200:
+            logging.info("using make_html_request")
+            logging.critical("Bad request {}".format(ic.format(response.json())))
+            sys.exit("Cannot create database")
+        __import__('pdb').set_trace()
+        return response
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -366,7 +388,8 @@ class GenerateData(object):
             for response in base.responses)  # gets all the jobtypes, in parallel over all cores
         self.html_jobs.extend([j for j in initial_jobs if len(j) == 1])
         self.extract_jobs.extend([j for j in initial_jobs if len(j) == 2])
-        html_results = self.async_helper(lambda x: (x, requests.get(x['html_url'])), self.html_jobs)
+        __import__('pdb').set_trace()
+        html_results = self.async_helper(lambda x: (x, self.make_html_request(x)), self.html_jobs)
         for res in html_results:
             current_url_info = defaultdict(str)
             plugin_data = res[0]
@@ -490,7 +513,7 @@ class GenerateData(object):
 
 def main() -> None:
     """Main Function"""
-    dg = GenerateData()
+    dg = GenerateData(batch_size=10)
     dc = dg()
     return dc
 
