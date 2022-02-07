@@ -1,0 +1,140 @@
+* Dev notes
+ ** Asyncio basics
+    Lets assume you have a list of api queries you need to run:
+    @code python
+    queries = [
+      {'a':1}, {'a':2},
+      {'a':3}, {'a':4}, ] * 1000
+    @end
+    and a function to run queries which takes in a dict:
+    @code python
+    def query_fun(d):
+      return requests.post(d)
+    @end
+    We would like to run each of these jobs as a concurrent future. To do so, we do something like this:
+    @code python
+    async def main():
+      loop = asyncio.get_running_loop()
+      return await asyncio.gather(*[loop.run_in_executor(None, functools.partial(query_fun, q),) for q in queries])
+
+    asyncio.run(main())
+    @end
+
+    Why do we do it this way, which seems hard? This is because `requests` objects and friends are typically not `awaitable`. If an object is awaitable, we can `await object`, which means it will not block python from moving forward while it is evaluated. If we wanted to do things in a more idiomatic manner, we would use a library like `aiohttp` or `requests_html` to provide us with awaitable objects. Instead of that, we just write lower level code
+
+  *** asyncio.get_running_loop
+      At the lowest level, asyncio runs a loop which checks the status of a bunch of concurrent futures. This line lets us access asyncios main magic future loop
+  *** loop.run_in_executor
+      Runs a function in a concurrent.futures.executor, which in our case is `None`, meaning that we simply run our function in asyncios default executor.
+  *** Why functools.partial?
+      We do not want to actually evaluate query_fun(q), we want a function which when called returns query_fun(q), because asyncio is going to call it for us
+  *** asyncio.gather
+      gather fires of a bunch of coroutines to asyncio, it is gather(*args). So for each job in the list of jobs we have created (to be ran in asyncios default concurrent futures executor), we are going to pop that job into asyncios loop
+  *** await
+      Await means this will not block python from moving forward, and the futures will not be evaluated until `asyncio.run` or something like `loop.run_until_complete`
+  *** asyncio.run
+      Runs all the jobs in the event loop until they are all complete
+
+* AST generated documentation: generate database
+ ** get_or_create_eventloop
+    Gets the current asyncio event loop. Asyncio only
+    opens an event loop when called in the main thread,
+*** Returns
+    - the current or created asyncio event loop
+ ** key_mapper
+    helper for working with annoying dicts and lists of dicts
+    runs a function over external iterable on a specific dict key
+*** Examples:
+   @code python
+    d = {'a':1, 'b':2}
+    d2 = {'a':0, 'b':2}
+    l = [0,2,3,4,5,6,7]
+    a_mapper = key_mapper('a')
+    b_mapper = key_mapper('b')
+    equals_l = b_mapper(lambda x,y: x == y, l)
+    equals_l(d) # 0
+    equals_l(d2) # 1
+    @end
+*** Parameters
+    - key : key to map a function over
+*** Returns
+    - cond_mapper : function which takes in a function which asserts a condition over an iterable, and returns a function which runs the supplied function over the supplied iterable and the input
+*** cond_mapper
+**** Parameters
+      - fn : a callable, which takes in 2 positional args, the first of which is supplied later on, and the second of which comes from the supplied iterable
+      - iterable : list of parameters to supply to fn
+**** Returns
+      - output : a function which takes in a dict, indexes it with previously supplied key, and compares that index to a previously supplied iterable
+**** output
+** GenerateData
+*** Attributes
+    - batch_size : batch size for asyncrhonous API calls.
+    - use_batches : whether or not batches are used
+    - user : the user
+    - user_fmt : formatted version of the user
+    - base_url : url for users starpage
+    - client_id : client id
+    - client_secret : secret
+    - wanted_fields : fields we care about
+    - unwanted_config : fields we dont care about
+    - ignore_list : i am confused about this one
+    - extract_jobs : jobs to extract plugin data
+    - html_jobs : jobs to extract html data
+*** __init__
+**** Parameters
+      - user : str, the username
+      - batch_size : int, batch size for asyncio, if < 1 do not use batches at all (saves a couple of requests, uses way more memory, batch size only really needed if github limits our concurrent api requests)
+*** async_helper
+      Helper for simple async usages. Complicated stuff should be done normally
+**** Parameters
+      - fn : Callable[[tuple], Any], function to run asynchronously
+      - iterable : list, list of parameters for fn
+**** Returns
+      - list of fn(iterable_item)
+**** run_jobs
+*** load_stars_by_page
+**** Parameters
+      - page : int
+**** Returns
+      - BaseRequestResponse
+*** get_pages
+      gets all starpages for a user, works by grabbing 10 pages at a time, when all pages are empty, stops making more pages
+**** Returns
+      - response: BaseRequestResponse
+*** extract_data
+      extracts commit data from a plugin or dotfile
+**** Parameters
+      - plugin_dict : dict, dict describing dotfile or plugin
+      - is_plugin : bool, is it a plugin? or a dotfile?
+**** Returns
+      - dict containing the plugin name, plugin data, and whether it is a plugin or dotfile('type')
+*** make_jobs
+      Given a response list, generate jobs(read: sets of parameters) for extract_data to run asynchronously
+      Iterates through the response list, and for each one, creates a plugin or dotfile job. For some edge cases,
+      it creates a list of jobs to parse some html relating to the plugin or dotfile, and uses the result of that to create more jobs
+**** Parameters
+      - base : BaseRequestResponse
+**** make_jobtype
+*** run_jobs
+      Runs jobs
+**** Returns
+      - results : list of star pages
+*** sort_results
+      sorts results by plugin or not
+**** Parameters
+      - results : list[dict]
+**** Returns
+      - dict[str, list[dict]]
+*** write_results
+      Writes sorted results to database
+**** Parameters
+      - results : dict[str, list[dict]]
+*** __call__
+**** Parameters
+      -   *args: Any
+      -  write_results : bool
+      -   **kwds: Any
+**** Returns
+      - dict[str, list[dict]]
+** main
+    Main Function

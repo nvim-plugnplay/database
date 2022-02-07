@@ -197,8 +197,7 @@ class GenerateData(object):
 
             return results
 
-        loop = get_or_create_eventloop()
-        return loop.run_until_complete(run_jobs())
+        return asyncio.run(run_jobs())
 
     def load_stars_by_page(self, page: int) -> BaseRequestResponse:
         """
@@ -469,7 +468,7 @@ class GenerateData(object):
         """
         loop = get_or_create_eventloop()
         logging.info("Getting stars for {}".format(self.user_fmt))
-        base = loop.run_until_complete(self.get_pages())
+        base = asyncio.run(self.get_pages())
         self.make_jobs(base)
         ic.configureOutput(prefix="")
         logging.info("Running {} jobs!".format(
