@@ -319,13 +319,26 @@ class GenerateData(object):
     @staticmethod
 
     def make_html_request(d: dict):
+        """
+        makes a single html/tree request, results are aggregated and parsed in the main thread
+
+        Parameters
+        ----------
+        d : dict
+
+
+        Returns
+        -------
+        response :
+
+        """
         "https://api.github.com/repos/[USER]/[REPO]/git/trees/[BRANCH]?recursive=1"
+        # CHANGE HERE
         response = requests.get(d['html_url'])
         if response.status_code != 200:
             logging.info("using make_html_request")
             logging.critical("Bad request {}".format(ic.format(response.json())))
             sys.exit("Cannot create database")
-        __import__('pdb').set_trace()
         return response
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
@@ -391,6 +404,8 @@ class GenerateData(object):
         __import__('pdb').set_trace()
         html_results = self.async_helper(lambda x: (x, self.make_html_request(x)), self.html_jobs)
         for res in html_results:
+            logging.critical("TODO: MODIFY ME TO PARSE THE TREES")
+
             current_url_info = defaultdict(str)
             plugin_data = res[0]
             html = res[-1]
