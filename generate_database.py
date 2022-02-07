@@ -14,6 +14,7 @@ import json
 import logging
 from collections import defaultdict
 from typing import Any, Callable
+import os
 
 import requests
 import tqdm
@@ -144,8 +145,8 @@ class GenerateData(object):
         # just grab whole thing not page by page!
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
             self.user)
-        self.client_id = "7fe0a33f01d1a6b60b08"
-        self.client_secret = "f4abd5a32d99a3f48a16743f134fcdd55e967eaa"
+        self.client_id = os.environ['CLIENT_ID']
+        self.client_secret = os.environ['SECRET_ID']
 
         # perhaps export to a `constants` module
         self.wanted_fields = [
@@ -487,4 +488,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    __import__('dotenv').load_dotenv('dev.env')
     main()
