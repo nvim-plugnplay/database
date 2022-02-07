@@ -1,5 +1,8 @@
 * Dev notes
+ ** Joblib
+    {https://joblib.readthedocs.io/en/latest/parallel.html}[Joblib] is magic for the "make for loop go brr" scenario
  ** Asyncio basics
+    We use asyncio when we are bound not by cpu, but by io, since everything in python is blocking and annoying
     Lets assume you have a list of api queries you need to run:
     @code python
     queries = [
