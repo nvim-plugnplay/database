@@ -20,7 +20,7 @@
     asyncio.run(main())
     @end
 
-    Why do we do it this way, which seems hard? This is because `requests` objects and friends are typically not `awaitable`. If an object is awaitable, we can `await object`, which means it will not block python from moving forward while it is evaluated. If we wanted to do things in a more idiomatic manner, we would use a library like `aiohttp` or `requests_html` to provide us with awaitable objects. Instead of that, we just write lower level code
+    Why do we do it this way, which seems hard? This is because `requests` objects and friends are typically not `awaitable`. If an object is awaitable, we can `await object`, which means it will not block python from moving forward while it is evaluated. If we wanted to do things in a more idiomatic manner, we would use a library like `aiohttp` or `requests_html` to provide us with awaitable objects. Instead of that, we just write lower level code. It was also because it was the simplest way to get the existing code to run asynchronously. `aiohttp` is super easy to use and well documented!
 
   *** asyncio.get_running_loop
       At the lowest level, asyncio runs a loop which checks the status of a bunch of concurrent futures. This line lets us access asyncios main magic future loop
