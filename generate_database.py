@@ -16,7 +16,7 @@ import logging
 import os
 import sys
 import time
-from collections import defaultdict
+from collections import defaultdict, Counter
 from typing import Any, Callable
 
 import requests
@@ -188,7 +188,7 @@ class GenerateData(object):
         ]
         self.ignore_list = ["lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"]
         self.extract_jobs: list[tuple[dict, bool]] = []
-        self.html_jobs: list[tuple[str]] = []
+        self.filetree_jobs: list[tuple[str]] = []
 
     def async_helper(self, fn: Callable[[tuple], Any], iterable: list) -> list:
         """
@@ -359,7 +359,7 @@ class GenerateData(object):
 
         return out
 
-    def make_html_request(self, d: dict):
+    def get_filetree(self, d: dict):
         """
         makes a single html/tree request, results are aggregated and parsed in the main thread
 
@@ -385,17 +385,12 @@ class GenerateData(object):
             )
         )
         response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
+        time.sleep(0.5)
 
         if response.status_code != 200:
             logging.info("using make_html_request")
 
             logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
-            # sys.exit("Cannot create database")
-            # TODO: handle this better
-            # if response.status_code == 403:
-            #     logging.warning("Retrying tree request for {}/{}".format(ic.format(repo), ic.format(branch)))
-            #     time.sleep(5)
-            #     return self.make_html_request(d)
             return
 
         return response.json()
@@ -462,15 +457,17 @@ class GenerateData(object):
             delayed(make_jobtype)(response) for response in base.responses
         )  # gets all the jobtypes, in parallel over all cores
 
-        self.html_jobs.extend([j for j in initial_jobs if len(j) == 1])
+        self.filetree_jobs.extend([j for j in initial_jobs if len(j) == 1])
         self.extract_jobs.extend([j for j in initial_jobs if len(j) == 2])
+
+        type_counts = Counter(["plugin" if not x[-1] else "dotfile" for x in self.extract_jobs])
         # __import__("pdb").set_trace()
 
-        html_results = self.async_helper(
-            lambda x: (x, self.make_html_request(x)), self.html_jobs
+        filetrees = self.async_helper(
+            lambda x: (x, self.get_filetree(x)), self.filetree_jobs
         )
-        html_results = list(filter(lambda x: x is not None, html_results))
-        for res in html_results:
+        filetrees = [x for x in filetrees if x is not None]
+        for res in filetrees:
             # logging.critical("TODO: MODIFY ME TO PARSE THE TREES")
             #
             # url = res[0]["html_url"]
@@ -489,15 +486,21 @@ class GenerateData(object):
             # # Can we use queues or threads here im not sure how ?
             # tree_req = self.make_html_request({"html_url": tree_url})
             tree = res[-1]
+            if tree is None:
+                continue
             tree_files = [f["path"] for f in tree["tree"] if f["type"] == "blob"]
             if "init.vim" in tree_files or "init.lua" in tree_files:
-                logging.info(ic.format("Found init.vim or init.lua => DotFiles"))
+                # logging.info(ic.format("Found init.vim or init.lua => DotFiles"))
                 self.extract_jobs.append((res[0], True))
+                type_counts.update(["dotfile"])
 
             else:
-                logging.info(ic.format("No init.vim or init.lua => Plugins"))
+                # logging.info(ic.format("No init.vim or init.lua => Plugins"))
+                logging.info(ic.format(type_counts))
                 self.extract_jobs.append((res[0], False))
+                type_counts.update(["plugin"])
 
+        logging.info(ic.format(type_counts))
         ic.configureOutput("Created: ")
         logging.info(ic.format(len(self.extract_jobs)))
 
@@ -599,7 +602,7 @@ class GenerateData(object):
         ic.configureOutput(prefix="")
         logging.info(
             "Running {} jobs!".format(
-                ic.format(len(self.html_jobs) + len(self.extract_jobs))
+                ic.format(len(self.filetree_jobs) + len(self.extract_jobs))
             )
         )
         results = self.async_helper(self.extract_data, self.extract_jobs)
