@@ -260,7 +260,7 @@ class GenerateData(object):
         )
         if response.status_code != 200:
             logging.info("using load stars by page")
-            logging.critical("Bad request {}".format(ic.format(response.json)))
+            logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
             sys.exit("Cannot create database")
 
         out = BaseRequestResponse(
@@ -344,7 +344,7 @@ class GenerateData(object):
                 plugin_data["commit"] = commit["sha"]
             else:
                 logging.info("using extractdata ")
-                logging.critical("Bad request {}".format(ic.format(commit_req.json())))
+                logging.critical("Bad request {}".format(ic.format(commit_req.json(), commit_req.status_code)))
                 sys.exit("Cannot create database")
 
             del plugin_data["commits_url"]
@@ -359,8 +359,7 @@ class GenerateData(object):
 
         return out
 
-    @staticmethod
-    def make_html_request(d: dict):
+    def make_html_request(self, d: dict):
         """
         makes a single html/tree request, results are aggregated and parsed in the main thread
 
@@ -376,20 +375,30 @@ class GenerateData(object):
         """
         "https://api.github.com/repos/[USER]/[REPO]/git/trees/[BRANCH]?recursive=1"
         # CHANGE HERE
-        response = requests.get(d["html_url"])
+
+        repo = d["full_name"]
+        branch = d["default_branch"]
+
+        tree_url = (
+            "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
+                repo, branch
+            )
+        )
+        response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
 
         if response.status_code != 200:
             logging.info("using make_html_request")
 
-            # logging.critical("Bad request {}".format(ic.format(response.json)))
+            logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
             # sys.exit("Cannot create database")
             # TODO: handle this better
-            while "Whoa there!" in response.text:
-                logging.warning("abuse detected, sleeping for half a minute")
-                time.sleep(30)
-                response = requests.get(d["html_url"])
+            # if response.status_code == 403:
+            #     logging.warning("Retrying tree request for {}/{}".format(ic.format(repo), ic.format(branch)))
+            #     time.sleep(5)
+            #     return self.make_html_request(d)
+            return
 
-        return response
+        return response.json()
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -460,25 +469,26 @@ class GenerateData(object):
         html_results = self.async_helper(
             lambda x: (x, self.make_html_request(x)), self.html_jobs
         )
+        html_results = list(filter(lambda x: x is not None, html_results))
         for res in html_results:
-            logging.critical("TODO: MODIFY ME TO PARSE THE TREES")
-
-            url = res[0]["html_url"]
-            repo = res[0]["full_name"]
-            branch = res[0]["default_branch"]
-
-            tree_url = (
-                "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
-                    repo, branch
-                )
-            )
-
-            ic.configureOutput(prefix="Parsed: ")
-            logging.info(ic.format(url))
-
-            # Can we use queues or threads here im not sure how ?
-            tree_req = self.make_html_request({"html_url": tree_url})
-            tree = tree_req.json()
+            # logging.critical("TODO: MODIFY ME TO PARSE THE TREES")
+            #
+            # url = res[0]["html_url"]
+            # repo = res[0]["full_name"]
+            # branch = res[0]["default_branch"]
+            #
+            # tree_url = (
+            #     "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
+            #         repo, branch
+            #     )
+            # )
+            #
+            # ic.configureOutput(prefix="Parsed: ")
+            # logging.info(ic.format(url))
+            #
+            # # Can we use queues or threads here im not sure how ?
+            # tree_req = self.make_html_request({"html_url": tree_url})
+            tree = res[-1]
             tree_files = [f["path"] for f in tree["tree"] if f["type"] == "blob"]
             if "init.vim" in tree_files or "init.lua" in tree_files:
                 logging.info(ic.format("Found init.vim or init.lua => DotFiles"))
@@ -602,7 +612,7 @@ class GenerateData(object):
 def main() -> None:
     """Main Function"""
     # Have to limit the batch size to 2
-    dg = GenerateData(batch_size=1)
+    dg = GenerateData(batch_size=10)
     dc = dg()
     return dc
 
