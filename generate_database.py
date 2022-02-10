@@ -142,12 +142,10 @@ class GenerateData(object):
 
         """
         ic.configureOutput(prefix="")
-        # parametrize user
         self.batch_size = batch_size
         self.use_batches = self.batch_size > 0
         self.user = user
         self.user_fmt = ic.format(self.user)
-        # just grab whole thing not page by page!
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
             self.user
         )
@@ -261,11 +259,10 @@ class GenerateData(object):
         if response.status_code != 200:
             logging.info("using load stars by page")
             logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
-            sys.exit("Cannot create database")
 
         out = BaseRequestResponse(
             responses=response.json(),
-        )  # validates the response is good, otherwise will raise an error
+        )
         if len(out.responses) == 0:
             logging.warning(
                 "No stars for {}, {} found!".format(self.user_fmt, ic.format(page))
@@ -345,13 +342,11 @@ class GenerateData(object):
             else:
                 logging.info("using extractdata ")
                 logging.critical("Bad request {}".format(ic.format(commit_req.json(), commit_req.status_code)))
-                sys.exit("Cannot create database")
 
             del plugin_data["commits_url"]
 
         plugin_data = {k: v for k, v in plugin_data.items()}
 
-        # iS there  a better way of doing this ?
         out = {"name": plugin_name, "data": plugin_data}
         out["type"] = "plugin" if is_plugin else "dotfile"
         ic.configureOutput(prefix="Parsed: ")
@@ -373,8 +368,6 @@ class GenerateData(object):
         response :
 
         """
-        "https://api.github.com/repos/[USER]/[REPO]/git/trees/[BRANCH]?recursive=1"
-        # CHANGE HERE
 
         repo = d["full_name"]
         branch = d["default_branch"]
@@ -385,7 +378,7 @@ class GenerateData(object):
             )
         )
         response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
-        time.sleep(0.5)
+        time.sleep(2)
 
         if response.status_code != 200:
             logging.info("using make_html_request")
@@ -442,9 +435,7 @@ class GenerateData(object):
             (0, 1): "dotfile_count",
         }
 
-        # for response in tqdm.tqdm(base.responses):
         def make_jobtype(response):
-            # helper for joblib
             plugin_data = response.dict()
             case = tuple(map(lambda c: sum(cn(plugin_data) for cn in c), conds))
             case = tuple(map(lambda x: min(1, x), case))
@@ -466,37 +457,15 @@ class GenerateData(object):
         filetrees = self.async_helper(
             lambda x: (x, self.get_filetree(x)), self.filetree_jobs
         )
-        filetrees = [x for x in filetrees if x is not None]
+        filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
-            # logging.critical("TODO: MODIFY ME TO PARSE THE TREES")
-            #
-            # url = res[0]["html_url"]
-            # repo = res[0]["full_name"]
-            # branch = res[0]["default_branch"]
-            #
-            # tree_url = (
-            #     "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
-            #         repo, branch
-            #     )
-            # )
-            #
-            # ic.configureOutput(prefix="Parsed: ")
-            # logging.info(ic.format(url))
-            #
-            # # Can we use queues or threads here im not sure how ?
-            # tree_req = self.make_html_request({"html_url": tree_url})
             tree = res[-1]
-            if tree is None:
-                continue
             tree_files = [f["path"] for f in tree["tree"] if f["type"] == "blob"]
             if "init.vim" in tree_files or "init.lua" in tree_files:
-                # logging.info(ic.format("Found init.vim or init.lua => DotFiles"))
                 self.extract_jobs.append((res[0], True))
                 type_counts.update(["dotfile"])
 
             else:
-                # logging.info(ic.format("No init.vim or init.lua => Plugins"))
-                logging.info(ic.format(type_counts))
                 self.extract_jobs.append((res[0], False))
                 type_counts.update(["plugin"])
 
@@ -614,8 +583,7 @@ class GenerateData(object):
 
 def main() -> None:
     """Main Function"""
-    # Have to limit the batch size to 2
-    dg = GenerateData(batch_size=10)
+    dg = GenerateData(batch_size=20)
     dc = dg()
     return dc
 
