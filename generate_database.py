@@ -258,7 +258,7 @@ class GenerateData(object):
         )
         if response.status_code != 200:
             logging.info("using load stars by page")
-            logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
+            logging.critical("Bad request {}".format(ic.format(response.status_code)))
 
         out = BaseRequestResponse(
             responses=response.json(),
@@ -304,7 +304,7 @@ class GenerateData(object):
         response = BaseRequestResponse(responses=results)
         return response
 
-    def extract_data(self, plugin_dict: dict, is_plugin: bool) -> dict:
+    def extract_data(self, plugin_dict: dict, is_plugin: bool, n_retries: int = 0) -> dict:
         """
         extracts commit data from a plugin or dotfile
 
@@ -341,7 +341,13 @@ class GenerateData(object):
                 plugin_data["commit"] = commit["sha"]
             else:
                 logging.info("using extractdata ")
-                logging.critical("Bad request {}".format(ic.format(commit_req.json(), commit_req.status_code)))
+                logging.critical("Bad request {}".format(ic.format(commit_req.status_code)))
+                if commit_req.status_code == 403 and n_retries <= 10:
+                    logging.info("Retrying!")
+                    time.sleep(20)
+                    self.extract_data(plugin_dict, is_plugin, n_retries+1)
+
+
 
             del plugin_data["commits_url"]
 
@@ -354,7 +360,7 @@ class GenerateData(object):
 
         return out
 
-    def get_filetree(self, d: dict):
+    def get_filetree(self, d: dict, n_retries: int = 0):
         """
         makes a single html/tree request, results are aggregated and parsed in the main thread
 
@@ -378,12 +384,16 @@ class GenerateData(object):
             )
         )
         response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
-        time.sleep(2)
+        time.sleep(1)
 
         if response.status_code != 200:
             logging.info("using make_html_request")
+            logging.critical("Bad request {}".format(ic.format(response.status_code)))
+            if response.status_code == 403 and n_retries < 10:
+                logging.info("retrying!")
+                time.sleep(20)
+                return self.get_filetree(d, n_retries + 1)
 
-            logging.critical("Bad request {}".format(ic.format(response.json(), response.status_code)))
             return
 
         return response.json()
