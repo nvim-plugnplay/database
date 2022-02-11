@@ -16,7 +16,7 @@ import logging
 import os
 import sys
 import time
-from collections import defaultdict, Counter
+from collections import Counter, defaultdict
 from typing import Any, Callable
 
 import requests
@@ -33,9 +33,7 @@ if root.handlers:
         root.removeHandler(h)()
 
 FORMAT = "%(message)s"
-logging.basicConfig(
-    level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
-)
+logging.basicConfig(level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
 
 
 def get_or_create_eventloop() -> Any:
@@ -147,42 +145,20 @@ class GenerateData(object):
         self.user = user
         self.user_fmt = ic.format(self.user)
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
-            self.user
-        )
+            self.user)
         self.client_id = os.environ["CLIENT_ID"]
         self.client_secret = os.environ["SECRET_ID"]
 
         # perhaps export to a `constants` module
         self.wanted_fields = [
-            "full_name",
-            "description",
-            "default_branch",
-            "fork",
-            "archived",
-            "private",
-            "clone_url",
-            "commits_url",
-            "created_at",
-            "updated_at",
-            "stargazers_count",
-            "subscribers_count",
-            "forks_count",
-            "language",
-            "open_issues_count",
-            "topics",
-            "owner",
+            "full_name", "description", "default_branch", "fork", "archived", "private",
+            "clone_url", "commits_url", "created_at", "updated_at", "stargazers_count",
+            "subscribers_count", "forks_count", "language", "open_issues_count", "topics", "owner",
         ]
         # this is not accurate but it will be good enough for now.
         self.unwanted_config = [
-            "dotfiles",
-            "dots",
-            "nvim-dotfiles",
-            "nvim-qt",
-            "nvim-config",
-            "neovim-lua",
-            "vim-config",
-            "nvim-lua",
-            "config-nvim",
+            "dotfiles", "dots", "nvim-dotfiles", "nvim-qt", "nvim-config", "neovim-lua",
+            "vim-config", "nvim-lua", "config-nvim",
         ]
         self.ignore_list = ["lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"]
         self.extract_jobs: list[tuple[dict, bool]] = []
@@ -210,28 +186,17 @@ class GenerateData(object):
             results = []
             if self.use_batches:
                 for i in tqdm.tqdm(
-                    range(0, len(iterable) + self.batch_size, self.batch_size),
-                    desc=fn.__name__,
+                        range(0,
+                              len(iterable) + self.batch_size, self.batch_size), desc=fn.__name__,
                 ):
-                    results += await asyncio.gather(
-                        *[
-                            loop.run_in_executor(
-                                None,
-                                functools.partial(fn, *j),
-                            )
-                            for j in iterable[i : i + self.batch_size]
-                        ]
-                    )
+                    results += await asyncio.gather(*[
+                        loop.run_in_executor(None, functools.partial(fn, *j),
+                                            ) for j in iterable[i:i + self.batch_size]
+                    ])
             else:
                 results += await asyncio.gather(
-                    *[
-                        loop.run_in_executor(
-                            None,
-                            functools.partial(fn, *j),
-                        )
-                        for j in iterable
-                    ]
-                )
+                    *[loop.run_in_executor(None, functools.partial(fn, *j),
+                                          ) for j in iterable])
 
             return results
 
@@ -250,23 +215,16 @@ class GenerateData(object):
         BaseRequestResponse
 
         """
-        logging.debug(
-            "Querying github stars for {}, {}".format(self.user_fmt, ic.format(page))
-        )
+        logging.debug("Querying github stars for {}, {}".format(self.user_fmt, ic.format(page)))
         response = requests.get(
-            self.base_url + str(page), auth=(self.client_id, self.client_secret)
-        )
+            self.base_url + str(page), auth=(self.client_id, self.client_secret))
         if response.status_code != 200:
             logging.info("using load stars by page")
             logging.critical("Bad request {}".format(ic.format(response.status_code)))
 
-        out = BaseRequestResponse(
-            responses=response.json(),
-        )
+        out = BaseRequestResponse(responses=response.json(),)
         if len(out.responses) == 0:
-            logging.warning(
-                "No stars for {}, {} found!".format(self.user_fmt, ic.format(page))
-            )
+            logging.warning("No stars for {}, {} found!".format(self.user_fmt, ic.format(page)))
         return out
 
     async def get_pages(self) -> BaseRequestResponse:
@@ -285,18 +243,11 @@ class GenerateData(object):
         start = 0
         batch_size = 10
         while not finished:
-            tmp = await asyncio.gather(
-                *[
-                    loop.run_in_executor(
-                        None,
-                        functools.partial(self.load_stars_by_page, start + i),
-                    )
-                    for i in range(1, batch_size + 1)
-                ]
-            )
-            tmp = BaseRequestResponse(
-                responses=list(it.chain(*[t.responses for t in tmp]))
-            )
+            tmp = await asyncio.gather(*[
+                loop.run_in_executor(None, functools.partial(self.load_stars_by_page, start + i),
+                                    ) for i in range(1, batch_size + 1)
+            ])
+            tmp = BaseRequestResponse(responses=list(it.chain(*[t.responses for t in tmp])))
             if len(tmp.responses) == 0:
                 finished = True
             results += tmp.responses
@@ -332,8 +283,7 @@ class GenerateData(object):
         if "commits_url" in plugin_dict:
 
             commit_req = requests.get(
-                plugin_dict["commits_url"][:-6],
-                auth=(self.client_id, self.client_secret),
+                plugin_dict["commits_url"][:-6], auth=(self.client_id, self.client_secret),
             )
 
             if commit_req.status_code == 200:
@@ -345,15 +295,16 @@ class GenerateData(object):
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
                     time.sleep(20)
-                    self.extract_data(plugin_dict, is_plugin, n_retries+1)
-
-
+                    self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
 
         plugin_data = {k: v for k, v in plugin_data.items()}
 
-        out = {"name": plugin_name, "data": plugin_data}
+        out = {
+            "name": plugin_name,
+            "data": plugin_data
+        }
         out["type"] = "plugin" if is_plugin else "dotfile"
         ic.configureOutput(prefix="Parsed: ")
         logging.debug(ic.format(out["name"]))
@@ -378,11 +329,7 @@ class GenerateData(object):
         repo = d["full_name"]
         branch = d["default_branch"]
 
-        tree_url = (
-            "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
-                repo, branch
-            )
-        )
+        tree_url = ("https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(repo, branch))
         response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
         time.sleep(1)
 
@@ -415,26 +362,23 @@ class GenerateData(object):
         fullname_mapper = key_mapper("full_name")  # uses d['full_name']
         description_mapper = key_mapper("description")  # uses d['description']
         ends_nvim = fullname_mapper(
-            lambda x, y: x.lower().endswith(y.lower()), [".nvim", "-nvim", ".vim"]
-        )  # checks if d['full_name'] ends with .nvim, -nvim, .vim
-        begins_dot = name_mapper(
-            lambda x, y: x.lower().startswith(y.lower()), "."
-        )  # check if d['name'] starts with '.'
+            lambda x, y: x.lower().endswith(y.lower()),
+            [".nvim", "-nvim", ".vim"])  # checks if d['full_name'] ends with .nvim, -nvim, .vim
+        begins_dot = name_mapper(lambda x, y: x.lower().startswith(y.lower()),
+                                 ".")  # check if d['name'] starts with '.'
         plugin_conds = [
-            lambda d: max(
-                0, ends_nvim(d) - begins_dot(d)
-            ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
+            lambda d: max(0,
+                          ends_nvim(d) - begins_dot(d)
+                         ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
             name_mapper(
                 lambda x, y: y.lower() in x.lower(), self.ignore_list
             ),  # checks if any values from the ignore list are present in d['name'], does this belong here or does this remove things to be requested?
         ]
         dotfile_conds = [
-            fullname_mapper(
-                lambda x, y: y.lower() in x.lower(), self.unwanted_config
-            ),  # checks if any of the unwanted config names are in d['full_name']
+            fullname_mapper(lambda x, y: y.lower() in x.lower(), self.unwanted_config
+                           ),  # checks if any of the unwanted config names are in d['full_name']
             description_mapper(
-                lambda x, y: y.lower() in x.lower() if x is not None else 0,
-                self.unwanted_config,
+                lambda x, y: y.lower() in x.lower() if x is not None else 0, self.unwanted_config,
             ),  # check if any of the unwanted config names are in d['description']
             begins_dot,  # check if it begins with a dot
         ]
@@ -455,8 +399,8 @@ class GenerateData(object):
                 return (plugin_data,)
 
         initial_jobs = Parallel(-1)(
-            delayed(make_jobtype)(response) for response in base.responses
-        )  # gets all the jobtypes, in parallel over all cores
+            delayed(make_jobtype)(response)
+            for response in base.responses)  # gets all the jobtypes, in parallel over all cores
 
         self.filetree_jobs.extend([j for j in initial_jobs if len(j) == 1])
         self.extract_jobs.extend([j for j in initial_jobs if len(j) == 2])
@@ -464,9 +408,7 @@ class GenerateData(object):
         type_counts = Counter(["plugin" if not x[-1] else "dotfile" for x in self.extract_jobs])
         # __import__("pdb").set_trace()
 
-        filetrees = self.async_helper(
-            lambda x: (x, self.get_filetree(x)), self.filetree_jobs
-        )
+        filetrees = self.async_helper(lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
         filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
             tree = res[-1]
@@ -494,18 +436,11 @@ class GenerateData(object):
         """
         loop = get_or_create_eventloop()
         results = []
-        for i in tqdm.tqdm(
-            range(0, len(self.extract_jobs) + self.batch_size, self.batch_size)
-        ):
-            results += await asyncio.gather(
-                *[
-                    loop.run_in_executor(
-                        None,
-                        functools.partial(self.extract_data, *j),
-                    )
-                    for j in self.extract_jobs[i : i + self.batch_size]
-                ]
-            )
+        for i in tqdm.tqdm(range(0, len(self.extract_jobs) + self.batch_size, self.batch_size)):
+            results += await asyncio.gather(*[
+                loop.run_in_executor(None, functools.partial(self.extract_data, *j),
+                                    ) for j in self.extract_jobs[i:i + self.batch_size]
+            ])
         return results
 
     @staticmethod
@@ -579,11 +514,8 @@ class GenerateData(object):
         base = asyncio.run(self.get_pages())
         self.make_jobs(base)
         ic.configureOutput(prefix="")
-        logging.info(
-            "Running {} jobs!".format(
-                ic.format(len(self.filetree_jobs) + len(self.extract_jobs))
-            )
-        )
+        logging.info("Running {} jobs!".format(
+            ic.format(len(self.filetree_jobs) + len(self.extract_jobs))))
         results = self.async_helper(self.extract_data, self.extract_jobs)
         results_grouped = self.sort_results(results)
         if write_results:
