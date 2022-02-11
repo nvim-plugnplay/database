@@ -15,6 +15,7 @@ import json
 import logging
 import os
 import sys
+import random
 import time
 from collections import Counter, defaultdict
 from typing import Any, Callable
@@ -219,7 +220,6 @@ class GenerateData(object):
         response = requests.get(
             self.base_url + str(page), auth=(self.client_id, self.client_secret))
         if response.status_code != 200:
-            logging.info("using load stars by page")
             logging.critical("Bad request {}".format(ic.format(response.status_code)))
 
         out = BaseRequestResponse(responses=response.json(),)
@@ -282,6 +282,7 @@ class GenerateData(object):
 
         if "commits_url" in plugin_dict:
 
+            time.sleep(random.random() * 3 + n_retries)
             commit_req = requests.get(
                 plugin_dict["commits_url"][:-6], auth=(self.client_id, self.client_secret),
             )
@@ -290,11 +291,9 @@ class GenerateData(object):
                 commit = commit_req.json()[-1]
                 plugin_data["commit"] = commit["sha"]
             else:
-                logging.info("using extractdata ")
                 logging.critical("Bad request {}".format(ic.format(commit_req.status_code)))
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
-                    time.sleep(20)
                     self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
@@ -330,15 +329,13 @@ class GenerateData(object):
         branch = d["default_branch"]
 
         tree_url = ("https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(repo, branch))
+        time.sleep(random.random() * 3 + n_retries)
         response = requests.get(tree_url, auth=(self.client_id, self.client_secret))
-        time.sleep(1)
 
         if response.status_code != 200:
-            logging.info("using make_html_request")
             logging.critical("Bad request {}".format(ic.format(response.status_code)))
             if response.status_code == 403 and n_retries < 10:
                 logging.info("retrying!")
-                time.sleep(20)
                 return self.get_filetree(d, n_retries + 1)
 
             return
@@ -525,7 +522,7 @@ class GenerateData(object):
 
 def main() -> None:
     """Main Function"""
-    dg = GenerateData(batch_size=20)
+    dg = GenerateData(batch_size=30)
     dc = dg()
     return dc
 
