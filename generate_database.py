@@ -14,8 +14,8 @@ import itertools as it
 import json
 import logging
 import os
-import sys
 import random
+import sys
 import time
 from collections import Counter, defaultdict
 from typing import Any, Callable
@@ -25,6 +25,7 @@ import tqdm
 from icecream import ic
 from joblib import Parallel, delayed
 from rich.logging import RichHandler
+from tqdm.contrib.logging import logging_redirect_tqdm
 
 from models import BaseRequestResponse
 
@@ -186,14 +187,16 @@ class GenerateData(object):
             loop = get_or_create_eventloop()
             results = []
             if self.use_batches:
-                for i in tqdm.tqdm(
-                        range(0,
-                              len(iterable) + self.batch_size, self.batch_size), desc=fn.__name__,
-                ):
-                    results += await asyncio.gather(*[
-                        loop.run_in_executor(None, functools.partial(fn, *j),
-                                            ) for j in iterable[i:i + self.batch_size]
-                    ])
+                with logging_redirect_tqdm():
+                    for i in tqdm.tqdm(
+                            range(0,
+                                  len(iterable) + self.batch_size, self.batch_size),
+                            desc=fn.__name__,
+                    ):
+                        results += await asyncio.gather(*[
+                            loop.run_in_executor(None, functools.partial(fn, *j),
+                                                ) for j in iterable[i:i + self.batch_size]
+                        ])
             else:
                 results += await asyncio.gather(
                     *[loop.run_in_executor(None, functools.partial(fn, *j),
@@ -433,11 +436,12 @@ class GenerateData(object):
         """
         loop = get_or_create_eventloop()
         results = []
-        for i in tqdm.tqdm(range(0, len(self.extract_jobs) + self.batch_size, self.batch_size)):
-            results += await asyncio.gather(*[
-                loop.run_in_executor(None, functools.partial(self.extract_data, *j),
-                                    ) for j in self.extract_jobs[i:i + self.batch_size]
-            ])
+        with logging_redirect_tqdm():
+            for i in tqdm.tqdm(range(0, len(self.extract_jobs) + self.batch_size, self.batch_size)):
+                results += await asyncio.gather(*[
+                    loop.run_in_executor(None, functools.partial(self.extract_data, *j),
+                                        ) for j in self.extract_jobs[i:i + self.batch_size]
+                ])
         return results
 
     @staticmethod
