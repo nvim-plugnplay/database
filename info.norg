@@ -1,0 +1,32 @@
+@document.meta
+  title: info
+  description:
+  authors: viv
+  categories:
+  created: 2022-01-28
+  version: 0.0.9
+@end
+
+* Current Stats
+    @code python
+    Stats
+    -----
+    ic| 'Success! Dumped', self.count - 1: 72, 'pages worth of plugins'
+    ic| 'Total plugins:', self.plugin_count: 2109
+    ic| 'Total unwanted fields:', self.unwanted_field_count: 291
+    ic| "Percentage of unwanted fields:": 'Percentage of unwanted fields:'
+        (self.unwanted_field_count / self.plugin_count) * 100: 13.79 %
+    ic| "Mean number of plugins per page:": 'Mean number of plugins per page:'
+        self.plugin_count / self.count: 28.89041095890411
+  @end
+
+* Notes
+ ** Error Code
+    We have to check if the status is 200 : otherwise we get an key error
+    - [-] Some changes might need to be made  on lines 166-178
+
+* TODO
+  - [ ]  Check extension if valid
+  - [ ] if extension valid we assume it is a dotfile
+  - [ ] if extension is not valid we can check if its in the ignore list then it is a plugin
+  - [ ] if that is not valid then we check if it a dot file?

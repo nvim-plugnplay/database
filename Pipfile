@@ -5,8 +5,13 @@ name = "pypi"
 
 [packages]
 requests = "*"
+icecream = "*"
+pydantic = "*"
+tqdm = "*"
+rich = "*"
 
 [dev-packages]
+python-dotenv = "*"
 
 [requires]
 python_version = "3.10"
