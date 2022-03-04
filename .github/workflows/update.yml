@@ -36,11 +36,8 @@ jobs:
           pipenv install --deploy --dev
 
       - name: Run pythonAuto
-        env:
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          SECRET_ID: ${{ secrets.SECRET_ID }}
         run: |
-          pipenv run python generate_database.py
+          CLIENT_ID=${{ secrets.CLIENT_ID }} SECRET_ID=${{ secrets.CLIENT_SECRET }} pipenv run python generate_database.py
 
       - name: Commit database changes
         run: |
