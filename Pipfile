@@ -9,6 +9,7 @@ icecream = "*"
 pydantic = "*"
 tqdm = "*"
 rich = "*"
+joblib = "*"
 
 [dev-packages]
 python-dotenv = "*"
