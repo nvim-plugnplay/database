@@ -151,8 +151,9 @@ class GenerateData(object):
         self.user_fmt = ic.format(self.user)
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
             self.user)
-        self.client_id = os.getenv("CLIENT_ID")
-        self.client_secret = os.getenv("SECRET_ID")
+
+        self.client_id = os.environ['CLIENT_ID']
+        self.client_secret = os.environ['SECRET_ID']
 
         if self.client_id is None or self.client_secret is None:
             logging.info(ic.format("Client Key not loaded"))
@@ -600,5 +601,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-#     __import__("dotenv").load_dotenv()
+    __import__("dotenv").load_dotenv(".env")
     main()
