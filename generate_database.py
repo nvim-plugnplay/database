@@ -155,9 +155,9 @@ class GenerateData(object):
         self.client_id = os.environ['CLIENT_ID']
         self.client_secret = os.environ['SECRET_ID']
 
-        if self.client_id is None or self.client_secret is None:
-            logging.info(ic.format("Client Key not loaded"))
-            return
+        if not self.client_id or not self.client_secret:
+            logging.info(
+                ic.format("Client id and secret not set, using defaults"))
 
         # perhaps export to a `constants` module
         self.wanted_fields = [
