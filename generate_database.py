@@ -532,6 +532,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    __import__("dotenv").load_dotenv("dev.env")
-
+    __import__("dotenv").load_dotenv()
     main()
