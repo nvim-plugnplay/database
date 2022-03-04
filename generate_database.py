@@ -595,7 +595,7 @@ class GenerateData(object):
 
 def main() -> None:
     """Main Function"""
-    dg = GenerateData(batch_size=15)
+    dg = GenerateData(batch_size=30)
     dc = dg()
     return dc
 
