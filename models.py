@@ -87,7 +87,6 @@ class BaseRequestResponseItem(BaseModel):
     watchers: Optional[int] = None
     default_branch: Optional[str] = None
 
-
 class BaseRequestResponse(BaseModel):
     """
     BaseRequestResponse
