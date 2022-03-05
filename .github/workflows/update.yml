@@ -51,6 +51,8 @@ jobs:
           if [[ ! -z $(git status -s) ]]; then
             git add database.json
             git commit -m "chore: update plugins database"
+            git add dotfiles.json
+            git commit -m "chore: update dotfiles database"
           fi
       - name: Push regenerated database
         uses: ad-m/github-push-action@master
