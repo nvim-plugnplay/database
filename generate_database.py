@@ -167,7 +167,7 @@ class GenerateData(object):
             "neovim-lua", "vim-config", "nvim-lua", "config-nvim",
         ]
         self.ignore_list = [
-            "lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"
+            "lspconfig", "snip", "lsp_config", "cmp", "coq", "neorg", "norg"
         ]
         self.extract_jobs: list[tuple[dict, bool]] = []
         self.filetree_jobs: list[tuple[str]] = []
