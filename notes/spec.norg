@@ -1,0 +1,358 @@
+@document.meta
+  title: spec
+  description:
+  authors: viv
+  categories:
+  created: 2022-03-06
+  version: 0.0.11
+@end
+
+* Json Spec
+ ** Json Matches Wanted_list
+    Refer to generate_database.py line /*158*/ following information would be saved to the database
+    @code python
+         "full_name", "description", "default_branch", "fork", "archived",
+         "private", "clone_url", "commits_url", "created_at", "updated_at",
+         "stargazers_count", "subscribers_count", "forks_count", "language",
+         "open_issues_count", "topics", "owner",
+    @end
+
+  *** Code Base Filter
+      @code comment
+      full_name -> str
+      description -> str
+      default_branch -> str
+      fork -> Int
+      archived -> Bool
+      private -> Bool
+      clone_url -> str
+      commits_url -> str
+      created_at -> str
+      updated_at -> str
+      stargazers_count -> int
+      subscribers_count -> int
+      forks_count -> int
+      language -> Str [Edge Case can be nill]
+      open_issues_count -> int
+      topics -> List of topics -> List can be empty []
+      owner -> Dict of following events
+              {
+              avater_url : str
+              events_url : str
+              followers_url :str
+              following_url : str
+              gist_url : str
+              gravater_id : str
+              html_url : str
+              id : int
+              login : str
+              node_id : str
+              organizations_url : str
+              repos_url : str
+              site_admin : bool
+              starred_url
+              subscriptions_url : str
+              type : str
+              url : str
+              }
+      @end
+
+   **** Required Data
+        Majority of the data is required, excluding the following items
+          @code
+               {
+               avater_url,
+               events_url,
+               gravater_id,
+               html_url,
+               node_id,
+               site_admin,
+               }
+               Above data can be thrown away.
+          @end
+
+  *** Json
+     @code
+     PluginName : {
+          archived : bool
+          clone_url : str
+          commit : str (Latest commit )
+          default_branch : str
+          description : str
+          fork : bool
+          forks_count : int
+          full_name : owner/PluginName
+          language : Main Language
+          open issues_count : 0
+          "owner": {
+               "avatar_url":
+               "events_url":
+               "followers_url":
+               "following_url":
+               "gists_url":
+               "gravatar_id": "",
+               "html_url":
+               "id":
+               "login": ,
+               "node_id": ",
+               "organizations_url": ",
+               "received_events_url": ",
+               "repos_url":
+               "site_admin":
+               "starred_url":
+               "subscriptions_url":
+               "type": ,
+               "url": "
+          },
+          "private": ,
+          "stargazers_count": ,
+          "topics": List of topics
+          "updated_at": Mose rcent update
+     }
+     @end
+
+    | $Example$
+     Telescope Example
+    | _
+    @code json
+    "telescope.nvim": {
+        "archived": false,
+        "clone_url": "https://github.com/nvim-telescope/telescope.nvim.git",
+        "commit": "5060f3f0ab33504e728a8673dc08679947c35ded",
+        "created_at": "2020-07-15T04:04:58Z",
+        "default_branch": "master",
+        "description": "Find, Filter, Preview, Pick. All lua, all the time.",
+        "fork": false,
+        "forks_count": 377,
+        "full_name": "nvim-telescope/telescope.nvim",
+        "language": "Lua",
+        "open_issues_count": 183,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/74419533?v=4",
+            "events_url": "https://api.github.com/users/nvim-telescope/events{/privacy}",
+            "followers_url": "https://api.github.com/users/nvim-telescope/followers",
+            "following_url": "https://api.github.com/users/nvim-telescope/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nvim-telescope/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/nvim-telescope",
+            "id": 74419533,
+            "login": "nvim-telescope",
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjc0NDE5NTMz",
+            "organizations_url": "https://api.github.com/users/nvim-telescope/orgs",
+            "received_events_url": "https://api.github.com/users/nvim-telescope/received_events",
+            "repos_url": "https://api.github.com/users/nvim-telescope/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/nvim-telescope/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nvim-telescope/subscriptions",
+            "type": "Organization",
+            "url": "https://api.github.com/users/nvim-telescope"
+        },
+        "private": false,
+        "stargazers_count": 5060,
+        "topics": [
+            "lua",
+            "neovim",
+            "nvim",
+            "nvim-lua"
+        ],
+        "updated_at": "2022-03-06T17:28:51Z"
+    },
+
+    @end
+
+
+ ** Request Info
+    - archived
+          > is it archived or not
+    - clone_url
+          > Link to clone the url
+    - commit
+          > Latest commit
+    - created_at
+          > Creation date of the repo
+    - default_branch
+          > Main Master etc
+    - description
+          > description of the repo [normally at the side]
+    - fork
+          > Has the repo been forked
+    - fork_count
+          > How many times has it been forked
+    - full_name
+          > full name i.e username/reponame
+    - language
+          > Main Language used
+    - open_issues_count
+          > How many issues does the plugin/dotfile have ?
+    - private
+          > Is it private {Kinda a stupid one}
+    - stargazer_count
+          > How many people started this repo
+    - topics
+          > List containing topics like lua, plugin etc ...
+    - updated_at
+          > Last updated at
+    - owners
+          > Details of the owners main information to take from this is the following
+               1. gists_url
+               2. html_url
+               3. login [optional]
+               4. Url i.e users/name
+
+ ** Unwanted Fields and ignore_list
+    The current database allows a filter, between what we want and what data we do not need i.e dotfiles
+    Such that in this case, we exclude dotfiles from the search and create another json file for that.
+
+     Current Scope of finding dotfiles are based on the following items
+
+     @code python
+          "dotfiles", "dots", "nvim-dotfiles", "nvim-qt", "nvim-config",
+          "neovim-lua", "vim-config", "nvim-lua", "config-nvim",
+     @end
+
+     In some edge cases certain dotfiles contain keywords that need to be ignored such that it would register as a plugin
+     @code python
+          "lspconfig", "snip", "lsp_config", "cmp", "coq", "neorg", "norg"
+     @end
+     Strings listed above will allow any plugin that contain those key words to be registered as a plugin.
+
+* Dotfiles */^IMPORTANT^/*
+
+ ** Note
+    Allot of plugins currently are not being registered as dotfiles and hence go to this edge case to scan for certain file types :
+    currently you will have to scan *Both* /dotfiles.json and database.json/ for plugins
+
+    - This is a huge issue and will have to be rectified as soon as possible
+
+    Example shown below :
+    @code json
+    "neogen": {
+        "archived": false,
+        "clone_url": "https://github.com/danymat/neogen.git",
+        "commit": "47b4a74a2b95e4fcf779024addaad16462c1274d",
+        "created_at": "2021-08-15T20:03:20Z",
+        "default_branch": "main",
+        "description": "A better annotation generator. Supports multiple languages and annotation conventions.",
+        "fork": false,
+        "forks_count": 18,
+        "full_name": "danymat/neogen",
+        "language": "Lua",
+        "open_issues_count": 5,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/5306901?v=4",
+            "events_url": "https://api.github.com/users/danymat/events{/privacy}",
+            "followers_url": "https://api.github.com/users/danymat/followers",
+            "following_url": "https://api.github.com/users/danymat/following{/other_user}",
+            "gists_url": "https://api.github.com/users/danymat/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/danymat",
+            "id": 5306901,
+            "login": "danymat",
+            "node_id": "MDQ6VXNlcjUzMDY5MDE=",
+            "organizations_url": "https://api.github.com/users/danymat/orgs",
+            "received_events_url": "https://api.github.com/users/danymat/received_events",
+            "repos_url": "https://api.github.com/users/danymat/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/danymat/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/danymat/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/danymat"
+        },
+        "private": false,
+        "stargazers_count": 363,
+        "topics": [
+            "annotation",
+            "comment",
+            "lua",
+            "neovim",
+            "neovim-annotation",
+            "neovim-documentation",
+            "neovim-lua",
+            "neovim-plugin",
+            "nvim"
+        ],
+        "updated_at": "2022-03-06T14:07:20Z"
+    },
+    @end
+
+* Request Response item Optional Values that can be used :
+   Items which have the base request for all fields
+   I.E /These are all optional param that the json file can intake/  for the wanted_fields
+ ** Items
+      id: Optional[int]
+      node_id: Optional[str]
+      name: Optional[str]
+      full_name: Optional[str]
+      private: Optional[bool]
+      owner: Optional[Any]
+      html_url: Optional[str]
+      description: Optional[str]
+      fork: Optional[bool]
+      url: Optional[str]
+      forks_url: Optional[str]
+      keys_url: Optional[str]
+      collaborators_url: Optional[str]
+      teams_url: Optional[str]
+      hooks_url: Optional[str]
+      issue_events_url: Optional[str]
+      events_url: Optional[str]
+      assignees_url: Optional[str]
+      branches_url: Optional[str]
+      tags_url: Optional[str]
+      blobs_url: Optional[str]
+      git_tags_url: Optional[str]
+      git_refs_url: Optional[str]
+      trees_url: Optional[str]
+      statuses_url: Optional[str]
+      languages_url: Optional[str]
+      stargazers_url: Optional[str]
+      contributors_url: Optional[str]
+      subscribers_url: Optional[str]
+      subscription_url: Optional[str]
+      commits_url: Optional[str]
+      git_commits_url: Optional[str]
+      comments_url: Optional[str]
+      issue_comment_url: Optional[str]
+      contents_url: Optional[str]
+      compare_url: Optional[str]
+      merges_url: Optional[str]
+      archive_url: Optional[str]
+      downloads_url: Optional[str]
+      issues_url: Optional[str]
+      pulls_url: Optional[str]
+      milestones_url: Optional[str]
+      notifications_url: Optional[str]
+      labels_url: Optional[str]
+      releases_url: Optional[str]
+      deployments_url: Optional[str]
+      created_at: Optional[str]
+      updated_at: Optional[str]
+      pushed_at: Optional[str]
+      git_url: Optional[str]
+      ssh_url: Optional[str]
+      clone_url: Optional[str]
+      svn_url: Optional[str]
+      homepage: Optional[str]
+      size: Optional[int]
+      stargazers_count: Optional[int]
+      watchers_count: Optional[int]
+      language: Optional[str]
+      has_issues: Optional[bool]
+      has_projects: Optional[bool]
+      has_downloads: Optional[bool]
+      has_wiki: Optional[bool]
+      has_pages: Optional[bool]
+      forks_count: Optional[int]
+      mirror_url: Optional[str]
+      archived: Optional[bool]
+      disabled: Optional[bool]
+      open_issues_count: Optional[int]
+      license: Optional[Any]
+      allow_forking: Optional[bool]
+      is_template: Optional[bool]
+      topics: Optional[list]
+      visibility: Optional[str]
+      forks: Optional[int]
+      open_issues: Optional[int]
+      watchers: Optional[int]
+      default_branch: Optional[str]
