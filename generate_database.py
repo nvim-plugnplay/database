@@ -450,6 +450,7 @@ class GenerateData(object):
         filetrees = self.async_helper(
             lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
         filetrees = [x for x in filetrees if x[-1] is not None]
+        # TODO : Fix this such that it does not look further than lua/ [HIGH PRIORITY]
         for res in filetrees:
             tree = res[-1]
             tree_files = [
