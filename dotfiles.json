@@ -131,7 +131,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2022-03-08T18:41:20Z"
+        "updated_at": "2022-03-08T20:08:53Z"
     },
     "BobVim": {
         "archived": false,
@@ -757,7 +757,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 8242,
+        "stargazers_count": 8244,
         "topics": [
             "chad",
             "dotfiles",
@@ -778,7 +778,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-03-08T17:18:00Z"
+        "updated_at": "2022-03-08T20:13:31Z"
     },
     "NvimConfig": {
         "archived": false,
@@ -967,6 +967,59 @@
             "starvim"
         ],
         "updated_at": "2022-03-06T13:26:04Z"
+    },
+    "Svimming-in-NeoVim": {
+        "archived": false,
+        "clone_url": "https://github.com/yashsavani/Svimming-in-NeoVim.git",
+        "commit": "d7bcdde373df548e373e1af69bd644997291badf",
+        "contents_url": "https://api.github.com/repos/yashsavani/Svimming-in-NeoVim/contents/{+path}",
+        "created_at": "2021-06-21T18:38:59Z",
+        "default_branch": "main",
+        "description": "A beautiful and fast neovim config written in lua.",
+        "fork": false,
+        "forks_count": 1,
+        "full_name": "yashsavani/Svimming-in-NeoVim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/6228832?v=4",
+            "events_url": "https://api.github.com/users/yashsavani/events{/privacy}",
+            "followers_url": "https://api.github.com/users/yashsavani/followers",
+            "following_url": "https://api.github.com/users/yashsavani/following{/other_user}",
+            "gists_url": "https://api.github.com/users/yashsavani/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/yashsavani",
+            "id": 6228832,
+            "login": "yashsavani",
+            "node_id": "MDQ6VXNlcjYyMjg4MzI=",
+            "organizations_url": "https://api.github.com/users/yashsavani/orgs",
+            "received_events_url": "https://api.github.com/users/yashsavani/received_events",
+            "repos_url": "https://api.github.com/users/yashsavani/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/yashsavani/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/yashsavani/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/yashsavani"
+        },
+        "private": false,
+        "stargazers_count": 3,
+        "topics": [
+            "lua",
+            "luajit",
+            "neovim",
+            "neovim-config",
+            "neovim-configuration",
+            "neovim-dotfiles",
+            "neovim-lua",
+            "nvim",
+            "nvim-configs",
+            "nvim-configuration",
+            "vim",
+            "vim-config",
+            "vim-configuration",
+            "vimrc"
+        ],
+        "updated_at": "2021-12-19T22:06:12Z"
     },
     "TezVim": {
         "archived": false,
@@ -1235,6 +1288,44 @@
         ],
         "updated_at": "2022-03-07T02:34:28Z"
     },
+    "WVim": {
+        "archived": false,
+        "clone_url": "https://github.com/wmilou/WVim.git",
+        "commit": "c42f7f98d776279e62cbb3ba50af75aaee7a8fd7",
+        "contents_url": "https://api.github.com/repos/wmilou/WVim/contents/{+path}",
+        "created_at": "2021-03-13T04:51:36Z",
+        "default_branch": "master",
+        "description": "Vim configuration and instalation developed by Wedsley Fernando, clone and be happy ",
+        "fork": false,
+        "forks_count": 0,
+        "full_name": "wmilou/WVim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/43588223?v=4",
+            "events_url": "https://api.github.com/users/wmilou/events{/privacy}",
+            "followers_url": "https://api.github.com/users/wmilou/followers",
+            "following_url": "https://api.github.com/users/wmilou/following{/other_user}",
+            "gists_url": "https://api.github.com/users/wmilou/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/wmilou",
+            "id": 43588223,
+            "login": "wmilou",
+            "node_id": "MDQ6VXNlcjQzNTg4MjIz",
+            "organizations_url": "https://api.github.com/users/wmilou/orgs",
+            "received_events_url": "https://api.github.com/users/wmilou/received_events",
+            "repos_url": "https://api.github.com/users/wmilou/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/wmilou/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/wmilou/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/wmilou"
+        },
+        "private": false,
+        "stargazers_count": 3,
+        "topics": [],
+        "updated_at": "2021-10-03T20:32:17Z"
+    },
     "alacritty.xplr": {
         "archived": false,
         "clone_url": "https://github.com/sayanarijit/alacritty.xplr.git",
@@ -1494,6 +1585,50 @@
         "stargazers_count": 12,
         "topics": [],
         "updated_at": "2022-03-06T06:36:51Z"
+    },
+    "cheovim": {
+        "archived": false,
+        "clone_url": "https://github.com/NTBBloodbath/cheovim.git",
+        "commit": "1f4cc5669d5bbfd296aa3c6091b651e19e83ce68",
+        "contents_url": "https://api.github.com/repos/NTBBloodbath/cheovim/contents/{+path}",
+        "created_at": "2021-05-21T13:53:56Z",
+        "default_branch": "main",
+        "description": "Neovim configuration switcher written in Lua. Inspired by chemacs.",
+        "fork": false,
+        "forks_count": 13,
+        "full_name": "NTBBloodbath/cheovim",
+        "language": "Lua",
+        "open_issues_count": 5,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/36456999?v=4",
+            "events_url": "https://api.github.com/users/NTBBloodbath/events{/privacy}",
+            "followers_url": "https://api.github.com/users/NTBBloodbath/followers",
+            "following_url": "https://api.github.com/users/NTBBloodbath/following{/other_user}",
+            "gists_url": "https://api.github.com/users/NTBBloodbath/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/NTBBloodbath",
+            "id": 36456999,
+            "login": "NTBBloodbath",
+            "node_id": "MDQ6VXNlcjM2NDU2OTk5",
+            "organizations_url": "https://api.github.com/users/NTBBloodbath/orgs",
+            "received_events_url": "https://api.github.com/users/NTBBloodbath/received_events",
+            "repos_url": "https://api.github.com/users/NTBBloodbath/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/NTBBloodbath/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/NTBBloodbath/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/NTBBloodbath"
+        },
+        "private": false,
+        "stargazers_count": 146,
+        "topics": [
+            "config-management",
+            "lua",
+            "neovim",
+            "neovim-lua",
+            "switching-configs"
+        ],
+        "updated_at": "2022-03-03T14:21:51Z"
     },
     "chezmoi-dotfiles": {
         "archived": false,
@@ -3075,6 +3210,44 @@
         ],
         "updated_at": "2022-02-28T21:39:27Z"
     },
+    "neovhy": {
+        "archived": false,
+        "clone_url": "https://github.com/vhyrro/neovhy.git",
+        "commit": "ca65ed728aaa643b9fa04156003f30c4b53da353",
+        "contents_url": "https://api.github.com/repos/vhyrro/neovhy/contents/{+path}",
+        "created_at": "2021-06-12T07:40:10Z",
+        "default_branch": "main",
+        "description": "I had no better name for it I swear",
+        "fork": false,
+        "forks_count": 2,
+        "full_name": "vhyrro/neovhy",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/76052559?v=4",
+            "events_url": "https://api.github.com/users/vhyrro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/vhyrro/followers",
+            "following_url": "https://api.github.com/users/vhyrro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vhyrro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/vhyrro",
+            "id": 76052559,
+            "login": "vhyrro",
+            "node_id": "MDQ6VXNlcjc2MDUyNTU5",
+            "organizations_url": "https://api.github.com/users/vhyrro/orgs",
+            "received_events_url": "https://api.github.com/users/vhyrro/received_events",
+            "repos_url": "https://api.github.com/users/vhyrro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/vhyrro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vhyrro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/vhyrro"
+        },
+        "private": false,
+        "stargazers_count": 22,
+        "topics": [],
+        "updated_at": "2022-01-31T17:12:06Z"
+    },
     "neovim": {
         "archived": false,
         "clone_url": "https://github.com/amazingefren/neovim.git",
@@ -3894,7 +4067,7 @@
     "nvim-config-bistro": {
         "archived": false,
         "clone_url": "https://github.com/mwebb387/nvim-config-bistro.git",
-        "commit": "5d1dc19d98295d246704159b6456f8a8b2cae0b0",
+        "commit": "83f3b3154548a8bd093ffa898ee81108df21c7d7",
         "contents_url": "https://api.github.com/repos/mwebb387/nvim-config-bistro/contents/{+path}",
         "created_at": "2021-08-17T18:23:19Z",
         "default_branch": "main",
