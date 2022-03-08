@@ -159,7 +159,7 @@ class GenerateData(object):
             "full_name", "description", "default_branch", "fork", "archived",
             "private", "clone_url", "commits_url", "created_at", "updated_at",
             "stargazers_count", "subscribers_count", "forks_count", "language",
-            "open_issues_count", "topics", "owner",
+            "open_issues_count", "topics", "owner", "contents_url",
         ]
         # this is not accurate but it will be good enough for now.
         self.unwanted_config = [
@@ -341,7 +341,7 @@ class GenerateData(object):
 
         return out
 
-    def get_filetree(self, d: dict, n_retries: int = 0):
+    def get_filetree(self, d: dict, n_retries: int = 0, url=None) -> dict:
         """
         makes a single html/tree request, results are aggregated and parsed in the main thread
 
@@ -356,26 +356,32 @@ class GenerateData(object):
 
         """
 
-        repo = d["full_name"]
-        branch = d["default_branch"]
+        # repo = d["contents_url"]
+        if url is None:
+            url = f"https://api.github.com/repos/{d['full_name']}/contents"
 
-        tree_url = (
-            "https://api.github.com/repos/{}/git/trees/{}?recursive=1".format(
-                repo, branch))
+        logging.info(ic.format("repo -> ", url))
+        # tree_url = ("https://api.github.com/repos/{}/contents".format(repo))
+        #
+        files = []
         time.sleep(random.random() * 3 + n_retries)
-        response = requests.get(
-            tree_url, auth=(self.client_id, self.client_secret))
+        response = requests.get(url, auth=(self.client_id, self.client_secret),)
 
-        if response.status_code != 200:
-            logging.critical(
-                "Bad request {}".format(ic.format(response.status_code)))
-            if response.status_code == 403 and n_retries < 10:
-                logging.info("retrying!")
-                return self.get_filetree(d, n_retries + 1)
+        while url:
+            if response.status_code != 200:
+                logging.critical(
+                    "Bad request {}".format(ic.format(response.status_code)))
+                if response.status_code == 403 and n_retries < 10:
+                    logging.info("Retrying...")
+                    self.get_filetree(d, n_retries + 1, url)
+            data = response.json()
 
-            return
-
-        return response.json()
+            if isinstance(data, list):
+                for item in data:
+                    if "type" in item and item['type'] == 'file':
+                        files.append(item['name'])
+            url = response.links.get('next', {}).get('url')
+        return files
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -451,16 +457,13 @@ class GenerateData(object):
             lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
         filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
+            __import__('pdb').set_trace()
             tree = res[-1]
-            tree_files = [
-                f["path"] for f in tree["tree"] if f["type"] == "blob"
-            ]
-            if "init.vim" in tree_files or "init.lua" in tree_files:
-                self.extract_jobs.append((res[0], True))
-                type_counts.update(["dotfile"])
-
-            else:
+            if "init.vim" in tree or "init.lua" in tree:
                 self.extract_jobs.append((res[0], False))
+                type_counts.update(["dotfile"])
+            else:
+                self.extract_jobs.append((res[0], True))
                 type_counts.update(["plugin"])
 
         logging.info(ic.format(type_counts))
