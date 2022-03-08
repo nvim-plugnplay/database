@@ -376,8 +376,10 @@ class GenerateData(object):
                     self.get_filetree(d, n_retries + 1, url)
             data = response.json()
 
+            # have to check isntance
             if isinstance(data, list):
                 for item in data:
+                    # Failures occour here - hence the double check
                     if "type" in item and item['type'] == 'file':
                         files.append(item['name'])
             url = response.links.get('next', {}).get('url')
@@ -457,7 +459,7 @@ class GenerateData(object):
             lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
         filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
-            __import__('pdb').set_trace()
+            # __import__('pdb').set_trace()
             tree = res[-1]
             if "init.vim" in tree or "init.lua" in tree:
                 self.extract_jobs.append((res[0], False))
