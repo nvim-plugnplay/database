@@ -118,7 +118,7 @@
             "url": "https://api.github.com/users/kabinspace"
         },
         "private": false,
-        "stargazers_count": 2300,
+        "stargazers_count": 2302,
         "topics": [
             "astrovim",
             "ide",
@@ -131,7 +131,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2022-03-26T21:43:48Z"
+        "updated_at": "2022-03-27T06:54:01Z"
     },
     "BobVim": {
         "archived": false,
@@ -273,7 +273,7 @@
             "vscode",
             "vue"
         ],
-        "updated_at": "2022-03-24T20:48:59Z"
+        "updated_at": "2022-03-27T05:58:01Z"
     },
     "Death.NeoVim": {
         "archived": false,
@@ -583,7 +583,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 8014,
+        "stargazers_count": 8017,
         "topics": [
             "formatters",
             "ide",
@@ -601,7 +601,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-03-27T03:06:52Z"
+        "updated_at": "2022-03-27T08:08:09Z"
     },
     "NeoCode": {
         "archived": false,
@@ -734,10 +734,10 @@
         "default_branch": "main",
         "description": "An attempt to make neovim cli functional like an IDE while being very beautiful, blazing fast startuptime ~ 0.06 secs",
         "fork": false,
-        "forks_count": 533,
+        "forks_count": 534,
         "full_name": "NvChad/NvChad",
         "language": "Lua",
-        "open_issues_count": 10,
+        "open_issues_count": 11,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/88978340?v=4",
             "events_url": "https://api.github.com/users/NvChad/events{/privacy}",
@@ -873,7 +873,7 @@
     "SpaceVim": {
         "archived": false,
         "clone_url": "https://github.com/SpaceVim/SpaceVim.git",
-        "commit": "51c8f81b93648cf69d06a42d7e3ab6ed10cf148f",
+        "commit": "ab631a2513fc5a6fc592ab9e50086fbe7ac5a231",
         "contents_url": "https://api.github.com/repos/SpaceVim/SpaceVim/contents/{+path}",
         "created_at": "2016-12-26T04:40:55Z",
         "default_branch": "master",
@@ -1117,13 +1117,13 @@
     "VapourNvim": {
         "archived": false,
         "clone_url": "https://github.com/VapourNvim/VapourNvim.git",
-        "commit": "90941f60d41d9359c18817785b7d92593d13a61e",
+        "commit": "b0735402a03e5e7c68c4aa7632f342b633074d4e",
         "contents_url": "https://api.github.com/repos/VapourNvim/VapourNvim/contents/{+path}",
         "created_at": "2021-03-16T15:05:56Z",
         "default_branch": "main",
         "description": "A NeoVim config for THE ULTIMATE vim IDE-like experience.",
         "fork": false,
-        "forks_count": 39,
+        "forks_count": 40,
         "full_name": "VapourNvim/VapourNvim",
         "language": "Lua",
         "open_issues_count": 7,
@@ -1890,7 +1890,7 @@
             "url": "https://api.github.com/users/Axarva"
         },
         "private": false,
-        "stargazers_count": 1096,
+        "stargazers_count": 1097,
         "topics": [
             "dotfiles",
             "eww",
@@ -1898,7 +1898,7 @@
             "widgets",
             "xmonad"
         ],
-        "updated_at": "2022-03-26T17:41:57Z"
+        "updated_at": "2022-03-27T07:06:15Z"
     },
     "dotfiles-arch": {
         "archived": false,
@@ -2632,7 +2632,7 @@
             "url": "https://api.github.com/users/nshen"
         },
         "private": false,
-        "stargazers_count": 289,
+        "stargazers_count": 290,
         "topics": [
             "learn-vim",
             "learning-by-doing",
@@ -2640,7 +2640,7 @@
             "nvim",
             "vimrc"
         ],
-        "updated_at": "2022-03-27T03:42:21Z"
+        "updated_at": "2022-03-27T06:06:39Z"
     },
     "lite-xl-vibe": {
         "archived": false,
@@ -3846,7 +3846,7 @@
         "default_branch": "master",
         "description": "Neovim custom configuration, oriented for full stack developers (rails, ruby, php, html, css, SCSS, javascript)",
         "fork": false,
-        "forks_count": 31,
+        "forks_count": 32,
         "full_name": "crivotz/nv-ide",
         "language": "Lua",
         "open_issues_count": 0,
