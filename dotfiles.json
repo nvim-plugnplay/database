@@ -96,7 +96,7 @@
         "forks_count": 124,
         "full_name": "kabinspace/AstroVim",
         "language": "Lua",
-        "open_issues_count": 4,
+        "open_issues_count": 5,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/91150148?v=4",
             "events_url": "https://api.github.com/users/kabinspace/events{/privacy}",
@@ -118,7 +118,7 @@
             "url": "https://api.github.com/users/kabinspace"
         },
         "private": false,
-        "stargazers_count": 2317,
+        "stargazers_count": 2318,
         "topics": [
             "astrovim",
             "ide",
@@ -131,7 +131,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2022-03-29T03:51:27Z"
+        "updated_at": "2022-03-29T06:13:36Z"
     },
     "BobVim": {
         "archived": false,
@@ -252,7 +252,7 @@
             "url": "https://api.github.com/users/CosmicNvim"
         },
         "private": false,
-        "stargazers_count": 408,
+        "stargazers_count": 409,
         "topics": [
             "dotfiles",
             "hacktoberfest2021",
@@ -273,7 +273,7 @@
             "vscode",
             "vue"
         ],
-        "updated_at": "2022-03-28T09:37:50Z"
+        "updated_at": "2022-03-29T08:10:33Z"
     },
     "Death.NeoVim": {
         "archived": false,
@@ -583,7 +583,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 8037,
+        "stargazers_count": 8040,
         "topics": [
             "formatters",
             "ide",
@@ -601,7 +601,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-03-29T03:50:26Z"
+        "updated_at": "2022-03-29T08:14:36Z"
     },
     "NeoCode": {
         "archived": false,
@@ -734,7 +734,7 @@
         "default_branch": "main",
         "description": "An attempt to make neovim cli functional like an IDE while being very beautiful, blazing fast startuptime ~ 0.06 secs",
         "fork": false,
-        "forks_count": 533,
+        "forks_count": 534,
         "full_name": "NvChad/NvChad",
         "language": "Lua",
         "open_issues_count": 10,
@@ -759,7 +759,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 8404,
+        "stargazers_count": 8405,
         "topics": [
             "chad",
             "dotfiles",
@@ -780,7 +780,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-03-29T04:05:04Z"
+        "updated_at": "2022-03-29T05:02:10Z"
     },
     "NvimConfig": {
         "archived": false,
@@ -904,7 +904,7 @@
             "url": "https://api.github.com/users/SpaceVim"
         },
         "private": false,
-        "stargazers_count": 17973,
+        "stargazers_count": 17972,
         "topics": [
             "awesome",
             "editor",
@@ -918,7 +918,7 @@
             "vim-distribution",
             "vimrc"
         ],
-        "updated_at": "2022-03-28T15:39:40Z"
+        "updated_at": "2022-03-29T05:52:03Z"
     },
     "StarVim": {
         "archived": true,
@@ -1890,7 +1890,7 @@
             "url": "https://api.github.com/users/Axarva"
         },
         "private": false,
-        "stargazers_count": 1096,
+        "stargazers_count": 1097,
         "topics": [
             "dotfiles",
             "eww",
@@ -1898,7 +1898,7 @@
             "widgets",
             "xmonad"
         ],
-        "updated_at": "2022-03-28T13:36:42Z"
+        "updated_at": "2022-03-29T05:42:48Z"
     },
     "dotfiles-arch": {
         "archived": false,
@@ -3840,7 +3840,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
-        "commit": "620b0d6c7595d87a2339274201ea3de54ce57648",
+        "commit": "077296d4cb986c12d00c6ef6e21dbdeda84f217c",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
@@ -4011,7 +4011,7 @@
     "nvim-config": {
         "archived": false,
         "clone_url": "https://github.com/jdhao/nvim-config.git",
-        "commit": "f10f6883748903546690476404a291318efaa283",
+        "commit": "2b24d0794e95ce45e9bbd346c99a3bd76f127102",
         "contents_url": "https://api.github.com/repos/jdhao/nvim-config/contents/{+path}",
         "created_at": "2019-04-25T15:20:42Z",
         "default_branch": "master",
@@ -4839,7 +4839,7 @@
     "nvim-package-specification": {
         "archived": false,
         "clone_url": "https://github.com/nvim-lua/nvim-package-specification.git",
-        "commit": "9d4e4cb89b1c474e758f19badd6cc0feebe2c725",
+        "commit": "3aed4d11e8595fde7a21e0fc68c64e20a897b6f1",
         "contents_url": "https://api.github.com/repos/nvim-lua/nvim-package-specification/contents/{+path}",
         "created_at": "2022-02-06T18:53:22Z",
         "default_branch": "master",
@@ -4848,7 +4848,7 @@
         "forks_count": 2,
         "full_name": "nvim-lua/nvim-package-specification",
         "language": "Lua",
-        "open_issues_count": 7,
+        "open_issues_count": 6,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -4870,9 +4870,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 58,
+        "stargazers_count": 64,
         "topics": [],
-        "updated_at": "2022-03-27T10:46:16Z"
+        "updated_at": "2022-03-29T07:18:50Z"
     },
     "nvim-reproduce-zsh-suggestions": {
         "archived": false,
@@ -5295,7 +5295,7 @@
         "forks_count": 133,
         "full_name": "ayamir/nvimdots",
         "language": "Lua",
-        "open_issues_count": 2,
+        "open_issues_count": 3,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/61657399?v=4",
             "events_url": "https://api.github.com/users/ayamir/events{/privacy}",
@@ -5669,7 +5669,7 @@
     "titan": {
         "archived": false,
         "clone_url": "https://github.com/skbolton/titan.git",
-        "commit": "27924d5194235ab19c0b532062769eaf7db8c18e",
+        "commit": "6bf940aff46db0fb4dc53148ad8a6a523f9cad4c",
         "contents_url": "https://api.github.com/repos/skbolton/titan/contents/{+path}",
         "created_at": "2019-02-03T23:50:35Z",
         "default_branch": "main",
