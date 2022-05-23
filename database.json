@@ -46,7 +46,7 @@
         "default_branch": "main",
         "description": "42 header in lua universe",
         "fork": false,
-        "forks_count": 0,
+        "forks_count": 1,
         "full_name": "abellaismail7/42header.nvim",
         "language": "Lua",
         "open_issues_count": 0,
@@ -455,12 +455,12 @@
             "url": "https://api.github.com/users/KSP-CKAN"
         },
         "private": false,
-        "stargazers_count": 1468,
+        "stargazers_count": 1469,
         "topics": [
             "ckan",
             "ksp"
         ],
-        "updated_at": "2022-05-23T06:45:28Z"
+        "updated_at": "2022-05-23T18:00:43Z"
     },
     "COBOL.vim": {
         "archived": false,
@@ -666,7 +666,7 @@
             "treesitter",
             "vim-commentary"
         ],
-        "updated_at": "2022-05-23T15:40:33Z"
+        "updated_at": "2022-05-23T20:15:36Z"
     },
     "CompetitiveProgramming": {
         "archived": false,
@@ -1052,7 +1052,7 @@
         "default_branch": "master",
         "description": "A mod for the game \"The Binding of Isaac: Rebirth\" that displays useful informations for items, trinkets, rooms and more!",
         "fork": false,
-        "forks_count": 56,
+        "forks_count": 57,
         "full_name": "wofsauge/External-Item-Descriptions",
         "language": "Lua",
         "open_issues_count": 17,
@@ -1544,10 +1544,10 @@
         "default_branch": "main",
         "description": "Just Another Buffer Switcher for Neovim",
         "fork": false,
-        "forks_count": 4,
+        "forks_count": 5,
         "full_name": "matbme/JABS.nvim",
         "language": "Lua",
-        "open_issues_count": 4,
+        "open_issues_count": 5,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/48367298?v=4",
             "events_url": "https://api.github.com/users/matbme/events{/privacy}",
@@ -1589,7 +1589,7 @@
         "forks_count": 55,
         "full_name": "Kareadita/Kavita",
         "language": "C#",
-        "open_issues_count": 79,
+        "open_issues_count": 81,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/75760308?v=4",
             "events_url": "https://api.github.com/users/Kareadita/events{/privacy}",
@@ -1611,7 +1611,7 @@
             "url": "https://api.github.com/users/Kareadita"
         },
         "private": false,
-        "stargazers_count": 1158,
+        "stargazers_count": 1159,
         "topics": [
             "cbz",
             "comics",
@@ -1634,7 +1634,7 @@
             "ubooquity",
             "windows"
         ],
-        "updated_at": "2022-05-23T04:12:15Z"
+        "updated_at": "2022-05-23T18:06:35Z"
     },
     "LDoc": {
         "archived": false,
@@ -2002,13 +2002,13 @@
             "url": "https://api.github.com/users/molleweide"
         },
         "private": false,
-        "stargazers_count": 34,
+        "stargazers_count": 35,
         "topics": [
             "lua",
             "neovim",
             "snippets-collection"
         ],
-        "updated_at": "2022-05-21T22:17:45Z"
+        "updated_at": "2022-05-23T19:17:39Z"
     },
     "LunarChad": {
         "archived": false,
@@ -2068,7 +2068,7 @@
         "default_branch": "main",
         "description": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
         "fork": false,
-        "forks_count": 7025,
+        "forks_count": 7024,
         "full_name": "microsoft/ML-For-Beginners",
         "language": "Jupyter Notebook",
         "open_issues_count": 3,
@@ -2093,7 +2093,7 @@
             "url": "https://api.github.com/users/microsoft"
         },
         "private": false,
-        "stargazers_count": 36238,
+        "stargazers_count": 36242,
         "topics": [
             "data-science",
             "education",
@@ -2107,7 +2107,7 @@
             "scikit-learn",
             "scikit-learn-python"
         ],
-        "updated_at": "2022-05-23T16:09:57Z"
+        "updated_at": "2022-05-23T20:16:13Z"
     },
     "MarkdownHelp.nvim": {
         "archived": false,
@@ -2219,7 +2219,7 @@
             "url": "https://api.github.com/users/massgravel"
         },
         "private": false,
-        "stargazers_count": 12891,
+        "stargazers_count": 12894,
         "topics": [
             "activator",
             "hwid",
@@ -2229,7 +2229,7 @@
             "massgravel",
             "online"
         ],
-        "updated_at": "2022-05-23T16:11:47Z"
+        "updated_at": "2022-05-23T19:19:28Z"
     },
     "NVelox": {
         "archived": false,
@@ -2716,6 +2716,36 @@
         "topics": [],
         "updated_at": "2021-12-12T05:43:39Z"
     },
+    "Nvimfy": {
+        "archived": false,
+        "clone_url": "https://github.com/ayesumit/Nvimfy.git",
+        "contents_url": "https://api.github.com/repos/ayesumit/Nvimfy/contents/{+path}",
+        "created_at": "2021-08-15T20:00:03Z",
+        "default_branch": "main",
+        "description": "\ud83c\udf0c presenting neovim for all screens ! - from Text Editor to a Full Featured IDE... ",
+        "fork": false,
+        "forks_count": 0,
+        "full_name": "ayesumit/Nvimfy",
+        "language": "Lua",
+        "open_issues_count": 1,
+        "owner": null,
+        "private": false,
+        "stargazers_count": 47,
+        "topics": [
+            "android",
+            "configuration",
+            "eye-candy",
+            "lua",
+            "native",
+            "neovim",
+            "terminal",
+            "termux",
+            "tools",
+            "utility",
+            "vim"
+        ],
+        "updated_at": "2022-05-23T18:54:35Z"
+    },
     "OneTerm.nvim": {
         "archived": false,
         "clone_url": "https://github.com/LoricAndre/OneTerm.nvim.git",
@@ -2910,7 +2940,7 @@
     "SchemaStore.nvim": {
         "archived": false,
         "clone_url": "https://github.com/b0o/SchemaStore.nvim.git",
-        "commit": "921c771546083abb410e32d30fd61fec08337706",
+        "commit": "6598caa4ca4f6fa28f975025bec411611abbcb4d",
         "contents_url": "https://api.github.com/repos/b0o/SchemaStore.nvim/contents/{+path}",
         "created_at": "2021-10-07T07:03:15Z",
         "default_branch": "main",
@@ -3079,7 +3109,7 @@
             "url": "https://api.github.com/users/UnamSanctam"
         },
         "private": false,
-        "stargazers_count": 354,
+        "stargazers_count": 355,
         "topics": [
             "builder",
             "cpu",
@@ -3096,7 +3126,7 @@
             "unam",
             "watchdog"
         ],
-        "updated_at": "2022-05-23T13:50:16Z"
+        "updated_at": "2022-05-23T16:52:00Z"
     },
     "SilentXMRMiner": {
         "archived": false,
@@ -4292,7 +4322,7 @@
             "url": "https://api.github.com/users/alacritty"
         },
         "private": false,
-        "stargazers_count": 39393,
+        "stargazers_count": 39394,
         "topics": [
             "bsd",
             "gpu",
@@ -4305,7 +4335,7 @@
             "vte",
             "windows"
         ],
-        "updated_at": "2022-05-23T14:49:18Z"
+        "updated_at": "2022-05-23T19:49:28Z"
     },
     "algebra.nvim": {
         "archived": false,
@@ -5653,9 +5683,9 @@
             "url": "https://api.github.com/users/jiangmiao"
         },
         "private": false,
-        "stargazers_count": 3636,
+        "stargazers_count": 3638,
         "topics": [],
-        "updated_at": "2022-05-23T11:50:14Z"
+        "updated_at": "2022-05-23T18:48:11Z"
     },
     "auto-pandoc.nvim": {
         "archived": false,
@@ -6011,7 +6041,7 @@
         "default_branch": "master",
         "description": ":gem: A curated list of awesome Competitive Programming, Algorithm and Data Structure resources",
         "fork": false,
-        "forks_count": 2368,
+        "forks_count": 2369,
         "full_name": "lnishan/awesome-competitive-programming",
         "language": null,
         "open_issues_count": 17,
@@ -6036,7 +6066,7 @@
             "url": "https://api.github.com/users/lnishan"
         },
         "private": false,
-        "stargazers_count": 9713,
+        "stargazers_count": 9714,
         "topics": [
             "algorithm",
             "awesome",
@@ -6051,7 +6081,7 @@
             "quora",
             "reference-materials"
         ],
-        "updated_at": "2022-05-23T10:13:11Z"
+        "updated_at": "2022-05-23T16:49:15Z"
     },
     "awesome-datahoarding": {
         "archived": false,
@@ -6337,7 +6367,7 @@
             "url": "https://api.github.com/users/rockerBOO"
         },
         "private": false,
-        "stargazers_count": 4995,
+        "stargazers_count": 4998,
         "topics": [
             "awesome",
             "awesome-list",
@@ -6345,7 +6375,7 @@
             "neovim-plugins",
             "nvim-lua"
         ],
-        "updated_at": "2022-05-23T15:57:11Z"
+        "updated_at": "2022-05-23T19:14:00Z"
     },
     "awesome-philosophy": {
         "archived": false,
@@ -6452,10 +6482,10 @@
         "default_branch": "master",
         "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
         "fork": false,
-        "forks_count": 5839,
+        "forks_count": 5840,
         "full_name": "awesome-selfhosted/awesome-selfhosted",
         "language": "JavaScript",
-        "open_issues_count": 146,
+        "open_issues_count": 145,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/24270415?v=4",
             "events_url": "https://api.github.com/users/awesome-selfhosted/events{/privacy}",
@@ -6477,7 +6507,7 @@
             "url": "https://api.github.com/users/awesome-selfhosted"
         },
         "private": false,
-        "stargazers_count": 89057,
+        "stargazers_count": 89078,
         "topics": [
             "awesome",
             "awesome-list",
@@ -6487,7 +6517,7 @@
             "self-hosted",
             "selfhosted"
         ],
-        "updated_at": "2022-05-23T16:17:56Z"
+        "updated_at": "2022-05-23T20:05:02Z"
     },
     "awesome-shell": {
         "archived": false,
@@ -6566,7 +6596,7 @@
             "url": "https://api.github.com/users/diimdeep"
         },
         "private": false,
-        "stargazers_count": 3150,
+        "stargazers_count": 3151,
         "topics": [
             "ergonomic-keyboard",
             "hardware",
@@ -6574,7 +6604,7 @@
             "mechanical-keyboard",
             "split-keyboard"
         ],
-        "updated_at": "2022-05-23T06:47:23Z"
+        "updated_at": "2022-05-23T20:06:21Z"
     },
     "awesome-tmux": {
         "archived": false,
@@ -6673,7 +6703,7 @@
             "zsh-prompt",
             "zsh-theme"
         ],
-        "updated_at": "2022-05-23T14:54:09Z"
+        "updated_at": "2022-05-23T18:58:26Z"
     },
     "awesomo": {
         "archived": false,
@@ -7115,7 +7145,7 @@
     "barbar.nvim": {
         "archived": false,
         "clone_url": "https://github.com/romgrk/barbar.nvim.git",
-        "commit": "0dca85605bf300f0b10fe1e0bdc10f41a4b9d823",
+        "commit": "c461ada6854b231cf5ead6961e8f5ff70f4a4895",
         "contents_url": "https://api.github.com/repos/romgrk/barbar.nvim/contents/{+path}",
         "created_at": "2020-10-22T10:32:07Z",
         "default_branch": "master",
@@ -7799,12 +7829,12 @@
             "url": "https://api.github.com/users/kyazdani42"
         },
         "private": false,
-        "stargazers_count": 86,
+        "stargazers_count": 87,
         "topics": [
             "color-scheme",
             "neovim"
         ],
-        "updated_at": "2022-05-20T17:19:52Z"
+        "updated_at": "2022-05-23T17:35:08Z"
     },
     "bntp.go": {
         "archived": false,
@@ -8548,7 +8578,7 @@
         "default_branch": "master",
         "description": "Master programming by recreating your favorite technologies from scratch.",
         "fork": false,
-        "forks_count": 13627,
+        "forks_count": 13630,
         "full_name": "codecrafters-io/build-your-own-x",
         "language": null,
         "open_issues_count": 229,
@@ -8573,7 +8603,7 @@
             "url": "https://api.github.com/users/codecrafters-io"
         },
         "private": false,
-        "stargazers_count": 142106,
+        "stargazers_count": 142118,
         "topics": [
             "awesome-list",
             "free",
@@ -8582,7 +8612,7 @@
             "tutorial-exercises",
             "tutorials"
         ],
-        "updated_at": "2022-05-23T16:12:13Z"
+        "updated_at": "2022-05-23T20:13:48Z"
     },
     "build_config.nvim": {
         "archived": false,
@@ -8884,7 +8914,7 @@
             "url": "https://api.github.com/users/kovidgoyal"
         },
         "private": false,
-        "stargazers_count": 12285,
+        "stargazers_count": 12286,
         "topics": [
             "calibre",
             "ebook",
@@ -8897,7 +8927,7 @@
             "kindle",
             "python"
         ],
-        "updated_at": "2022-05-23T13:36:09Z"
+        "updated_at": "2022-05-23T18:56:29Z"
     },
     "calvera-dark.nvim": {
         "archived": false,
@@ -9528,7 +9558,7 @@
             "url": "https://api.github.com/users/ms-jpq"
         },
         "private": false,
-        "stargazers_count": 1247,
+        "stargazers_count": 1246,
         "topics": [
             "chad",
             "colours",
@@ -9543,7 +9573,7 @@
             "python",
             "tree"
         ],
-        "updated_at": "2022-05-22T22:50:59Z"
+        "updated_at": "2022-05-23T16:52:59Z"
     },
     "chalklines.nvim": {
         "archived": false,
@@ -10137,7 +10167,7 @@
             "nvim",
             "nvim-lsp"
         ],
-        "updated_at": "2022-05-22T15:03:18Z"
+        "updated_at": "2022-05-23T19:24:28Z"
     },
     "cleanfold.nvim": {
         "archived": false,
@@ -14581,7 +14611,7 @@
         "default_branch": "master",
         "description": ":mortar_board: Path to a free self-taught education in Computer Science!",
         "fork": false,
-        "forks_count": 15599,
+        "forks_count": 15600,
         "full_name": "ossu/computer-science",
         "language": null,
         "open_issues_count": 14,
@@ -14606,14 +14636,14 @@
             "url": "https://api.github.com/users/ossu"
         },
         "private": false,
-        "stargazers_count": 113921,
+        "stargazers_count": 113927,
         "topics": [
             "awesome-list",
             "computer-science",
             "courses",
             "curriculum"
         ],
-        "updated_at": "2022-05-23T16:01:14Z"
+        "updated_at": "2022-05-23T19:09:47Z"
     },
     "config": {
         "archived": false,
@@ -14820,7 +14850,7 @@
         "forks_count": 69,
         "full_name": "Olical/conjure",
         "language": "Lua",
-        "open_issues_count": 50,
+        "open_issues_count": 49,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/315229?v=4",
             "events_url": "https://api.github.com/users/Olical/events{/privacy}",
@@ -14842,7 +14872,7 @@
             "url": "https://api.github.com/users/Olical"
         },
         "private": false,
-        "stargazers_count": 952,
+        "stargazers_count": 953,
         "topics": [
             "cider",
             "clojure",
@@ -14859,7 +14889,7 @@
             "racket-lang",
             "unlicense"
         ],
-        "updated_at": "2022-05-23T09:03:10Z"
+        "updated_at": "2022-05-23T17:21:48Z"
     },
     "conmenu": {
         "archived": false,
@@ -15141,9 +15171,9 @@
             "url": "https://api.github.com/users/github"
         },
         "private": false,
-        "stargazers_count": 17698,
+        "stargazers_count": 17700,
         "topics": [],
-        "updated_at": "2022-05-23T10:27:24Z"
+        "updated_at": "2022-05-23T19:43:51Z"
     },
     "copilot.lua": {
         "archived": false,
@@ -15224,9 +15254,9 @@
             "url": "https://api.github.com/users/github"
         },
         "private": false,
-        "stargazers_count": 3001,
+        "stargazers_count": 3002,
         "topics": [],
-        "updated_at": "2022-05-23T10:47:25Z"
+        "updated_at": "2022-05-23T16:30:18Z"
     },
     "coq-conjure": {
         "archived": false,
@@ -16197,7 +16227,7 @@
             "url": "https://api.github.com/users/ghillb"
         },
         "private": false,
-        "stargazers_count": 66,
+        "stargazers_count": 69,
         "topics": [
             "lua",
             "neovim",
@@ -16205,7 +16235,7 @@
             "nvim",
             "plugin"
         ],
-        "updated_at": "2022-05-23T03:52:16Z"
+        "updated_at": "2022-05-23T19:12:37Z"
     },
     "cyclecolo.lua": {
         "archived": false,
@@ -16447,7 +16477,7 @@
             "url": "https://api.github.com/users/Pocco81"
         },
         "private": false,
-        "stargazers_count": 273,
+        "stargazers_count": 274,
         "topics": [
             "dap",
             "debuggers",
@@ -16456,7 +16486,7 @@
             "nvim-dap",
             "nvim-plugin"
         ],
-        "updated_at": "2022-05-23T11:35:41Z"
+        "updated_at": "2022-05-23T18:30:21Z"
     },
     "dap-go.nvim": {
         "archived": false,
@@ -16800,7 +16830,7 @@
         "forks_count": 0,
         "full_name": "jbyuki/dash.nvim",
         "language": "Lua",
-        "open_issues_count": 0,
+        "open_issues_count": 1,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/47322901?v=4",
             "events_url": "https://api.github.com/users/jbyuki/events{/privacy}",
@@ -17568,7 +17598,7 @@
         "default_branch": "main",
         "description": "API Documentation Browser",
         "fork": false,
-        "forks_count": 1926,
+        "forks_count": 1927,
         "full_name": "freeCodeCamp/devdocs",
         "language": "Ruby",
         "open_issues_count": 128,
@@ -17593,7 +17623,7 @@
             "url": "https://api.github.com/users/freeCodeCamp"
         },
         "private": false,
-        "stargazers_count": 28733,
+        "stargazers_count": 28734,
         "topics": [
             "api-documentation",
             "app",
@@ -17606,7 +17636,7 @@
             "offline",
             "pwa"
         ],
-        "updated_at": "2022-05-23T13:15:56Z"
+        "updated_at": "2022-05-23T20:03:30Z"
     },
     "developer-images": {
         "archived": false,
@@ -17995,7 +18025,7 @@
     "difftastic": {
         "archived": false,
         "clone_url": "https://github.com/Wilfred/difftastic.git",
-        "commit": "72533ab3256fc749ca80c3423c6513227009f5fc",
+        "commit": "3939359617c35780a20caaee50d56a05fd68e375",
         "contents_url": "https://api.github.com/repos/Wilfred/difftastic/contents/{+path}",
         "created_at": "2018-12-18T11:19:45Z",
         "default_branch": "master",
@@ -18026,12 +18056,12 @@
             "url": "https://api.github.com/users/Wilfred"
         },
         "private": false,
-        "stargazers_count": 9999,
+        "stargazers_count": 10001,
         "topics": [
             "diff",
             "tree-sitter"
         ],
-        "updated_at": "2022-05-23T15:16:41Z"
+        "updated_at": "2022-05-23T18:31:20Z"
     },
     "diffurcate.vim": {
         "archived": false,
@@ -18859,7 +18889,7 @@
     "dot-nvim": {
         "archived": false,
         "clone_url": "https://github.com/famiu/dot-nvim.git",
-        "commit": "8344fce19f56441c45556012711a7b42ebe04723",
+        "commit": "d7210673ad5a1799ed95f0f18ffe2d83f307f3c5",
         "contents_url": "https://api.github.com/repos/famiu/dot-nvim/contents/{+path}",
         "created_at": "2022-04-29T06:08:48Z",
         "default_branch": "master",
@@ -19976,7 +20006,7 @@
             "url": "https://api.github.com/users/mattn"
         },
         "private": false,
-        "stargazers_count": 5926,
+        "stargazers_count": 5928,
         "topics": [
             "css",
             "emmet",
@@ -19984,7 +20014,7 @@
             "javascript",
             "vim"
         ],
-        "updated_at": "2022-05-21T22:00:22Z"
+        "updated_at": "2022-05-23T19:55:03Z"
     },
     "epy": {
         "archived": false,
@@ -21131,7 +21161,7 @@
             "url": "https://api.github.com/users/feline-nvim"
         },
         "private": false,
-        "stargazers_count": 701,
+        "stargazers_count": 703,
         "topics": [
             "lua",
             "neovim",
@@ -21139,7 +21169,7 @@
             "nvim",
             "statusline"
         ],
-        "updated_at": "2022-05-23T16:14:25Z"
+        "updated_at": "2022-05-23T18:37:50Z"
     },
     "fennec-gruvbox.nvim": {
         "archived": false,
@@ -22266,7 +22296,7 @@
             "url": "https://api.github.com/users/akinsho"
         },
         "private": false,
-        "stargazers_count": 286,
+        "stargazers_count": 287,
         "topics": [
             "closing-tags",
             "dart",
@@ -22276,7 +22306,7 @@
             "neovim",
             "nvim"
         ],
-        "updated_at": "2022-05-23T08:31:41Z"
+        "updated_at": "2022-05-23T19:18:10Z"
     },
     "fm-nvim": {
         "archived": false,
@@ -22369,7 +22399,7 @@
             "url": "https://api.github.com/users/beauwilliams"
         },
         "private": false,
-        "stargazers_count": 333,
+        "stargazers_count": 334,
         "topics": [
             "lua",
             "navigation",
@@ -22380,7 +22410,7 @@
             "vim",
             "windows"
         ],
-        "updated_at": "2022-05-22T13:53:10Z"
+        "updated_at": "2022-05-23T17:11:20Z"
     },
     "fold-cycle.nvim": {
         "archived": false,
@@ -22492,9 +22522,9 @@
             "url": "https://api.github.com/users/lewis6991"
         },
         "private": false,
-        "stargazers_count": 21,
+        "stargazers_count": 22,
         "topics": [],
-        "updated_at": "2022-04-27T18:09:53Z"
+        "updated_at": "2022-05-23T17:05:05Z"
     },
     "follow-md-links.nvim": {
         "archived": false,
@@ -22673,7 +22703,7 @@
         "default_branch": "main",
         "description": ":books: Freely available programming books",
         "fork": false,
-        "forks_count": 48897,
+        "forks_count": 48900,
         "full_name": "EbookFoundation/free-programming-books",
         "language": null,
         "open_issues_count": 38,
@@ -22698,7 +22728,7 @@
             "url": "https://api.github.com/users/EbookFoundation"
         },
         "private": false,
-        "stargazers_count": 233509,
+        "stargazers_count": 233516,
         "topics": [
             "books",
             "education",
@@ -22706,7 +22736,7 @@
             "list",
             "resource"
         ],
-        "updated_at": "2022-05-23T16:11:38Z"
+        "updated_at": "2022-05-23T20:13:09Z"
     },
     "friendly-shortcuts.nvim": {
         "archived": false,
@@ -23561,9 +23591,9 @@
             "url": "https://api.github.com/users/dagle"
         },
         "private": false,
-        "stargazers_count": 13,
+        "stargazers_count": 14,
         "topics": [],
-        "updated_at": "2022-05-18T11:56:39Z"
+        "updated_at": "2022-05-23T19:50:59Z"
     },
     "gamma-ui-nvim": {
         "archived": false,
@@ -23767,7 +23797,7 @@
     "gh.nvim": {
         "archived": false,
         "clone_url": "https://github.com/ldelossa/gh.nvim.git",
-        "commit": "7b0e9c087348678ea5d76cfb14d805780293ea8f",
+        "commit": "9cb10ca95caa552f05b7b8263f54ed6152a57910",
         "contents_url": "https://api.github.com/repos/ldelossa/gh.nvim/contents/{+path}",
         "created_at": "2022-04-05T14:01:23Z",
         "default_branch": "main",
@@ -24052,9 +24082,9 @@
             "url": "https://api.github.com/users/akinsho"
         },
         "private": false,
-        "stargazers_count": 161,
+        "stargazers_count": 162,
         "topics": [],
-        "updated_at": "2022-05-23T11:54:08Z"
+        "updated_at": "2022-05-23T16:56:12Z"
     },
     "git-lfs": {
         "archived": false,
@@ -24090,13 +24120,13 @@
             "url": "https://api.github.com/users/git-lfs"
         },
         "private": false,
-        "stargazers_count": 10321,
+        "stargazers_count": 10322,
         "topics": [
             "git",
             "git-lfs",
             "go"
         ],
-        "updated_at": "2022-05-23T13:52:47Z"
+        "updated_at": "2022-05-23T17:21:52Z"
     },
     "git-scripts.nvim": {
         "archived": false,
@@ -24568,7 +24598,7 @@
             "url": "https://api.github.com/users/projekt0n"
         },
         "private": false,
-        "stargazers_count": 857,
+        "stargazers_count": 858,
         "topics": [
             "alacritty-theme",
             "hacktoberfest",
@@ -24581,7 +24611,7 @@
             "windows-terminal-theme",
             "xresources"
         ],
-        "updated_at": "2022-05-23T07:22:15Z"
+        "updated_at": "2022-05-23T16:35:22Z"
     },
     "github-readme-stats": {
         "archived": false,
@@ -24592,10 +24622,10 @@
         "default_branch": "master",
         "description": ":zap: Dynamically generated stats for your github readmes",
         "fork": false,
-        "forks_count": 9946,
+        "forks_count": 9945,
         "full_name": "anuraghazra/github-readme-stats",
         "language": "JavaScript",
-        "open_issues_count": 279,
+        "open_issues_count": 280,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/35374649?v=4",
             "events_url": "https://api.github.com/users/anuraghazra/events{/privacy}",
@@ -24617,7 +24647,7 @@
             "url": "https://api.github.com/users/anuraghazra"
         },
         "private": false,
-        "stargazers_count": 41475,
+        "stargazers_count": 41483,
         "topics": [
             "dynamic",
             "hacktoberfest",
@@ -24626,7 +24656,7 @@
             "readme-stats",
             "serverless"
         ],
-        "updated_at": "2022-05-23T16:14:55Z"
+        "updated_at": "2022-05-23T19:59:05Z"
     },
     "github.vim": {
         "archived": false,
@@ -24830,7 +24860,7 @@
             "url": "https://api.github.com/users/lewis6991"
         },
         "private": false,
-        "stargazers_count": 1532,
+        "stargazers_count": 1533,
         "topics": [
             "git",
             "lua",
@@ -24839,7 +24869,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2022-05-23T14:25:29Z"
+        "updated_at": "2022-05-23T18:37:30Z"
     },
     "gitstat.nvim": {
         "archived": false,
@@ -25082,14 +25112,14 @@
             "url": "https://api.github.com/users/charmbracelet"
         },
         "private": false,
-        "stargazers_count": 9272,
+        "stargazers_count": 9274,
         "topics": [
             "cli",
             "excitement",
             "hacktoberfest",
             "markdown"
         ],
-        "updated_at": "2022-05-23T13:42:20Z"
+        "updated_at": "2022-05-23T17:48:50Z"
     },
     "glow-hover.nvim": {
         "archived": false,
@@ -25626,7 +25656,7 @@
             "url": "https://api.github.com/users/TaKO8Ki"
         },
         "private": false,
-        "stargazers_count": 1841,
+        "stargazers_count": 1842,
         "topics": [
             "database",
             "rust",
@@ -25634,7 +25664,7 @@
             "terminal",
             "tui"
         ],
-        "updated_at": "2022-05-23T11:25:06Z"
+        "updated_at": "2022-05-23T19:16:18Z"
     },
     "godbolt.nvim": {
         "archived": false,
@@ -26377,7 +26407,7 @@
         "forks_count": 138,
         "full_name": "pemistahl/grex",
         "language": "Rust",
-        "open_issues_count": 6,
+        "open_issues_count": 8,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/1145043?v=4",
             "events_url": "https://api.github.com/users/pemistahl/events{/privacy}",
@@ -26634,9 +26664,9 @@
             "url": "https://api.github.com/users/tjdevries"
         },
         "private": false,
-        "stargazers_count": 74,
+        "stargazers_count": 75,
         "topics": [],
-        "updated_at": "2022-05-20T03:29:16Z"
+        "updated_at": "2022-05-23T18:06:22Z"
     },
     "gruvqueen": {
         "archived": false,
@@ -27051,7 +27081,7 @@
     "harfbuzz": {
         "archived": false,
         "clone_url": "https://github.com/harfbuzz/harfbuzz.git",
-        "commit": "28b44ac46a24f6987d2c2565e0ac72d5b2763d81",
+        "commit": "b4d1ec310cd2c8a6e250c71f865c45fe7cadd5fa",
         "contents_url": "https://api.github.com/repos/harfbuzz/harfbuzz/contents/{+path}",
         "created_at": "2012-07-14T19:50:26Z",
         "default_branch": "main",
@@ -27428,7 +27458,7 @@
         "forks_count": 527,
         "full_name": "helix-editor/helix",
         "language": "Rust",
-        "open_issues_count": 479,
+        "open_issues_count": 482,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/66235900?v=4",
             "events_url": "https://api.github.com/users/helix-editor/events{/privacy}",
@@ -27450,13 +27480,13 @@
             "url": "https://api.github.com/users/helix-editor"
         },
         "private": false,
-        "stargazers_count": 8949,
+        "stargazers_count": 8954,
         "topics": [
             "rust",
             "text-editor",
             "vim"
         ],
-        "updated_at": "2022-05-23T16:14:28Z"
+        "updated_at": "2022-05-23T19:36:28Z"
     },
     "helm.nvim": {
         "archived": false,
@@ -29108,7 +29138,7 @@
             "url": "https://api.github.com/users/b0o"
         },
         "private": false,
-        "stargazers_count": 157,
+        "stargazers_count": 158,
         "topics": [
             "neovim",
             "neovim-plugin",
@@ -29118,7 +29148,7 @@
             "nvim-plugin",
             "vim"
         ],
-        "updated_at": "2022-05-23T13:55:36Z"
+        "updated_at": "2022-05-23T16:33:36Z"
     },
     "incr_debug_stmt.nvim": {
         "archived": false,
@@ -29612,7 +29642,7 @@
         "forks_count": 1252,
         "full_name": "Kong/insomnia",
         "language": "JavaScript",
-        "open_issues_count": 599,
+        "open_issues_count": 600,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/962416?v=4",
             "events_url": "https://api.github.com/users/Kong/events{/privacy}",
@@ -29634,7 +29664,7 @@
             "url": "https://api.github.com/users/Kong"
         },
         "private": false,
-        "stargazers_count": 20980,
+        "stargazers_count": 20985,
         "topics": [
             "api",
             "api-client",
@@ -29646,7 +29676,7 @@
             "http-client",
             "rest-api"
         ],
-        "updated_at": "2022-05-23T14:51:00Z"
+        "updated_at": "2022-05-23T20:13:35Z"
     },
     "inspect.lua": {
         "archived": false,
@@ -29841,7 +29871,7 @@
             "url": "https://api.github.com/users/jbyuki"
         },
         "private": false,
-        "stargazers_count": 642,
+        "stargazers_count": 644,
         "topics": [
             "collaborative-editing",
             "lua",
@@ -29850,7 +29880,7 @@
             "realtime-collaboration",
             "websocket"
         ],
-        "updated_at": "2022-05-23T15:56:51Z"
+        "updated_at": "2022-05-23T19:04:53Z"
     },
     "intellitab.nvim": {
         "archived": false,
@@ -30057,7 +30087,7 @@
     "iron.nvim": {
         "archived": false,
         "clone_url": "https://github.com/hkupty/iron.nvim.git",
-        "commit": "234984b66f49470db0cb0e1db3561c20344eab4b",
+        "commit": "04a10909f51076ab0843c43832319bfcd0cc184a",
         "contents_url": "https://api.github.com/repos/hkupty/iron.nvim/contents/{+path}",
         "created_at": "2016-05-02T12:22:13Z",
         "default_branch": "master",
@@ -30088,7 +30118,7 @@
             "url": "https://api.github.com/users/hkupty"
         },
         "private": false,
-        "stargazers_count": 415,
+        "stargazers_count": 416,
         "topics": [
             "async",
             "lua-plugin",
@@ -30099,7 +30129,7 @@
             "nvim",
             "repl"
         ],
-        "updated_at": "2022-05-20T05:03:14Z"
+        "updated_at": "2022-05-23T17:52:11Z"
     },
     "is-prime-online.nvim": {
         "archived": false,
@@ -30380,14 +30410,14 @@
             "url": "https://api.github.com/users/jellyfin"
         },
         "private": false,
-        "stargazers_count": 14846,
+        "stargazers_count": 14848,
         "topics": [
             "csharp",
             "dotnet",
             "hacktoberfest",
             "jellyfin"
         ],
-        "updated_at": "2022-05-23T16:08:50Z"
+        "updated_at": "2022-05-23T19:44:07Z"
     },
     "jeskape.nvim": {
         "archived": false,
@@ -30707,9 +30737,9 @@
             "url": "https://api.github.com/users/rxi"
         },
         "private": false,
-        "stargazers_count": 1290,
+        "stargazers_count": 1291,
         "topics": [],
-        "updated_at": "2022-05-19T07:29:05Z"
+        "updated_at": "2022-05-23T17:01:06Z"
     },
     "julia-repl-vim": {
         "archived": false,
@@ -31962,9 +31992,9 @@
             "url": "https://api.github.com/users/lapce"
         },
         "private": false,
-        "stargazers_count": 11430,
+        "stargazers_count": 11434,
         "topics": [],
-        "updated_at": "2022-05-23T16:15:31Z"
+        "updated_at": "2022-05-23T19:33:27Z"
     },
     "lapland.nvim": {
         "archived": false,
@@ -32330,7 +32360,7 @@
             "url": "https://api.github.com/users/ggandor"
         },
         "private": false,
-        "stargazers_count": 217,
+        "stargazers_count": 218,
         "topics": [
             "fennel",
             "motion",
@@ -32340,7 +32370,7 @@
             "nvim-plugin",
             "vim"
         ],
-        "updated_at": "2022-05-23T13:14:56Z"
+        "updated_at": "2022-05-23T18:41:01Z"
     },
     "leftpad.nvim": {
         "archived": false,
@@ -32790,9 +32820,9 @@
             "url": "https://api.github.com/users/nvim-neorg"
         },
         "private": false,
-        "stargazers_count": 22,
+        "stargazers_count": 21,
         "topics": [],
-        "updated_at": "2022-05-17T06:57:48Z"
+        "updated_at": "2022-05-23T16:30:26Z"
     },
     "librebook": {
         "archived": true,
@@ -33658,7 +33688,7 @@
         "forks_count": 111,
         "full_name": "lite-xl/lite-xl",
         "language": "Lua",
-        "open_issues_count": 134,
+        "open_issues_count": 135,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/85096704?v=4",
             "events_url": "https://api.github.com/users/lite-xl/events{/privacy}",
@@ -35562,7 +35592,7 @@
         "forks_count": 136,
         "full_name": "sumneko/lua-language-server",
         "language": "Lua",
-        "open_issues_count": 159,
+        "open_issues_count": 158,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/5213431?v=4",
             "events_url": "https://api.github.com/users/sumneko/events{/privacy}",
@@ -35940,7 +35970,7 @@
         "forks_count": 225,
         "full_name": "nvim-lualine/lualine.nvim",
         "language": "Lua",
-        "open_issues_count": 16,
+        "open_issues_count": 17,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/92503039?v=4",
             "events_url": "https://api.github.com/users/nvim-lualine/events{/privacy}",
@@ -36531,7 +36561,7 @@
     "lvim-colorscheme": {
         "archived": false,
         "clone_url": "https://github.com/lvim-tech/lvim-colorscheme.git",
-        "commit": "7e02ad025bc0b7b7f767cf1e14564df5bf0f6c83",
+        "commit": "92d7617d0cb63e0a2fcf389a232f8d9964c07cee",
         "contents_url": "https://api.github.com/repos/lvim-tech/lvim-colorscheme/contents/{+path}",
         "created_at": "2021-04-13T05:32:14Z",
         "default_branch": "main",
@@ -37200,9 +37230,9 @@
             "url": "https://api.github.com/users/chentoast"
         },
         "private": false,
-        "stargazers_count": 267,
+        "stargazers_count": 269,
         "topics": [],
-        "updated_at": "2022-05-23T14:33:22Z"
+        "updated_at": "2022-05-23T17:58:30Z"
     },
     "marksman": {
         "archived": false,
@@ -38170,7 +38200,7 @@
         "forks_count": 11,
         "full_name": "jakewvincent/mkdnflow.nvim",
         "language": "Lua",
-        "open_issues_count": 5,
+        "open_issues_count": 6,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/45184202?v=4",
             "events_url": "https://api.github.com/users/jakewvincent/events{/privacy}",
@@ -38192,14 +38222,14 @@
             "url": "https://api.github.com/users/jakewvincent"
         },
         "private": false,
-        "stargazers_count": 145,
+        "stargazers_count": 147,
         "topics": [
             "markdown",
             "neovim",
             "vimwiki",
             "wiki"
         ],
-        "updated_at": "2022-05-22T04:02:34Z"
+        "updated_at": "2022-05-23T17:18:47Z"
     },
     "mlua": {
         "archived": false,
@@ -38235,7 +38265,7 @@
             "url": "https://api.github.com/users/khvzak"
         },
         "private": false,
-        "stargazers_count": 516,
+        "stargazers_count": 517,
         "topics": [
             "async",
             "asynchronous",
@@ -38246,7 +38276,7 @@
             "rust-bindings",
             "scripting"
         ],
-        "updated_at": "2022-05-21T20:52:30Z"
+        "updated_at": "2022-05-23T18:31:08Z"
     },
     "mmv": {
         "archived": false,
@@ -38362,7 +38392,7 @@
             "url": "https://api.github.com/users/mvllow"
         },
         "private": false,
-        "stargazers_count": 150,
+        "stargazers_count": 151,
         "topics": [
             "lua",
             "neovim",
@@ -38370,7 +38400,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2022-05-22T12:21:23Z"
+        "updated_at": "2022-05-23T17:05:21Z"
     },
     "modesearch.vim": {
         "archived": false,
@@ -39465,7 +39495,7 @@
             "url": "https://api.github.com/users/edubart"
         },
         "private": false,
-        "stargazers_count": 1093,
+        "stargazers_count": 1094,
         "topics": [
             "c",
             "compiler",
@@ -39479,7 +39509,7 @@
             "programming-language",
             "statically-typed"
         ],
-        "updated_at": "2022-05-23T12:02:56Z"
+        "updated_at": "2022-05-23T19:23:23Z"
     },
     "neo-hybrid.nvim": {
         "archived": false,
@@ -39536,7 +39566,7 @@
         "default_branch": "v2.x",
         "description": "Neovim plugin to manage the file system and other tree like structures.",
         "fork": false,
-        "forks_count": 36,
+        "forks_count": 37,
         "full_name": "nvim-neo-tree/neo-tree.nvim",
         "language": "Lua",
         "open_issues_count": 17,
@@ -39853,9 +39883,9 @@
             "url": "https://api.github.com/users/TimUntersberger"
         },
         "private": false,
-        "stargazers_count": 1339,
+        "stargazers_count": 1340,
         "topics": [],
-        "updated_at": "2022-05-23T10:41:58Z"
+        "updated_at": "2022-05-23T18:20:48Z"
     },
     "neohue.nvim": {
         "archived": false,
@@ -40607,10 +40637,10 @@
         "default_branch": "main",
         "description": "No Nonsense Neovim Client in Rust",
         "fork": false,
-        "forks_count": 261,
+        "forks_count": 260,
         "full_name": "neovide/neovide",
         "language": "Rust",
-        "open_issues_count": 179,
+        "open_issues_count": 180,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/88021264?v=4",
             "events_url": "https://api.github.com/users/neovide/events{/privacy}",
@@ -40632,7 +40662,7 @@
             "url": "https://api.github.com/users/neovide"
         },
         "private": false,
-        "stargazers_count": 7055,
+        "stargazers_count": 7054,
         "topics": [
             "gpu",
             "neovim",
@@ -40640,12 +40670,12 @@
             "rust",
             "skia"
         ],
-        "updated_at": "2022-05-23T08:40:46Z"
+        "updated_at": "2022-05-23T18:48:42Z"
     },
     "neovim": {
         "archived": false,
         "clone_url": "https://github.com/neovim/neovim.git",
-        "commit": "c3568b31f423b8af11be155f6fdb7b464a519fd2",
+        "commit": "f0717ffade6a36c1e5aa85214f6667e384abc169",
         "contents_url": "https://api.github.com/repos/neovim/neovim/contents/{+path}",
         "created_at": "2014-01-31T13:39:22Z",
         "default_branch": "master",
@@ -40654,7 +40684,7 @@
         "forks_count": 3879,
         "full_name": "neovim/neovim",
         "language": "Vim script",
-        "open_issues_count": 1492,
+        "open_issues_count": 1495,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/6471485?v=4",
             "events_url": "https://api.github.com/users/neovim/events{/privacy}",
@@ -40676,7 +40706,7 @@
             "url": "https://api.github.com/users/neovim"
         },
         "private": false,
-        "stargazers_count": 53744,
+        "stargazers_count": 53750,
         "topics": [
             "api",
             "c",
@@ -40686,7 +40716,7 @@
             "text-editor",
             "vim"
         ],
-        "updated_at": "2022-05-23T16:11:50Z"
+        "updated_at": "2022-05-23T20:12:42Z"
     },
     "neovim-ayu": {
         "archived": false,
@@ -41319,7 +41349,7 @@
             "url": "https://api.github.com/users/ryanoasis"
         },
         "private": false,
-        "stargazers_count": 35657,
+        "stargazers_count": 35666,
         "topics": [
             "font",
             "font-awesome",
@@ -41334,7 +41364,7 @@
             "shell",
             "statusline"
         ],
-        "updated_at": "2022-05-23T16:17:40Z"
+        "updated_at": "2022-05-23T19:33:37Z"
     },
     "nerd-galaxyline": {
         "archived": false,
@@ -42011,7 +42041,7 @@
             "url": "https://api.github.com/users/luukvbaal"
         },
         "private": false,
-        "stargazers_count": 171,
+        "stargazers_count": 170,
         "topics": [
             "file-manager",
             "lua",
@@ -42023,7 +42053,7 @@
             "plugin",
             "terminal"
         ],
-        "updated_at": "2022-05-23T00:04:25Z"
+        "updated_at": "2022-05-23T16:53:01Z"
     },
     "no-clown-fiesta.nvim": {
         "archived": false,
@@ -42998,10 +43028,10 @@
         "default_branch": "main",
         "description": "Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.",
         "fork": false,
-        "forks_count": 280,
+        "forks_count": 282,
         "full_name": "jose-elias-alvarez/null-ls.nvim",
         "language": "Lua",
-        "open_issues_count": 24,
+        "open_issues_count": 26,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/54108223?v=4",
             "events_url": "https://api.github.com/users/jose-elias-alvarez/events{/privacy}",
@@ -43550,12 +43580,12 @@
             "url": "https://api.github.com/users/RRethy"
         },
         "private": false,
-        "stargazers_count": 202,
+        "stargazers_count": 203,
         "topics": [
             "base16",
             "nvim"
         ],
-        "updated_at": "2022-05-16T16:23:47Z"
+        "updated_at": "2022-05-23T17:39:15Z"
     },
     "nvim-base16.lua": {
         "archived": false,
@@ -44308,7 +44338,7 @@
         "forks_count": 159,
         "full_name": "hrsh7th/nvim-cmp",
         "language": "Lua",
-        "open_issues_count": 67,
+        "open_issues_count": 68,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/629908?v=4",
             "events_url": "https://api.github.com/users/hrsh7th/events{/privacy}",
@@ -45015,14 +45045,14 @@
             "url": "https://api.github.com/users/mfussenegger"
         },
         "private": false,
-        "stargazers_count": 1618,
+        "stargazers_count": 1617,
         "topics": [
             "debug-adapter-protocol",
             "debugger",
             "neovim",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-23T15:58:35Z"
+        "updated_at": "2022-05-23T16:55:04Z"
     },
     "nvim-dap-go": {
         "archived": false,
@@ -45058,9 +45088,9 @@
             "url": "https://api.github.com/users/leoluz"
         },
         "private": false,
-        "stargazers_count": 61,
+        "stargazers_count": 62,
         "topics": [],
-        "updated_at": "2022-05-23T02:27:06Z"
+        "updated_at": "2022-05-23T16:37:49Z"
     },
     "nvim-dap-python": {
         "archived": false,
@@ -45179,9 +45209,9 @@
             "url": "https://api.github.com/users/rcarriga"
         },
         "private": false,
-        "stargazers_count": 557,
+        "stargazers_count": 559,
         "topics": [],
-        "updated_at": "2022-05-22T14:50:04Z"
+        "updated_at": "2022-05-23T19:36:00Z"
     },
     "nvim-dap-virtual-text": {
         "archived": false,
@@ -47300,14 +47330,14 @@
             "url": "https://api.github.com/users/mfussenegger"
         },
         "private": false,
-        "stargazers_count": 309,
+        "stargazers_count": 310,
         "topics": [
             "java",
             "lsp-client",
             "neovim",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-23T00:37:27Z"
+        "updated_at": "2022-05-23T18:58:55Z"
     },
     "nvim-jenkinsfile-linter": {
         "archived": false,
@@ -48491,7 +48521,7 @@
             "url": "https://api.github.com/users/jose-elias-alvarez"
         },
         "private": false,
-        "stargazers_count": 412,
+        "stargazers_count": 413,
         "topics": [
             "lsp",
             "neovim",
@@ -48499,7 +48529,7 @@
             "neovim-plugin",
             "typescript"
         ],
-        "updated_at": "2022-05-23T07:32:13Z"
+        "updated_at": "2022-05-23T16:43:46Z"
     },
     "nvim-lsp.github.io": {
         "archived": false,
@@ -51591,7 +51621,7 @@
     "nvim-scrollview": {
         "archived": false,
         "clone_url": "https://github.com/dstein64/nvim-scrollview.git",
-        "commit": "00dbe64c2894598fc0336f6be141cbe99aa98069",
+        "commit": "b962a67f6bb5ac7c415003748f2088b522ca4390",
         "contents_url": "https://api.github.com/repos/dstein64/nvim-scrollview/contents/{+path}",
         "created_at": "2020-12-10T01:51:20Z",
         "default_branch": "main",
@@ -52169,7 +52199,7 @@
         "forks_count": 31,
         "full_name": "ishan9299/nvim-solarized-lua",
         "language": "Lua",
-        "open_issues_count": 7,
+        "open_issues_count": 8,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/47824004?v=4",
             "events_url": "https://api.github.com/users/ishan9299/events{/privacy}",
@@ -53196,13 +53226,13 @@
             "url": "https://api.github.com/users/kyazdani42"
         },
         "private": false,
-        "stargazers_count": 2473,
+        "stargazers_count": 2474,
         "topics": [
             "file-explorer",
             "lua",
             "neovim"
         ],
-        "updated_at": "2022-05-23T16:15:52Z"
+        "updated_at": "2022-05-23T18:36:11Z"
     },
     "nvim-treeclimber": {
         "archived": false,
@@ -54013,7 +54043,7 @@
             "url": "https://api.github.com/users/p00f"
         },
         "private": false,
-        "stargazers_count": 573,
+        "stargazers_count": 574,
         "topics": [
             "lua",
             "neovim",
@@ -54021,7 +54051,7 @@
             "rainbow-parentheses",
             "tree-sitter"
         ],
-        "updated_at": "2022-05-23T16:11:12Z"
+        "updated_at": "2022-05-23T17:19:34Z"
     },
     "nvim-typora": {
         "archived": true,
@@ -54966,7 +54996,7 @@
             "url": "https://api.github.com/users/mbpowers"
         },
         "private": false,
-        "stargazers_count": 12,
+        "stargazers_count": 14,
         "topics": [
             "lua",
             "markdown",
@@ -54977,7 +55007,7 @@
             "vim",
             "vimwiki"
         ],
-        "updated_at": "2022-05-23T16:05:48Z"
+        "updated_at": "2022-05-23T19:03:57Z"
     },
     "nvimcord": {
         "archived": false,
@@ -55136,13 +55166,13 @@
             "url": "https://api.github.com/users/seandewar"
         },
         "private": false,
-        "stargazers_count": 49,
+        "stargazers_count": 50,
         "topics": [
             "lua",
             "minesweeper-game",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-21T09:03:48Z"
+        "updated_at": "2022-05-23T19:15:45Z"
     },
     "nvimline": {
         "archived": false,
@@ -55957,13 +55987,13 @@
             "url": "https://api.github.com/users/yonlu"
         },
         "private": false,
-        "stargazers_count": 37,
+        "stargazers_count": 36,
         "topics": [
             "lua",
             "neovim",
             "neovim-colorscheme"
         ],
-        "updated_at": "2022-04-06T19:50:14Z"
+        "updated_at": "2022-05-23T16:57:25Z"
     },
     "omnisharp-extended-lsp.nvim": {
         "archived": false,
@@ -56387,16 +56417,16 @@
     "onenord.nvim": {
         "archived": false,
         "clone_url": "https://github.com/rmehri01/onenord.nvim.git",
-        "commit": "3d8e99882d190d64b46301631b55dfb6cfc830d7",
+        "commit": "08577c696ce1abf5c6fbc1a4a00ad851b5b51a38",
         "contents_url": "https://api.github.com/repos/rmehri01/onenord.nvim/contents/{+path}",
         "created_at": "2021-10-17T06:39:51Z",
         "default_branch": "main",
         "description": "\ud83c\udfd4\ufe0f A Neovim theme that combines the Nord and Atom One Dark color palettes for a more vibrant programming experience.",
         "fork": false,
-        "forks_count": 15,
+        "forks_count": 14,
         "full_name": "rmehri01/onenord.nvim",
         "language": "Lua",
-        "open_issues_count": 1,
+        "open_issues_count": 0,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/52933714?v=4",
             "events_url": "https://api.github.com/users/rmehri01/events{/privacy}",
@@ -56418,7 +56448,7 @@
             "url": "https://api.github.com/users/rmehri01"
         },
         "private": false,
-        "stargazers_count": 211,
+        "stargazers_count": 210,
         "topics": [
             "lua",
             "neovim",
@@ -56428,7 +56458,7 @@
             "theme",
             "treesitter"
         ],
-        "updated_at": "2022-05-23T13:13:30Z"
+        "updated_at": "2022-05-23T17:27:58Z"
     },
     "open-related.nvim": {
         "archived": false,
@@ -57097,9 +57127,9 @@
             "url": "https://api.github.com/users/cfenollosa"
         },
         "private": false,
-        "stargazers_count": 23026,
+        "stargazers_count": 23027,
         "topics": [],
-        "updated_at": "2022-05-23T15:09:23Z"
+        "updated_at": "2022-05-23T16:22:42Z"
     },
     "osc.nvim": {
         "archived": false,
@@ -57793,7 +57823,7 @@
             "url": "https://api.github.com/users/rktjmp"
         },
         "private": false,
-        "stargazers_count": 49,
+        "stargazers_count": 50,
         "topics": [
             "fennel",
             "lua",
@@ -57801,7 +57831,7 @@
             "neovim-plugin",
             "pastebin"
         ],
-        "updated_at": "2022-05-23T02:37:19Z"
+        "updated_at": "2022-05-23T17:51:53Z"
     },
     "papers-we-love": {
         "archived": false,
@@ -57837,7 +57867,7 @@
             "url": "https://api.github.com/users/papers-we-love"
         },
         "private": false,
-        "stargazers_count": 60541,
+        "stargazers_count": 60545,
         "topics": [
             "awesome",
             "computer-science",
@@ -57847,7 +57877,7 @@
             "read-papers",
             "theory"
         ],
-        "updated_at": "2022-05-23T15:59:16Z"
+        "updated_at": "2022-05-23T20:16:20Z"
     },
     "papis": {
         "archived": false,
@@ -58784,12 +58814,12 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 876,
+        "stargazers_count": 877,
         "topics": [
             "lua",
             "neovim"
         ],
-        "updated_at": "2022-05-23T13:12:54Z"
+        "updated_at": "2022-05-23T16:57:57Z"
     },
     "plover-live-view-nvim": {
         "archived": false,
@@ -59927,7 +59957,7 @@
             "url": "https://api.github.com/users/golang-standards"
         },
         "private": false,
-        "stargazers_count": 31975,
+        "stargazers_count": 31981,
         "topics": [
             "go",
             "golang",
@@ -59935,7 +59965,7 @@
             "project-template",
             "standards"
         ],
-        "updated_at": "2022-05-23T15:28:08Z"
+        "updated_at": "2022-05-23T20:06:41Z"
     },
     "project-settings.nvim": {
         "archived": false,
@@ -60463,7 +60493,7 @@
         "default_branch": "master",
         "description": "A collective list of free APIs",
         "fork": false,
-        "forks_count": 22308,
+        "forks_count": 22313,
         "full_name": "public-apis/public-apis",
         "language": "Python",
         "open_issues_count": 6,
@@ -60488,7 +60518,7 @@
             "url": "https://api.github.com/users/public-apis"
         },
         "private": false,
-        "stargazers_count": 193451,
+        "stargazers_count": 193508,
         "topics": [
             "api",
             "apis",
@@ -60504,7 +60534,7 @@
             "resources",
             "software"
         ],
-        "updated_at": "2022-05-23T16:16:13Z"
+        "updated_at": "2022-05-23T20:05:46Z"
     },
     "pubspec-assist-nvim": {
         "archived": false,
@@ -60660,13 +60690,13 @@
             "url": "https://api.github.com/users/Shougo"
         },
         "private": false,
-        "stargazers_count": 53,
+        "stargazers_count": 54,
         "topics": [
             "ddc-vim",
             "neovim",
             "vim"
         ],
-        "updated_at": "2022-05-01T13:52:12Z"
+        "updated_at": "2022-05-23T17:22:44Z"
     },
     "purl-nvim": {
         "archived": false,
@@ -61144,10 +61174,10 @@
         "default_branch": "master",
         "description": "Open-source keyboard firmware for Atmel AVR and Arm USB families",
         "fork": false,
-        "forks_count": 26291,
+        "forks_count": 26297,
         "full_name": "qmk/qmk_firmware",
         "language": "C",
-        "open_issues_count": 879,
+        "open_issues_count": 880,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/25358678?v=4",
             "events_url": "https://api.github.com/users/qmk/events{/privacy}",
@@ -61169,7 +61199,7 @@
             "url": "https://api.github.com/users/qmk"
         },
         "private": false,
-        "stargazers_count": 12344,
+        "stargazers_count": 12346,
         "topics": [
             "atmel-avr",
             "c",
@@ -61182,7 +61212,7 @@
             "olkb",
             "qmk"
         ],
-        "updated_at": "2022-05-23T14:56:33Z"
+        "updated_at": "2022-05-23T17:12:50Z"
     },
     "quadprog": {
         "archived": false,
@@ -61894,11 +61924,11 @@
             "url": "https://api.github.com/users/linty-org"
         },
         "private": false,
-        "stargazers_count": 14,
+        "stargazers_count": 15,
         "topics": [
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-23T13:44:56Z"
+        "updated_at": "2022-05-23T17:24:19Z"
     },
     "reaper-keys": {
         "archived": false,
@@ -62471,7 +62501,7 @@
         "default_branch": "master",
         "description": "Resumes generated using the GitHub informations",
         "fork": false,
-        "forks_count": 1355,
+        "forks_count": 1356,
         "full_name": "resume/resume.github.com",
         "language": "JavaScript",
         "open_issues_count": 60,
@@ -62496,9 +62526,9 @@
             "url": "https://api.github.com/users/resume"
         },
         "private": false,
-        "stargazers_count": 57324,
+        "stargazers_count": 57328,
         "topics": [],
-        "updated_at": "2022-05-23T15:31:35Z"
+        "updated_at": "2022-05-23T19:50:11Z"
     },
     "reterm.nvim": {
         "archived": false,
@@ -63366,13 +63396,13 @@
             "url": "https://api.github.com/users/ray-x"
         },
         "private": false,
-        "stargazers_count": 37,
+        "stargazers_count": 38,
         "topics": [
             "find-and-replace",
             "neovim",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-16T16:16:28Z"
+        "updated_at": "2022-05-23T17:27:41Z"
     },
     "sage.nvim": {
         "archived": false,
@@ -64278,14 +64308,14 @@
             "url": "https://api.github.com/users/rmagatti"
         },
         "private": false,
-        "stargazers_count": 116,
+        "stargazers_count": 117,
         "topics": [
             "hacktoberfest",
             "lua",
             "neovim",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-23T12:55:41Z"
+        "updated_at": "2022-05-23T18:25:11Z"
     },
     "sessions.nvim": {
         "archived": false,
@@ -65562,7 +65592,7 @@
             "url": "https://api.github.com/users/mhadidg"
         },
         "private": false,
-        "stargazers_count": 6383,
+        "stargazers_count": 6382,
         "topics": [
             "architecture",
             "awesome",
@@ -65573,7 +65603,7 @@
             "software-design",
             "software-engineering"
         ],
-        "updated_at": "2022-05-23T15:03:11Z"
+        "updated_at": "2022-05-23T19:09:05Z"
     },
     "solarized.nvim": {
         "archived": false,
@@ -66070,7 +66100,7 @@
     "spicetify-cli": {
         "archived": false,
         "clone_url": "https://github.com/spicetify/spicetify-cli.git",
-        "commit": "7b45e7e7cc6b898543389b433243a66a15ac58c9",
+        "commit": "b058b05075f7b3fdb15df5c6ca40353bd05de39d",
         "contents_url": "https://api.github.com/repos/spicetify/spicetify-cli/contents/{+path}",
         "created_at": "2018-12-01T19:55:18Z",
         "default_branch": "master",
@@ -66101,7 +66131,7 @@
             "url": "https://api.github.com/users/spicetify"
         },
         "private": false,
-        "stargazers_count": 11397,
+        "stargazers_count": 11398,
         "topics": [
             "command-line",
             "command-line-tool",
@@ -66112,7 +66142,7 @@
             "spotify",
             "windows"
         ],
-        "updated_at": "2022-05-23T15:54:46Z"
+        "updated_at": "2022-05-23T19:52:26Z"
     },
     "splitjoin.vim": {
         "archived": false,
@@ -66762,7 +66792,7 @@
             "url": "https://api.github.com/users/startup-nvim"
         },
         "private": false,
-        "stargazers_count": 139,
+        "stargazers_count": 140,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2021",
@@ -66770,7 +66800,7 @@
             "neovim-plugin",
             "nvim-lua"
         ],
-        "updated_at": "2022-05-23T03:23:00Z"
+        "updated_at": "2022-05-23T18:50:31Z"
     },
     "stats": {
         "archived": false,
@@ -66806,7 +66836,7 @@
             "url": "https://api.github.com/users/exelban"
         },
         "private": false,
-        "stargazers_count": 10812,
+        "stargazers_count": 10815,
         "topics": [
             "battery",
             "bluetooth",
@@ -66822,7 +66852,7 @@
             "stats",
             "temperature"
         ],
-        "updated_at": "2022-05-23T15:19:49Z"
+        "updated_at": "2022-05-23T20:15:20Z"
     },
     "statusline.lua": {
         "archived": false,
@@ -67000,7 +67030,7 @@
         "forks_count": 44,
         "full_name": "stacked-git/stgit",
         "language": "Python",
-        "open_issues_count": 26,
+        "open_issues_count": 25,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/64688644?v=4",
             "events_url": "https://api.github.com/users/stacked-git/events{/privacy}",
@@ -67873,11 +67903,11 @@
             "url": "https://api.github.com/users/simrat39"
         },
         "private": false,
-        "stargazers_count": 790,
+        "stargazers_count": 791,
         "topics": [
             "neovim"
         ],
-        "updated_at": "2022-05-23T15:28:32Z"
+        "updated_at": "2022-05-23T17:37:01Z"
     },
     "symsearch.nvim": {
         "archived": false,
@@ -67929,7 +67959,7 @@
         "forks_count": 3414,
         "full_name": "syncthing/syncthing",
         "language": "Go",
-        "open_issues_count": 326,
+        "open_issues_count": 325,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/7628018?v=4",
             "events_url": "https://api.github.com/users/syncthing/events{/privacy}",
@@ -67951,14 +67981,14 @@
             "url": "https://api.github.com/users/syncthing"
         },
         "private": false,
-        "stargazers_count": 44816,
+        "stargazers_count": 44817,
         "topics": [
             "go",
             "p2p",
             "peer-to-peer",
             "synchronization"
         ],
-        "updated_at": "2022-05-23T15:42:34Z"
+        "updated_at": "2022-05-23T19:21:54Z"
     },
     "syntastic": {
         "archived": false,
@@ -67994,7 +68024,7 @@
             "url": "https://api.github.com/users/vim-syntastic"
         },
         "private": false,
-        "stargazers_count": 11184,
+        "stargazers_count": 11185,
         "topics": [
             "lint",
             "lint-checking",
@@ -68003,7 +68033,7 @@
             "syntax-checking",
             "vim-plugin"
         ],
-        "updated_at": "2022-05-23T16:19:25Z"
+        "updated_at": "2022-05-23T18:17:48Z"
     },
     "syntax-tree-surfer": {
         "archived": false,
@@ -68039,9 +68069,9 @@
             "url": "https://api.github.com/users/ziontee113"
         },
         "private": false,
-        "stargazers_count": 112,
+        "stargazers_count": 113,
         "topics": [],
-        "updated_at": "2022-05-23T15:44:24Z"
+        "updated_at": "2022-05-23T17:30:54Z"
     },
     "tabby.nvim": {
         "archived": false,
@@ -68205,13 +68235,13 @@
             "url": "https://api.github.com/users/abecodes"
         },
         "private": false,
-        "stargazers_count": 318,
+        "stargazers_count": 319,
         "topics": [
             "lua",
             "neovim",
             "tabout"
         ],
-        "updated_at": "2022-05-23T10:09:15Z"
+        "updated_at": "2022-05-23T17:07:17Z"
     },
     "tabset.nvim": {
         "archived": false,
@@ -70063,9 +70093,9 @@
             "url": "https://api.github.com/users/nvim-telescope"
         },
         "private": false,
-        "stargazers_count": 62,
+        "stargazers_count": 63,
         "topics": [],
-        "updated_at": "2022-05-03T08:51:42Z"
+        "updated_at": "2022-05-23T18:57:33Z"
     },
     "telescope-fzy-native.nvim": {
         "archived": false,
@@ -71527,7 +71557,7 @@
     "telescope-repo.nvim": {
         "archived": false,
         "clone_url": "https://github.com/cljoly/telescope-repo.nvim.git",
-        "commit": "f6ea0de11912d19943eb8c73d7ebb5ba28c55d4f",
+        "commit": "c4296954ffc24071b3dd1cdbc6249b5c7c2e1714",
         "contents_url": "https://api.github.com/repos/cljoly/telescope-repo.nvim/contents/{+path}",
         "created_at": "2021-06-04T06:33:57Z",
         "default_branch": "master",
@@ -71536,7 +71566,7 @@
         "forks_count": 4,
         "full_name": "cljoly/telescope-repo.nvim",
         "language": "Lua",
-        "open_issues_count": 6,
+        "open_issues_count": 5,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/7347374?v=4",
             "events_url": "https://api.github.com/users/cljoly/events{/privacy}",
@@ -72892,10 +72922,10 @@
         "default_branch": "master",
         "description": "Find, Filter, Preview, Pick. All lua, all the time.",
         "fork": false,
-        "forks_count": 427,
+        "forks_count": 428,
         "full_name": "nvim-telescope/telescope.nvim",
         "language": "Lua",
-        "open_issues_count": 141,
+        "open_issues_count": 142,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/74419533?v=4",
             "events_url": "https://api.github.com/users/nvim-telescope/events{/privacy}",
@@ -72917,14 +72947,14 @@
             "url": "https://api.github.com/users/nvim-telescope"
         },
         "private": false,
-        "stargazers_count": 5806,
+        "stargazers_count": 5808,
         "topics": [
             "lua",
             "neovim",
             "nvim",
             "nvim-lua"
         ],
-        "updated_at": "2022-05-23T12:42:10Z"
+        "updated_at": "2022-05-23T19:06:22Z"
     },
     "telescope_hoogle": {
         "archived": false,
@@ -74519,7 +74549,7 @@
         "default_branch": "main",
         "description": "\u2705  Highlight, list and search todo comments in your projects",
         "fork": false,
-        "forks_count": 23,
+        "forks_count": 24,
         "full_name": "folke/todo-comments.nvim",
         "language": "Lua",
         "open_issues_count": 37,
@@ -75102,7 +75132,7 @@
             "vim-colorscheme",
             "vim-theme"
         ],
-        "updated_at": "2022-05-23T07:25:47Z"
+        "updated_at": "2022-05-23T19:29:50Z"
     },
     "tomato.nvim": {
         "archived": false,
@@ -77352,7 +77382,7 @@
             "url": "https://api.github.com/users/errata-ai"
         },
         "private": false,
-        "stargazers_count": 1932,
+        "stargazers_count": 1934,
         "topics": [
             "linter",
             "linting",
@@ -77360,7 +77390,7 @@
             "nlp",
             "vale"
         ],
-        "updated_at": "2022-05-23T12:31:17Z"
+        "updated_at": "2022-05-23T18:39:19Z"
     },
     "valorant": {
         "archived": false,
@@ -77937,7 +77967,7 @@
             "url": "https://api.github.com/users/cknadler"
         },
         "private": false,
-        "stargazers_count": 3368,
+        "stargazers_count": 3369,
         "topics": [
             "keyboard-shortcuts",
             "osx",
@@ -77945,7 +77975,7 @@
             "text-editor",
             "vim"
         ],
-        "updated_at": "2022-05-22T06:07:42Z"
+        "updated_at": "2022-05-23T16:37:27Z"
     },
     "vim-apm": {
         "archived": false,
@@ -78213,7 +78243,7 @@
             "url": "https://api.github.com/users/liuchengxu"
         },
         "private": false,
-        "stargazers_count": 1871,
+        "stargazers_count": 1872,
         "topics": [
             "dispatcher",
             "finder",
@@ -78226,7 +78256,7 @@
             "vim-clap",
             "vim-plugin"
         ],
-        "updated_at": "2022-05-23T02:47:33Z"
+        "updated_at": "2022-05-23T18:59:28Z"
     },
     "vim-closer": {
         "archived": false,
@@ -79343,7 +79373,7 @@
         "private": false,
         "stargazers_count": 16009,
         "topics": [],
-        "updated_at": "2022-05-23T14:10:15Z"
+        "updated_at": "2022-05-23T20:08:03Z"
     },
     "vim-galore": {
         "archived": false,
@@ -79404,7 +79434,7 @@
         "default_branch": "master",
         "description": "A powerful grammar checker for Vim using LanguageTool.",
         "fork": false,
-        "forks_count": 31,
+        "forks_count": 30,
         "full_name": "rhysd/vim-grammarous",
         "language": "Vim script",
         "open_issues_count": 40,
@@ -79724,9 +79754,9 @@
             "url": "https://api.github.com/users/michaeljsmith"
         },
         "private": false,
-        "stargazers_count": 615,
+        "stargazers_count": 614,
         "topics": [],
-        "updated_at": "2022-05-23T05:05:43Z"
+        "updated_at": "2022-05-23T17:23:53Z"
     },
     "vim-indentwise": {
         "archived": false,
@@ -80070,7 +80100,7 @@
         "forks_count": 34,
         "full_name": "andymass/vim-matchup",
         "language": "Vim script",
-        "open_issues_count": 31,
+        "open_issues_count": 32,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/6655373?v=4",
             "events_url": "https://api.github.com/users/andymass/events{/privacy}",
@@ -80092,7 +80122,7 @@
             "url": "https://api.github.com/users/andymass"
         },
         "private": false,
-        "stargazers_count": 1071,
+        "stargazers_count": 1072,
         "topics": [
             "highlighting-matches",
             "matching-pairs",
@@ -80104,7 +80134,7 @@
             "vim-plugin",
             "vimscript-5624"
         ],
-        "updated_at": "2022-05-22T11:37:43Z"
+        "updated_at": "2022-05-23T18:13:46Z"
     },
     "vim-mergetool": {
         "archived": false,
@@ -80963,9 +80993,9 @@
             "url": "https://api.github.com/users/kshenoy"
         },
         "private": false,
-        "stargazers_count": 1264,
+        "stargazers_count": 1265,
         "topics": [],
-        "updated_at": "2022-05-20T10:02:56Z"
+        "updated_at": "2022-05-23T18:15:57Z"
     },
     "vim-signify": {
         "archived": false,
@@ -81001,7 +81031,7 @@
             "url": "https://api.github.com/users/mhinz"
         },
         "private": false,
-        "stargazers_count": 2500,
+        "stargazers_count": 2499,
         "topics": [
             "accurev",
             "async",
@@ -81021,7 +81051,7 @@
             "vim",
             "vim-plugin"
         ],
-        "updated_at": "2022-05-23T00:03:18Z"
+        "updated_at": "2022-05-23T17:51:53Z"
     },
     "vim-simplest-todo": {
         "archived": false,
@@ -81301,7 +81331,7 @@
             "url": "https://api.github.com/users/mhinz"
         },
         "private": false,
-        "stargazers_count": 4724,
+        "stargazers_count": 4725,
         "topics": [
             "hacktoberfest",
             "neovim",
@@ -81312,7 +81342,7 @@
             "vim-scripts",
             "viml"
         ],
-        "updated_at": "2022-05-22T07:46:17Z"
+        "updated_at": "2022-05-23T20:04:54Z"
     },
     "vim-table-mode": {
         "archived": false,
@@ -81428,9 +81458,9 @@
             "url": "https://api.github.com/users/tmux-plugins"
         },
         "private": false,
-        "stargazers_count": 306,
+        "stargazers_count": 307,
         "topics": [],
-        "updated_at": "2022-04-26T07:02:35Z"
+        "updated_at": "2022-05-23T19:13:22Z"
     },
     "vim-tpipeline": {
         "archived": false,
@@ -82274,7 +82304,7 @@
             "url": "https://api.github.com/users/vimwiki"
         },
         "private": false,
-        "stargazers_count": 7299,
+        "stargazers_count": 7300,
         "topics": [
             "hacktoberfest",
             "personal-organizer",
@@ -82283,7 +82313,7 @@
             "vimwiki",
             "wiki"
         ],
-        "updated_at": "2022-05-23T05:16:18Z"
+        "updated_at": "2022-05-23T16:59:06Z"
     },
     "vimwiki-reviews-lua": {
         "archived": false,
@@ -82730,7 +82760,7 @@
             "url": "https://api.github.com/users/liuchengxu"
         },
         "private": false,
-        "stargazers_count": 1601,
+        "stargazers_count": 1602,
         "topics": [
             "ctags",
             "language-server-protocol",
@@ -82738,7 +82768,7 @@
             "vim",
             "vim-plugin"
         ],
-        "updated_at": "2022-05-23T06:45:07Z"
+        "updated_at": "2022-05-23T17:37:03Z"
     },
     "visual-split.vim": {
         "archived": false,
@@ -83022,7 +83052,7 @@
     "vscode": {
         "archived": false,
         "clone_url": "https://github.com/microsoft/vscode.git",
-        "commit": "192ca6ffe2bfcb464029bf36aea8f3d2d5ce8bfd",
+        "commit": "da180bced6d4c6228649325a11b55a8f8aa8443a",
         "contents_url": "https://api.github.com/repos/microsoft/vscode/contents/{+path}",
         "created_at": "2015-09-03T20:23:38Z",
         "default_branch": "main",
@@ -83031,7 +83061,7 @@
         "forks_count": 22413,
         "full_name": "microsoft/vscode",
         "language": "TypeScript",
-        "open_issues_count": 6541,
+        "open_issues_count": 6544,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
             "events_url": "https://api.github.com/users/microsoft/events{/privacy}",
@@ -83053,7 +83083,7 @@
             "url": "https://api.github.com/users/microsoft"
         },
         "private": false,
-        "stargazers_count": 131972,
+        "stargazers_count": 131984,
         "topics": [
             "editor",
             "electron",
@@ -83061,7 +83091,7 @@
             "typescript",
             "visual-studio-code"
         ],
-        "updated_at": "2022-05-23T15:30:07Z"
+        "updated_at": "2022-05-23T20:13:49Z"
     },
     "vscode-langservers-extracted": {
         "archived": false,
@@ -83163,7 +83193,7 @@
         "forks_count": 683,
         "full_name": "VSCodium/vscodium",
         "language": "Shell",
-        "open_issues_count": 101,
+        "open_issues_count": 100,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/40338071?v=4",
             "events_url": "https://api.github.com/users/VSCodium/events{/privacy}",
@@ -83185,7 +83215,7 @@
             "url": "https://api.github.com/users/VSCodium"
         },
         "private": false,
-        "stargazers_count": 15904,
+        "stargazers_count": 15903,
         "topics": [
             "editor",
             "floss",
@@ -83193,7 +83223,7 @@
             "open-source-licensing",
             "vscode"
         ],
-        "updated_at": "2022-05-23T14:21:13Z"
+        "updated_at": "2022-05-23T17:53:08Z"
     },
     "vusted": {
         "archived": false,
@@ -83688,7 +83718,7 @@
         "forks_count": 237,
         "full_name": "wez/wezterm",
         "language": "Rust",
-        "open_issues_count": 183,
+        "open_issues_count": 182,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/117777?v=4",
             "events_url": "https://api.github.com/users/wez/events{/privacy}",
@@ -83755,9 +83785,9 @@
             "url": "https://api.github.com/users/aca"
         },
         "private": false,
-        "stargazers_count": 15,
+        "stargazers_count": 16,
         "topics": [],
-        "updated_at": "2022-04-30T16:59:38Z"
+        "updated_at": "2022-05-23T16:21:16Z"
     },
     "wheel": {
         "archived": false,
@@ -83861,7 +83891,7 @@
         "default_branch": "main",
         "description": "\ud83d\udca5   Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.",
         "fork": false,
-        "forks_count": 65,
+        "forks_count": 66,
         "full_name": "folke/which-key.nvim",
         "language": "Lua",
         "open_issues_count": 96,
@@ -83886,14 +83916,14 @@
             "url": "https://api.github.com/users/folke"
         },
         "private": false,
-        "stargazers_count": 1412,
+        "stargazers_count": 1413,
         "topics": [
             "lua",
             "neovim",
             "neovim-lua",
             "neovim-plugin"
         ],
-        "updated_at": "2022-05-23T15:58:29Z"
+        "updated_at": "2022-05-23T18:39:57Z"
     },
     "whitespace.nvim": {
         "archived": false,
@@ -84048,9 +84078,9 @@
             "url": "https://api.github.com/users/Fmstrat"
         },
         "private": false,
-        "stargazers_count": 6346,
+        "stargazers_count": 6351,
         "topics": [],
-        "updated_at": "2022-05-23T14:59:52Z"
+        "updated_at": "2022-05-23T20:10:54Z"
     },
     "windex.nvim": {
         "archived": false,
@@ -85553,7 +85583,7 @@
             "url": "https://api.github.com/users/mcchrish"
         },
         "private": false,
-        "stargazers_count": 218,
+        "stargazers_count": 217,
         "topics": [
             "alacritty-colorscheme",
             "alacritty-theme",
@@ -85572,7 +85602,7 @@
             "vim-plugin",
             "wezterm-colorscheme"
         ],
-        "updated_at": "2022-05-20T17:10:04Z"
+        "updated_at": "2022-05-23T17:22:02Z"
     },
     "zephyr-nvim": {
         "archived": false,
@@ -86032,7 +86062,7 @@
     "zotero": {
         "archived": false,
         "clone_url": "https://github.com/zotero/zotero.git",
-        "commit": "ff920de130888aecc95902a66ac849fcede94c8c",
+        "commit": "294c1da8b4e0fb2d36734cc489e17c32e9c99609",
         "contents_url": "https://api.github.com/repos/zotero/zotero/contents/{+path}",
         "created_at": "2011-10-27T07:46:48Z",
         "default_branch": "master",
@@ -86041,7 +86071,7 @@
         "forks_count": 515,
         "full_name": "zotero/zotero",
         "language": "JavaScript",
-        "open_issues_count": 865,
+        "open_issues_count": 866,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/891917?v=4",
             "events_url": "https://api.github.com/users/zotero/events{/privacy}",
@@ -86063,9 +86093,9 @@
             "url": "https://api.github.com/users/zotero"
         },
         "private": false,
-        "stargazers_count": 5312,
+        "stargazers_count": 5313,
         "topics": [],
-        "updated_at": "2022-05-23T13:50:25Z"
+        "updated_at": "2022-05-23T16:59:36Z"
     },
     "zotex.nvim": {
         "archived": false,
@@ -86160,7 +86190,7 @@
         "default_branch": "main",
         "description": "A smarter cd command. Supports all major shells.",
         "fork": false,
-        "forks_count": 212,
+        "forks_count": 211,
         "full_name": "ajeetdsouza/zoxide",
         "language": "Rust",
         "open_issues_count": 26,
@@ -86185,7 +86215,7 @@
             "url": "https://api.github.com/users/ajeetdsouza"
         },
         "private": false,
-        "stargazers_count": 6389,
+        "stargazers_count": 6390,
         "topics": [
             "autojump",
             "bash",
@@ -86208,7 +86238,7 @@
             "z",
             "zsh"
         ],
-        "updated_at": "2022-05-23T16:13:54Z"
+        "updated_at": "2022-05-23T19:15:16Z"
     },
     "zplug": {
         "archived": false,
