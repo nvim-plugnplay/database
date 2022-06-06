@@ -93,10 +93,10 @@
         "default_branch": "main",
         "description": "AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins ",
         "fork": false,
-        "forks_count": 183,
+        "forks_count": 182,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
-        "open_issues_count": 8,
+        "open_issues_count": 7,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/102238249?v=4",
             "events_url": "https://api.github.com/users/AstroNvim/events{/privacy}",
@@ -118,7 +118,7 @@
             "url": "https://api.github.com/users/AstroNvim"
         },
         "private": false,
-        "stargazers_count": 2946,
+        "stargazers_count": 2949,
         "topics": [
             "astronvim",
             "astrovim",
@@ -132,7 +132,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2022-06-05T19:52:48Z"
+        "updated_at": "2022-06-06T00:49:07Z"
     },
     "BobVim": {
         "archived": false,
@@ -593,7 +593,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 8921,
+        "stargazers_count": 8926,
         "topics": [
             "formatters",
             "ide",
@@ -611,7 +611,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-06-05T19:22:57Z"
+        "updated_at": "2022-06-06T00:44:10Z"
     },
     "NeoCode": {
         "archived": false,
@@ -702,7 +702,7 @@
         "default_branch": "master",
         "description": "A Neovim config designed from scratch to be understandable",
         "fork": false,
-        "forks_count": 601,
+        "forks_count": 602,
         "full_name": "LunarVim/Neovim-from-scratch",
         "language": "Lua",
         "open_issues_count": 77,
@@ -727,7 +727,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 2333,
+        "stargazers_count": 2334,
         "topics": [
             "neovim",
             "neovim-config",
@@ -736,12 +736,12 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2022-06-05T19:13:34Z"
+        "updated_at": "2022-06-06T00:15:28Z"
     },
     "NvChad": {
         "archived": false,
         "clone_url": "https://github.com/NvChad/NvChad.git",
-        "commit": "c7cfacd360553f9aa425031729398a5da1332989",
+        "commit": "5ba309a0dfee26b882658034c7bbf5ce03ebcde3",
         "contents_url": "https://api.github.com/repos/NvChad/NvChad/contents/{+path}",
         "created_at": "2021-03-07T14:33:17Z",
         "default_branch": "main",
@@ -772,7 +772,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 10042,
+        "stargazers_count": 10045,
         "topics": [
             "chad",
             "charity",
@@ -795,7 +795,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-06-05T19:48:42Z"
+        "updated_at": "2022-06-05T22:43:55Z"
     },
     "NvHack": {
         "archived": false,
@@ -918,7 +918,7 @@
             "url": "https://api.github.com/users/SpaceVim"
         },
         "private": false,
-        "stargazers_count": 18262,
+        "stargazers_count": 18265,
         "topics": [
             "awesome",
             "editor",
@@ -932,7 +932,7 @@
             "vim-distribution",
             "vimrc"
         ],
-        "updated_at": "2022-06-05T15:49:50Z"
+        "updated_at": "2022-06-06T00:27:30Z"
     },
     "StarVim": {
         "archived": true,
@@ -1879,7 +1879,7 @@
         "default_branch": "main",
         "description": "XMonad\u2122\ufe0f. Widgets go brr.",
         "fork": false,
-        "forks_count": 137,
+        "forks_count": 136,
         "full_name": "Axarva/dotfiles-2.0",
         "language": "Shell",
         "open_issues_count": 23,
@@ -2645,9 +2645,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 1226,
+        "stargazers_count": 1229,
         "topics": [],
-        "updated_at": "2022-06-05T18:56:21Z"
+        "updated_at": "2022-06-06T00:51:24Z"
     },
     "learn-neovim-lua": {
         "archived": false,
@@ -2683,7 +2683,7 @@
             "url": "https://api.github.com/users/nshen"
         },
         "private": false,
-        "stargazers_count": 404,
+        "stargazers_count": 405,
         "topics": [
             "learn-vim",
             "learning-by-doing",
@@ -2693,7 +2693,7 @@
             "vim",
             "vimrc"
         ],
-        "updated_at": "2022-06-04T17:55:46Z"
+        "updated_at": "2022-06-05T23:22:23Z"
     },
     "lite-xl-vibe": {
         "archived": false,
@@ -2746,7 +2746,7 @@
     "lua-config": {
         "archived": false,
         "clone_url": "https://github.com/nickerdoodle/lua-config.git",
-        "commit": "49e2325b7fd46dd24f37d0c7eed7fd91ef60a079",
+        "commit": "1fc2d106474149530aed9794aa022a4017108a39",
         "contents_url": "https://api.github.com/repos/nickerdoodle/lua-config/contents/{+path}",
         "created_at": "2021-03-08T05:01:31Z",
         "default_branch": "master",
@@ -4606,7 +4606,7 @@
             "url": "https://api.github.com/users/nanotee"
         },
         "private": false,
-        "stargazers_count": 3384,
+        "stargazers_count": 3387,
         "topics": [
             "documentation",
             "guide",
@@ -4615,7 +4615,7 @@
             "nvim",
             "vimscript"
         ],
-        "updated_at": "2022-06-05T17:30:55Z"
+        "updated_at": "2022-06-06T01:10:30Z"
     },
     "nvim-lua-plugin-template": {
         "archived": false,
@@ -5901,7 +5901,7 @@
             "url": "https://api.github.com/users/NNBnh"
         },
         "private": false,
-        "stargazers_count": 112,
+        "stargazers_count": 113,
         "topics": [
             "dotfiles",
             "dotfiles-manager",
@@ -5911,7 +5911,7 @@
             "terminal",
             "unix"
         ],
-        "updated_at": "2022-05-31T01:32:26Z"
+        "updated_at": "2022-06-05T21:51:19Z"
     },
     "titan": {
         "archived": false,
