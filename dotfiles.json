@@ -93,7 +93,7 @@
         "forks_count": 401,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
-        "open_issues_count": 2,
+        "open_issues_count": 3,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/102238249?v=4",
             "events_url": "https://api.github.com/users/AstroNvim/events{/privacy}",
@@ -129,7 +129,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2022-11-13T00:59:56Z"
+        "updated_at": "2022-11-13T04:17:16Z"
     },
     "BobVim": {
         "archived": false,
@@ -569,7 +569,7 @@
         "forks_count": 1331,
         "full_name": "LunarVim/LunarVim",
         "language": "Lua",
-        "open_issues_count": 86,
+        "open_issues_count": 89,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/86900519?v=4",
             "events_url": "https://api.github.com/users/LunarVim/events{/privacy}",
@@ -591,7 +591,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 11633,
+        "stargazers_count": 11635,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -611,7 +611,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-11-13T00:59:37Z"
+        "updated_at": "2022-11-13T02:35:37Z"
     },
     "NeoCode": {
         "archived": false,
@@ -702,7 +702,7 @@
         "default_branch": "master",
         "description": "\ud83d\udcda A Neovim config designed from scratch to be understandable",
         "fork": false,
-        "forks_count": 942,
+        "forks_count": 941,
         "full_name": "LunarVim/Neovim-from-scratch",
         "language": "Lua",
         "open_issues_count": 90,
@@ -774,7 +774,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 13098,
+        "stargazers_count": 13099,
         "topics": [
             "dotfiles",
             "editor",
@@ -797,7 +797,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2022-11-12T23:06:20Z"
+        "updated_at": "2022-11-13T01:41:23Z"
     },
     "NvHack": {
         "archived": false,
@@ -920,7 +920,7 @@
             "url": "https://api.github.com/users/SpaceVim"
         },
         "private": false,
-        "stargazers_count": 19242,
+        "stargazers_count": 19243,
         "topics": [
             "awesome",
             "editor",
@@ -935,7 +935,7 @@
             "vim-distribution",
             "vimrc"
         ],
-        "updated_at": "2022-11-12T19:49:36Z"
+        "updated_at": "2022-11-13T04:05:59Z"
     },
     "StarVim": {
         "archived": true,
@@ -2168,7 +2168,7 @@
     "dotfiles2": {
         "archived": false,
         "clone_url": "https://github.com/ono7/dotfiles2.git",
-        "commit": "d28104598e978c513571996fc2bc78dd006670f9",
+        "commit": "4cb15620c6f403c86f00f654816918fa235d9389",
         "contents_url": "https://api.github.com/repos/ono7/dotfiles2/contents/{+path}",
         "created_at": "2021-03-16T01:56:33Z",
         "default_branch": "main",
@@ -2771,7 +2771,7 @@
             "url": "https://api.github.com/users/nshen"
         },
         "private": false,
-        "stargazers_count": 681,
+        "stargazers_count": 682,
         "topics": [
             "learn-vim",
             "learning-by-doing",
@@ -2781,7 +2781,7 @@
             "vim",
             "vimrc"
         ],
-        "updated_at": "2022-11-12T07:14:50Z"
+        "updated_at": "2022-11-13T01:51:44Z"
     },
     "lite-xl-vibe": {
         "archived": false,
@@ -4184,7 +4184,7 @@
             "url": "https://api.github.com/users/jdhao"
         },
         "private": false,
-        "stargazers_count": 1867,
+        "stargazers_count": 1868,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -4193,7 +4193,7 @@
             "neovim-dotfiles",
             "nvim"
         ],
-        "updated_at": "2022-11-12T22:29:32Z"
+        "updated_at": "2022-11-13T04:19:50Z"
     },
     "nvim-config-bistro": {
         "archived": false,
@@ -4656,7 +4656,7 @@
             "url": "https://api.github.com/users/nanotee"
         },
         "private": false,
-        "stargazers_count": 4682,
+        "stargazers_count": 4683,
         "topics": [
             "documentation",
             "guide",
@@ -4665,7 +4665,7 @@
             "nvim",
             "vimscript"
         ],
-        "updated_at": "2022-11-13T00:50:21Z"
+        "updated_at": "2022-11-13T03:25:27Z"
     },
     "nvim-lua-plugin-template": {
         "archived": false,
@@ -5967,41 +5967,41 @@
     },
     "vim": {
         "archived": false,
-        "clone_url": "https://github.com/cyproterone/vim.git",
-        "commit": "a1e43694f45bbc760705d383484c5714a41ce943",
-        "contents_url": "https://api.github.com/repos/cyproterone/vim/contents/{+path}",
-        "created_at": "2020-04-14T00:22:49Z",
-        "default_branch": "wang",
+        "clone_url": "https://github.com/spektroskop/vim.git",
+        "commit": "4c5a44f4f0c2d946cb8b2139043bd88ca38c32f0",
+        "contents_url": "https://api.github.com/repos/spektroskop/vim/contents/{+path}",
+        "created_at": "2021-03-26T21:20:04Z",
+        "default_branch": "main",
         "description": null,
         "fork": false,
         "forks_count": 0,
-        "full_name": "cyproterone/vim",
-        "language": "Lua",
+        "full_name": "spektroskop/vim",
+        "language": "Vim script",
         "open_issues_count": 0,
         "owner": {
-            "avatar_url": "https://avatars.githubusercontent.com/u/24987181?v=4",
-            "events_url": "https://api.github.com/users/cyproterone/events{/privacy}",
-            "followers_url": "https://api.github.com/users/cyproterone/followers",
-            "following_url": "https://api.github.com/users/cyproterone/following{/other_user}",
-            "gists_url": "https://api.github.com/users/cyproterone/gists{/gist_id}",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3189?v=4",
+            "events_url": "https://api.github.com/users/spektroskop/events{/privacy}",
+            "followers_url": "https://api.github.com/users/spektroskop/followers",
+            "following_url": "https://api.github.com/users/spektroskop/following{/other_user}",
+            "gists_url": "https://api.github.com/users/spektroskop/gists{/gist_id}",
             "gravatar_id": "",
-            "html_url": "https://github.com/cyproterone",
-            "id": 24987181,
-            "login": "cyproterone",
-            "node_id": "MDQ6VXNlcjI0OTg3MTgx",
-            "organizations_url": "https://api.github.com/users/cyproterone/orgs",
-            "received_events_url": "https://api.github.com/users/cyproterone/received_events",
-            "repos_url": "https://api.github.com/users/cyproterone/repos",
+            "html_url": "https://github.com/spektroskop",
+            "id": 3189,
+            "login": "spektroskop",
+            "node_id": "MDQ6VXNlcjMxODk=",
+            "organizations_url": "https://api.github.com/users/spektroskop/orgs",
+            "received_events_url": "https://api.github.com/users/spektroskop/received_events",
+            "repos_url": "https://api.github.com/users/spektroskop/repos",
             "site_admin": false,
-            "starred_url": "https://api.github.com/users/cyproterone/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/cyproterone/subscriptions",
+            "starred_url": "https://api.github.com/users/spektroskop/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/spektroskop/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/cyproterone"
+            "url": "https://api.github.com/users/spektroskop"
         },
         "private": false,
-        "stargazers_count": 14,
+        "stargazers_count": 1,
         "topics": [],
-        "updated_at": "2022-11-05T01:56:33Z"
+        "updated_at": "2021-04-19T03:49:29Z"
     },
     "vim-blueplanet": {
         "archived": false,
