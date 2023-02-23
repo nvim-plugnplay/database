@@ -604,7 +604,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 233,
+        "forks_count": 234,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 7,
@@ -629,7 +629,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 3736,
+        "stargazers_count": 3739,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -638,12 +638,12 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2023-02-23T03:46:11Z"
+        "updated_at": "2023-02-23T08:15:03Z"
     },
     "LunarVim": {
         "archived": false,
         "clone_url": "https://github.com/LunarVim/LunarVim.git",
-        "commit": "98ef4a1a2481d1960708e5a91527cff90f802915",
+        "commit": "d2b4c313d6bda0e563c26bb07f9589b65adf1d7b",
         "contents_url": "https://api.github.com/repos/LunarVim/LunarVim/contents/{+path}",
         "created_at": "2018-08-16T23:55:19Z",
         "default_branch": "master",
@@ -652,7 +652,7 @@
         "forks_count": 1410,
         "full_name": "LunarVim/LunarVim",
         "language": "Lua",
-        "open_issues_count": 59,
+        "open_issues_count": 56,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/86900519?v=4",
             "events_url": "https://api.github.com/users/LunarVim/events{/privacy}",
@@ -674,7 +674,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 13298,
+        "stargazers_count": 13300,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -694,7 +694,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-02-23T03:20:35Z"
+        "updated_at": "2023-02-23T07:33:57Z"
     },
     "NeoCode": {
         "archived": false,
@@ -857,7 +857,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 14886,
+        "stargazers_count": 14890,
         "topics": [
             "dotfiles",
             "editor",
@@ -880,7 +880,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-02-23T03:56:22Z"
+        "updated_at": "2023-02-23T07:20:12Z"
     },
     "NvHack": {
         "archived": false,
@@ -2053,7 +2053,7 @@
         "default_branch": "main",
         "description": "XMonad\u2122\ufe0f. Widgets go brr.",
         "fork": false,
-        "forks_count": 158,
+        "forks_count": 157,
         "full_name": "Axarva/dotfiles-2.0",
         "language": "Shell",
         "open_issues_count": 15,
@@ -2212,7 +2212,7 @@
     "dotfiles2": {
         "archived": false,
         "clone_url": "https://github.com/ono7/dotfiles2.git",
-        "commit": "54f42cfa95f388bab9a5e4d9ec911bdecf398b91",
+        "commit": "c3ea3f5778dd087d67b5aacb98e47c6fb91f3c9f",
         "contents_url": "https://api.github.com/repos/ono7/dotfiles2/contents/{+path}",
         "created_at": "2021-03-16T01:56:33Z",
         "default_branch": "main",
@@ -2579,7 +2579,7 @@
     "dotvim": {
         "archived": false,
         "clone_url": "https://github.com/mars90226/dotvim.git",
-        "commit": "12899a5d6e4525bf3710476db0055cbb7ff8a6d1",
+        "commit": "b5a96800218f007e395dc3e732482f5988317157",
         "contents_url": "https://api.github.com/repos/mars90226/dotvim/contents/{+path}",
         "created_at": "2012-05-31T16:23:56Z",
         "default_branch": "master",
@@ -2752,10 +2752,10 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 736,
+        "forks_count": 743,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
-        "open_issues_count": 12,
+        "open_issues_count": 13,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -2777,9 +2777,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 3822,
+        "stargazers_count": 3823,
         "topics": [],
-        "updated_at": "2023-02-23T03:23:43Z"
+        "updated_at": "2023-02-23T07:25:10Z"
     },
     "learn-neovim-lua": {
         "archived": false,
@@ -4430,7 +4430,7 @@
     "nvim-ide": {
         "archived": false,
         "clone_url": "https://github.com/johnsci911/nvim-ide.git",
-        "commit": "36e8b1d5976f799d755df683245fc6fb178f3a41",
+        "commit": "b757b51304dddec0ddbd862168e7d1613daf9421",
         "contents_url": "https://api.github.com/repos/johnsci911/nvim-ide/contents/{+path}",
         "created_at": "2020-11-07T09:09:30Z",
         "default_branch": "lua",
@@ -4632,7 +4632,7 @@
         "default_branch": "master",
         "description": "A guide to using Lua in Neovim",
         "fork": false,
-        "forks_count": 185,
+        "forks_count": 186,
         "full_name": "nanotee/nvim-lua-guide",
         "language": null,
         "open_issues_count": 18,
@@ -5592,7 +5592,7 @@
         "forks_count": 299,
         "full_name": "ayamir/nvimdots",
         "language": "Lua",
-        "open_issues_count": 8,
+        "open_issues_count": 9,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/61657399?v=4",
             "events_url": "https://api.github.com/users/ayamir/events{/privacy}",
@@ -5614,13 +5614,13 @@
             "url": "https://api.github.com/users/ayamir"
         },
         "private": false,
-        "stargazers_count": 1489,
+        "stargazers_count": 1490,
         "topics": [
             "configuration",
             "lua",
             "neovim"
         ],
-        "updated_at": "2023-02-23T03:23:34Z"
+        "updated_at": "2023-02-23T07:38:05Z"
     },
     "nvimfiles": {
         "archived": false,
