@@ -115,7 +115,7 @@
             "url": "https://api.github.com/users/AstroNvim"
         },
         "private": false,
-        "stargazers_count": 10383,
+        "stargazers_count": 10382,
         "topics": [
             "astronvim",
             "astrovim",
@@ -129,7 +129,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2023-09-11T12:14:02Z"
+        "updated_at": "2023-09-11T15:42:06Z"
     },
     "BobVim": {
         "archived": false,
@@ -629,7 +629,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 7713,
+        "stargazers_count": 7718,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -638,7 +638,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2023-09-11T10:26:55Z"
+        "updated_at": "2023-09-11T15:33:47Z"
     },
     "LunarVim": {
         "archived": false,
@@ -652,7 +652,7 @@
         "forks_count": 1492,
         "full_name": "LunarVim/LunarVim",
         "language": "Lua",
-        "open_issues_count": 81,
+        "open_issues_count": 82,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/86900519?v=4",
             "events_url": "https://api.github.com/users/LunarVim/events{/privacy}",
@@ -674,7 +674,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 15813,
+        "stargazers_count": 15814,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -693,7 +693,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-09-11T04:46:04Z"
+        "updated_at": "2023-09-11T13:05:42Z"
     },
     "NeoCode": {
         "archived": false,
@@ -838,7 +838,7 @@
         "forks_count": 1148,
         "full_name": "LunarVim/Neovim-from-scratch",
         "language": "Lua",
-        "open_issues_count": 71,
+        "open_issues_count": 72,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/86900519?v=4",
             "events_url": "https://api.github.com/users/LunarVim/events{/privacy}",
@@ -860,7 +860,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 4869,
+        "stargazers_count": 4871,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -871,12 +871,12 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2023-09-11T08:03:11Z"
+        "updated_at": "2023-09-11T15:22:35Z"
     },
     "NormalNvim": {
         "archived": false,
         "clone_url": "https://github.com/NormalNvim/NormalNvim.git",
-        "commit": "7e2c02d17b2ca178bf0e60205c56bb42f66b1cab",
+        "commit": "4fce652b007fc82055763a608eddd2a1305d3fcd",
         "contents_url": "https://api.github.com/repos/NormalNvim/NormalNvim/contents/{+path}",
         "created_at": "2023-05-12T18:07:04Z",
         "default_branch": "main",
@@ -945,7 +945,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 19201,
+        "stargazers_count": 19206,
         "topics": [
             "dotfiles",
             "editor",
@@ -968,7 +968,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-09-11T12:17:55Z"
+        "updated_at": "2023-09-11T15:35:37Z"
     },
     "NvHack": {
         "archived": false,
@@ -2116,7 +2116,7 @@
             "url": "https://api.github.com/users/Axarva"
         },
         "private": false,
-        "stargazers_count": 1593,
+        "stargazers_count": 1592,
         "topics": [
             "dotfiles",
             "eww",
@@ -2124,7 +2124,7 @@
             "widgets",
             "xmonad"
         ],
-        "updated_at": "2023-09-11T11:43:36Z"
+        "updated_at": "2023-09-11T12:23:37Z"
     },
     "dotfiles-arch": {
         "archived": false,
@@ -2751,7 +2751,7 @@
     "evim": {
         "archived": false,
         "clone_url": "https://github.com/e-cal/evim.git",
-        "commit": "2f494c854eff1096e8dac2286b6b3181368a6e9e",
+        "commit": "c1cb50bc71c0516bbeabdcb4df2fb558b879e3a9",
         "contents_url": "https://api.github.com/repos/e-cal/evim/contents/{+path}",
         "created_at": "2021-04-21T17:43:03Z",
         "default_branch": "main",
@@ -2833,7 +2833,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 3349,
+        "forks_count": 3354,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 1,
@@ -2858,9 +2858,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 7256,
+        "stargazers_count": 7261,
         "topics": [],
-        "updated_at": "2023-09-11T12:08:38Z"
+        "updated_at": "2023-09-11T15:32:56Z"
     },
     "learn-neovim-lua": {
         "archived": false,
@@ -4567,7 +4567,7 @@
     "nvim-lazyman": {
         "archived": false,
         "clone_url": "https://github.com/doctorfree/nvim-lazyman.git",
-        "commit": "f7d73cb381bb96fa99b9e9f46648721f4fb08808",
+        "commit": "914f80d7119abdd6243b40f6244815dd1ceb9cdf",
         "contents_url": "https://api.github.com/repos/doctorfree/nvim-lazyman/contents/{+path}",
         "created_at": "2023-03-08T21:59:42Z",
         "default_branch": "main",
@@ -4794,7 +4794,7 @@
             "url": "https://api.github.com/users/nanotee"
         },
         "private": false,
-        "stargazers_count": 5501,
+        "stargazers_count": 5502,
         "topics": [
             "documentation",
             "guide",
@@ -4803,7 +4803,7 @@
             "nvim",
             "vimscript"
         ],
-        "updated_at": "2023-09-11T09:03:22Z"
+        "updated_at": "2023-09-11T13:55:20Z"
     },
     "nvim-lua-plugin-template": {
         "archived": false,
