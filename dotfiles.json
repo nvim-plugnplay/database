@@ -129,7 +129,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2023-09-20T14:27:44Z"
+        "updated_at": "2023-09-20T19:48:34Z"
     },
     "BobVim": {
         "archived": false,
@@ -341,7 +341,7 @@
             "url": "https://api.github.com/users/CosmicNvim"
         },
         "private": false,
-        "stargazers_count": 998,
+        "stargazers_count": 997,
         "topics": [
             "dotfiles",
             "hacktoberfest2021",
@@ -362,7 +362,7 @@
             "vscode",
             "vue"
         ],
-        "updated_at": "2023-09-20T13:51:36Z"
+        "updated_at": "2023-09-20T16:41:07Z"
     },
     "DeathVim": {
         "archived": true,
@@ -607,7 +607,7 @@
         "forks_count": 541,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 39,
+        "open_issues_count": 38,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -638,7 +638,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2023-09-20T13:56:19Z"
+        "updated_at": "2023-09-20T19:54:29Z"
     },
     "LunarVim": {
         "archived": false,
@@ -674,7 +674,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 15891,
+        "stargazers_count": 15893,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -693,7 +693,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-09-20T14:57:10Z"
+        "updated_at": "2023-09-20T19:52:29Z"
     },
     "NeoCode": {
         "archived": false,
@@ -860,7 +860,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 4886,
+        "stargazers_count": 4887,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -871,7 +871,7 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2023-09-20T09:38:00Z"
+        "updated_at": "2023-09-20T18:04:52Z"
     },
     "NormalNvim": {
         "archived": false,
@@ -920,7 +920,7 @@
         "default_branch": "v2.0",
         "description": "Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.",
         "fork": false,
-        "forks_count": 1546,
+        "forks_count": 1547,
         "full_name": "NvChad/NvChad",
         "language": "Lua",
         "open_issues_count": 3,
@@ -945,7 +945,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 19331,
+        "stargazers_count": 19336,
         "topics": [
             "dotfiles",
             "editor",
@@ -968,7 +968,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2023-09-20T15:35:01Z"
+        "updated_at": "2023-09-20T18:04:57Z"
     },
     "NvHack": {
         "archived": false,
@@ -1091,7 +1091,7 @@
             "url": "https://api.github.com/users/SpaceVim"
         },
         "private": false,
-        "stargazers_count": 20093,
+        "stargazers_count": 20094,
         "topics": [
             "awesome",
             "editor",
@@ -1106,7 +1106,7 @@
             "vim-distribution",
             "vimrc"
         ],
-        "updated_at": "2023-09-20T12:12:20Z"
+        "updated_at": "2023-09-20T18:09:08Z"
     },
     "StarVim": {
         "archived": true,
@@ -2858,9 +2858,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 7455,
+        "stargazers_count": 7471,
         "topics": [],
-        "updated_at": "2023-09-20T14:25:59Z"
+        "updated_at": "2023-09-20T19:40:00Z"
     },
     "learn-neovim-lua": {
         "archived": false,
@@ -3760,36 +3760,36 @@
     },
     "neovim-setup": {
         "archived": false,
-        "clone_url": "https://github.com/impeding-milanese/neovim-setup.git",
+        "clone_url": "https://github.com/cg-jl/neovim-setup.git",
         "commit": "f97c82385f305abe99798013934ebb5ab17436ae",
-        "contents_url": "https://api.github.com/repos/impeding-milanese/neovim-setup/contents/{+path}",
+        "contents_url": "https://api.github.com/repos/cg-jl/neovim-setup/contents/{+path}",
         "created_at": "2021-02-21T19:07:44Z",
         "default_branch": "current",
         "description": "quick and clean neovim setup for myself",
         "fork": false,
         "forks_count": 0,
-        "full_name": "impeding-milanese/neovim-setup",
+        "full_name": "cg-jl/neovim-setup",
         "language": "Lua",
         "open_issues_count": 0,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/54634335?v=4",
-            "events_url": "https://api.github.com/users/impeding-milanese/events{/privacy}",
-            "followers_url": "https://api.github.com/users/impeding-milanese/followers",
-            "following_url": "https://api.github.com/users/impeding-milanese/following{/other_user}",
-            "gists_url": "https://api.github.com/users/impeding-milanese/gists{/gist_id}",
+            "events_url": "https://api.github.com/users/cg-jl/events{/privacy}",
+            "followers_url": "https://api.github.com/users/cg-jl/followers",
+            "following_url": "https://api.github.com/users/cg-jl/following{/other_user}",
+            "gists_url": "https://api.github.com/users/cg-jl/gists{/gist_id}",
             "gravatar_id": "",
-            "html_url": "https://github.com/impeding-milanese",
+            "html_url": "https://github.com/cg-jl",
             "id": 54634335,
-            "login": "impeding-milanese",
+            "login": "cg-jl",
             "node_id": "MDQ6VXNlcjU0NjM0MzM1",
-            "organizations_url": "https://api.github.com/users/impeding-milanese/orgs",
-            "received_events_url": "https://api.github.com/users/impeding-milanese/received_events",
-            "repos_url": "https://api.github.com/users/impeding-milanese/repos",
+            "organizations_url": "https://api.github.com/users/cg-jl/orgs",
+            "received_events_url": "https://api.github.com/users/cg-jl/received_events",
+            "repos_url": "https://api.github.com/users/cg-jl/repos",
             "site_admin": false,
-            "starred_url": "https://api.github.com/users/impeding-milanese/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/impeding-milanese/subscriptions",
+            "starred_url": "https://api.github.com/users/cg-jl/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/cg-jl/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/impeding-milanese"
+            "url": "https://api.github.com/users/cg-jl"
         },
         "private": false,
         "stargazers_count": 5,
@@ -4567,7 +4567,7 @@
     "nvim-lazyman": {
         "archived": false,
         "clone_url": "https://github.com/doctorfree/nvim-lazyman.git",
-        "commit": "c512e7744401748e290911723c22a179406f3fdb",
+        "commit": "03f41d192e3cb6462b540c81e6604ffedf3b5049",
         "contents_url": "https://api.github.com/repos/doctorfree/nvim-lazyman/contents/{+path}",
         "created_at": "2023-03-08T21:59:42Z",
         "default_branch": "main",
@@ -5352,7 +5352,7 @@
     "nvim.conf": {
         "archived": false,
         "clone_url": "https://github.com/datwaft/nvim.conf.git",
-        "commit": "1c0422df38e5930501bb752858b50fda47b338b1",
+        "commit": "c93e7a794f2330eb0b9bf5189d8f493ece7a4853",
         "contents_url": "https://api.github.com/repos/datwaft/nvim.conf/contents/{+path}",
         "created_at": "2019-12-22T05:34:53Z",
         "default_branch": "main",
@@ -5691,7 +5691,7 @@
         "forks_count": 413,
         "full_name": "ayamir/nvimdots",
         "language": "Lua",
-        "open_issues_count": 11,
+        "open_issues_count": 12,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/61657399?v=4",
             "events_url": "https://api.github.com/users/ayamir/events{/privacy}",
