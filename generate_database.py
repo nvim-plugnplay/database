@@ -391,8 +391,12 @@ class GenerateData(object):
         return files
 
     def debug_print(self, x, y):
-        print(x, y)
-        return x == "lua"
+        # print(x, y)
+        print(f"Language: {x} == Lua: {x.lower() == 'lua' if x is not None else False}")
+        if x is not None:
+            return x.lower() == y.lower()
+        else:
+            return False
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -451,10 +455,12 @@ class GenerateData(object):
             plugin_data = response.dict()
             case = tuple(map(lambda c: sum(cn(plugin_data) for cn in c), conds))
             case = tuple(map(lambda x: min(1, x), case))
-            if case in cases.keys():
-                return (plugin_data, bool(case[0]))
-            else:
-                return (plugin_data,)
+            # if case in cases.keys():
+            #     return (plugin_data, bool(case[0]))
+            # else:
+            #     return (plugin_data,)
+
+            return (plugin_data, bool(case[0]))
 
         initial_jobs = Parallel(-1)(
             delayed(make_jobtype)(response) for response in base.responses
