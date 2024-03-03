@@ -390,6 +390,10 @@ class GenerateData(object):
             url = response.links.get("next", {}).get("url")
         return files
 
+    def debug_print(self, x, y):
+        print(x, y)
+        return x == "lua"
+
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
         Given a response list, generate jobs(read: sets of parameters) for extract_data to run asynchronously
@@ -415,15 +419,13 @@ class GenerateData(object):
             lambda x, y: x.lower().startswith(y.lower()),
             ".")  # check if d['name'] starts with '.'
         plugin_conds = [
-            lambda d: max(
-                0, ends_nvim(d) - begins_dot(d)
-            ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
             name_mapper(
                 lambda x, y: y.lower() in x.lower(), self.ignore_list
             ),  # checks if any values from the ignore list are present in d['name'], does this belong here or does this remove things to be requested?
             # check if language is Lua or not
             language_mapper(  # checks if language is lua
-                lambda x, y: y.lower() in x.lower() if isinstance(x, str) else (any(y.lower() in item.lower() for item in x) if x else False), ["lua", "Lua"]
+                            lambda x, y: self.debug_print(x, y), ["lua"]
+
             ),
         ]
         print(language_mapper)
