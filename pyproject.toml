@@ -1,3 +1,9 @@
+[tool.poetry]
+name = "generate_database"
+version = "0.1.0"
+description = ""
+authors = ["vsedov <viv.sedov@hotmail.com>"]
+
 [tool.yapf]
 align_closing_bracket_with_visual_indent = "False"
 allow_multiline_dictionary_keys = "True"

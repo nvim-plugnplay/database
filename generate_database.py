@@ -22,11 +22,11 @@ from typing import Any, Callable, List
 import requests
 import tqdm
 from icecream import ic
-from joblib import Parallel, delayed
-from rich.logging import RichHandler
-from tqdm.contrib.logging import logging_redirect_tqdm
+from joblib import delayed, Parallel
 
 from models import BaseRequestResponse
+from rich.logging import RichHandler
+from tqdm.contrib.logging import logging_redirect_tqdm
 
 root = logging.getLogger()
 if root.handlers:
@@ -35,7 +35,9 @@ if root.handlers:
 
 FORMAT = "%(message)s"
 logging.basicConfig(
-    level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
+    level="INFO", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()]
+)
+
 
 def get_or_create_eventloop() -> Any:
     """
@@ -54,6 +56,7 @@ def get_or_create_eventloop() -> Any:
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
             return asyncio.get_event_loop()
+
 
 def key_mapper(key):
     """
@@ -104,11 +107,13 @@ def key_mapper(key):
 
         def output(d: dict):
             return sum(
-                fn(d[key], x) if key in d.keys() else 0 for x in iterable)
+                fn(d[key], x) if key in d.keys() else 0 for x in iterable
+            )
 
         return output
 
     return cond_mapper
+
 
 class GenerateData(object):
     """
@@ -145,29 +150,57 @@ class GenerateData(object):
         self.user = user
         self.user_fmt = ic.format(self.user)
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
-            self.user)
+            self.user
+        )
 
-        self.client_id = os.environ['CLIENT_ID']
-        self.client_secret = os.environ['SECRET_ID']
+        self.client_id = os.environ["CLIENT_ID"]
+        self.client_secret = os.environ["SECRET_ID"]
 
         if not self.client_id or not self.client_secret:
             logging.info(
-                ic.format("Client id and secret not set, using defaults"))
+                ic.format("Client id and secret not set, using defaults")
+            )
 
         # perhaps export to a `constants` module
         self.wanted_fields = [
-            "full_name", "description", "default_branch", "fork", "archived",
-            "private", "clone_url", "commits_url", "created_at", "updated_at",
-            "stargazers_count", "subscribers_count", "forks_count", "language",
-            "open_issues_count", "topics", "owner", "contents_url",
+            "full_name",
+            "description",
+            "default_branch",
+            "fork",
+            "archived",
+            "private",
+            "clone_url",
+            "commits_url",
+            "created_at",
+            "updated_at",
+            "stargazers_count",
+            "subscribers_count",
+            "forks_count",
+            "language",
+            "open_issues_count",
+            "topics",
+            "owner",
+            "contents_url",
         ]
         # this is not accurate but it will be good enough for now.
         self.unwanted_config = [
-            "dotfiles", "dots", "nvim-dotfiles", "nvim-qt", "nvim-config",
-            "neovim-lua", "vim-config", "nvim-lua", "config-nvim",
+            "dotfiles",
+            "dots",
+            "nvim-dotfiles",
+            "nvim-qt",
+            "nvim-config",
+            "neovim-lua",
+            "vim-config",
+            "nvim-lua",
+            "config-nvim",
         ]
         self.ignore_list = [
-            "lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"
+            "lspconfig",
+            "lsp_config",
+            "cmp",
+            "coq",
+            "neorg",
+            "norg",
         ]
         self.extract_jobs: list[tuple[dict, bool]] = []
         self.filetree_jobs: list[tuple[str]] = []
@@ -194,24 +227,31 @@ class GenerateData(object):
             results = []
             if self.use_batches:
                 with logging_redirect_tqdm():
-                    for i in tqdm.tqdm(range(0, len(iterable) + self.batch_size,
-                                             self.batch_size), desc=fn.__name__,
-                                      ):
+                    for i in tqdm.tqdm(
+                        range(
+                            0, len(iterable) + self.batch_size, self.batch_size
+                        ),
+                        desc=fn.__name__,
+                    ):
                         results += await asyncio.gather(
                             *[
                                 loop.run_in_executor(
                                     None,
                                     functools.partial(fn, *j),
-                                ) for j in iterable[i:i + self.batch_size]
-                            ])
+                                )
+                                for j in iterable[i : i + self.batch_size]
+                            ]
+                        )
             else:
                 results += await asyncio.gather(
                     *[
                         loop.run_in_executor(
                             None,
                             functools.partial(fn, *j),
-                        ) for j in iterable
-                    ])
+                        )
+                        for j in iterable
+                    ]
+                )
 
             return results
 
@@ -232,19 +272,27 @@ class GenerateData(object):
         """
         logging.debug(
             "Querying github stars for {}, {}".format(
-                self.user_fmt, ic.format(page)))
+                self.user_fmt, ic.format(page)
+            )
+        )
         response = requests.get(
-            self.base_url + str(page),
-            auth=(self.client_id, self.client_secret))
+            self.base_url + str(page), auth=(self.client_id, self.client_secret)
+        )
+
         if response.status_code != 200:
             logging.critical(
-                "Bad request {}".format(ic.format(response.status_code)))
+                "Bad request {}".format(ic.format(response.status_code))
+            )
 
-        out = BaseRequestResponse(responses=response.json(),)
+        out = BaseRequestResponse(
+            responses=response.json(),
+        )
         if len(out.responses) == 0:
             logging.warning(
                 "No stars for {}, {} found!".format(
-                    self.user_fmt, ic.format(page)))
+                    self.user_fmt, ic.format(page)
+                )
+            )
         return out
 
     async def get_pages(self) -> BaseRequestResponse:
@@ -268,10 +316,13 @@ class GenerateData(object):
                     loop.run_in_executor(
                         None,
                         functools.partial(self.load_stars_by_page, start + i),
-                    ) for i in range(1, batch_size + 1)
-                ])
+                    )
+                    for i in range(1, batch_size + 1)
+                ]
+            )
             tmp = BaseRequestResponse(
-                responses=list(it.chain(*[t.responses for t in tmp])))
+                responses=list(it.chain(*[t.responses for t in tmp]))
+            )
             if len(tmp.responses) == 0:
                 finished = True
             results += tmp.responses
@@ -280,10 +331,8 @@ class GenerateData(object):
         return response
 
     def extract_data(
-            self,
-            plugin_dict: dict,
-            is_plugin: bool,
-            n_retries: int = 0) -> dict:
+        self, plugin_dict: dict, is_plugin: bool, n_retries: int = 0
+    ) -> dict:
         """
         extracts commit data from a plugin or dotfile
 
@@ -321,20 +370,17 @@ class GenerateData(object):
                 plugin_data["commit"] = commit["sha"]
             else:
                 logging.critical(
-                    "Bad request {}".format(ic.format(commit_req.status_code)))
+                    "Bad request {}".format(ic.format(commit_req.status_code))
+                )
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
                     self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
 
-        plugin_data = {k: v
-                       for k, v in plugin_data.items()}
+        plugin_data = {k: v for k, v in plugin_data.items()}
 
-        out = {
-            "name": plugin_name,
-            "data": plugin_data
-        }
+        out = {"name": plugin_name, "data": plugin_data}
         out["type"] = "plugin" if is_plugin else "dotfile"
         ic.configureOutput(prefix="Parsed: ")
         logging.debug(ic.format(out["name"]))
@@ -365,12 +411,16 @@ class GenerateData(object):
         #
         files = []
         time.sleep(random.random() * 3 + n_retries)
-        response = requests.get(url, auth=(self.client_id, self.client_secret),)
+        response = requests.get(
+            url,
+            auth=(self.client_id, self.client_secret),
+        )
 
         while url:
             if response.status_code != 200:
                 logging.critical(
-                    "Bad request {}".format(ic.format(response.status_code)))
+                    "Bad request {}".format(ic.format(response.status_code))
+                )
                 if response.status_code == 403 and n_retries < 10:
                     logging.info("Retrying...")
                     self.get_filetree(d, n_retries + 1, url)
@@ -380,9 +430,9 @@ class GenerateData(object):
             if isinstance(data, list):
                 for item in data:
                     # Failures occour here - hence the double check
-                    if "type" in item and item['type'] == 'file':
-                        files.append(item['name'])
-            url = response.links.get('next', {}).get('url')
+                    if "type" in item and item["type"] == "file":
+                        files.append(item["name"])
+            url = response.links.get("next", {}).get("url")
         return files
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
@@ -401,29 +451,34 @@ class GenerateData(object):
         name_mapper = key_mapper("name")  # uses d['name']
         fullname_mapper = key_mapper("full_name")  # uses d['full_name']
         description_mapper = key_mapper("description")  # uses d['description']
+        language_mapper = key_mapper("language")
         ends_nvim = fullname_mapper(
             lambda x, y: x.lower().endswith(y.lower()),
-            [".nvim", "-nvim", ".vim"
-            ])  # checks if d['full_name'] ends with .nvim, -nvim, .vim
+            [".nvim", "-nvim", ".vim"],
+        )  # checks if d['full_name'] ends with .nvim, -nvim, .vim
         begins_dot = name_mapper(
-            lambda x, y: x.lower().startswith(y.lower()),
-            ".")  # check if d['name'] starts with '.'
+            lambda x, y: x.lower().startswith(y.lower()), "."
+        )  # check if d['name'] starts with '.'
         plugin_conds = [
-            lambda d:
-            max(0,
-                ends_nvim(d) - begins_dot(d)
-               ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
+            lambda d: max(
+                0, ends_nvim(d) - begins_dot(d)
+            ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
             name_mapper(
                 lambda x, y: y.lower() in x.lower(), self.ignore_list
             ),  # checks if any values from the ignore list are present in d['name'], does this belong here or does this remove things to be requested?
+            # check if language is Lua or not
+            language_mapper(  # checks if language is lua
+                # lambda x, y: x.lower() == y.lower(), ["lua"]
+                lambda x, y: y.lower() in x.lower() if x is not None else False,
+                ["lua", "vim"],
+            ),
         ]
         dotfile_conds = [
             fullname_mapper(
                 lambda x, y: y.lower() in x.lower(), self.unwanted_config
             ),  # checks if any of the unwanted config names are in d['full_name']
             description_mapper(
-                lambda x,
-                y: y.lower() in x.lower() if x is not None else 0,
+                lambda x, y: y.lower() in x.lower() if x is not None else 0,
                 self.unwanted_config,
             ),  # check if any of the unwanted config names are in d['description']
             begins_dot,  # check if it begins with a dot
@@ -452,11 +507,13 @@ class GenerateData(object):
         self.extract_jobs.extend([j for j in initial_jobs if len(j) == 2])
 
         type_counts = Counter(
-            ["plugin" if not x[-1] else "dotfile" for x in self.extract_jobs])
+            ["plugin" if not x[-1] else "dotfile" for x in self.extract_jobs]
+        )
         # __import__("pdb").set_trace()
 
         filetrees = self.async_helper(
-            lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
+            lambda x: (x, self.get_filetree(x)), self.filetree_jobs
+        )
         filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
             # __import__('pdb').set_trace()
@@ -484,16 +541,20 @@ class GenerateData(object):
         loop = get_or_create_eventloop()
         results = []
         with logging_redirect_tqdm():
-            for i in tqdm.tqdm(range(0,
-                                     len(self.extract_jobs) + self.batch_size,
-                                     self.batch_size)):
+            for i in tqdm.tqdm(
+                range(
+                    0, len(self.extract_jobs) + self.batch_size, self.batch_size
+                )
+            ):
                 results += await asyncio.gather(
                     *[
                         loop.run_in_executor(
                             None,
                             functools.partial(self.extract_data, *j),
-                        ) for j in self.extract_jobs[i:i + self.batch_size]
-                    ])
+                        )
+                        for j in self.extract_jobs[i : i + self.batch_size]
+                    ]
+                )
         return results
 
     @staticmethod
@@ -513,8 +574,7 @@ class GenerateData(object):
         """
         results = sorted(results, key=lambda x: x["type"])
         grouped = {
-            k: list(g)
-            for k, g in it.groupby(results, lambda x: x["type"])
+            k: list(g) for k, g in it.groupby(results, lambda x: x["type"])
         }
         ic.configureOutput("Group Counts: ")
         logging.info(ic.format(len(grouped["plugin"])))
@@ -549,7 +609,8 @@ class GenerateData(object):
             f.write(json.dumps(dotfile_dict, sort_keys=True, indent=4))
 
     def __call__(
-            self, *args: Any, write_results: bool = True, **kwds: Any) -> Any:
+        self, *args: Any, write_results: bool = True, **kwds: Any
+    ) -> Any:
         """
 
          Parameters
@@ -573,18 +634,22 @@ class GenerateData(object):
         ic.configureOutput(prefix="")
         logging.info(
             "Running {} jobs!".format(
-                ic.format(len(self.filetree_jobs) + len(self.extract_jobs))))
+                ic.format(len(self.filetree_jobs) + len(self.extract_jobs))
+            )
+        )
         results = self.async_helper(self.extract_data, self.extract_jobs)
         results_grouped = self.sort_results(results)
         if write_results:
             self.write_results(results_grouped)
         return results_grouped
 
+
 def main() -> None:
     """Main Function"""
     dg = GenerateData(batch_size=30)
     dc = dg()
     return dc
+
 
 if __name__ == "__main__":
     __import__("dotenv").load_dotenv(".env")
