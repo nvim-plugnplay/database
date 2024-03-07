@@ -13,6 +13,7 @@ import itertools as it
 import json
 import logging
 import os
+import queue
 import random
 import time
 from collections import Counter, defaultdict
@@ -103,8 +104,8 @@ def key_mapper(key):
 
         def output(d: dict):
             logging.info(ic.format(d))
-            return sum(fn(d[key], x) if key in d else 0 for x in iterable)
-
+            return sum(
+                fn(d[key], x) if key in d.keys() else 0 for x in iterable)
 
 
         return output
@@ -145,28 +146,35 @@ class GenerateData(object):
         self.use_batches = self.batch_size > 0
         self.user = user
         self.user_fmt = ic.format(self.user)
-        self.base_url = f"https://api.github.com/users/{self.user}/starred?per-page=1&per_page=100&page="
+        self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
+            self.user)
 
-        self.client_container = [
-            {
-                "id": os.environ["CLIENT_ID"],
-                "secret": os.environ["SECRET_ID"],
-            },
-            {
-                "id": os.environ["CLIENT_ID2"],
-                "secret": os.environ["SECRET_ID2"],
-            },
-        ]
+        # self.client_container = [
+        #     {
+        #         "id": os.environ["CLIENT_ID"],
+        #         "secret": os.environ["SECRET_ID"],
+        #     },
+        #     {
+        #         "id": os.environ["CLIENT_ID2"],
+        #         "secret": os.environ["SECRET_ID2"],
+        #     },
+        # ]
+        #
+        #
+        # for i, (k,v) in enumerate(self.client_container[0].items()):
+        #
+        #     if i == 0:
+        #         self.client_id = k
+        #         self.client_secret = v
+        #     else:
+        #         setattr(self, f"client_id{i+1}", k)
+        #         setattr(self, f"client_secret{i+1}", v)
 
+        self.client_id = os.environ["CLIENT_ID"]
+        self.client_secret = os.environ["SECRET_ID"]
 
-        for i, (k,v) in enumerate(self.client_container[0].items()):
-
-            if i == 0:
-                self.client_id = k
-                self.client_secret = v
-            else:
-                setattr(self, f"client_id{i+1}", k)
-                setattr(self, f"client_secret{i+1}", v)
+        self.client_id2 = os.environ["CLIENT_ID2"]
+        self.client_secret2 = os.environ["SECRET_ID2"]
 
 
         if not self.client_id or not self.client_secret:
@@ -183,9 +191,10 @@ class GenerateData(object):
         # this is not accurate but it will be good enough for now.
         self.unwanted_config = [
             "dotfiles", "dots", "nvim-dotfiles", "nvim-qt", "nvim-config",
-            "neovim-lua", "vim-config", "nvim-lua", "config-nvim",  "ide"
+             "vim-config", "config-nvim",
         ]
-        self.ignore_list = ["lspconfig", "lsp_config"]
+        self.ignore_list = [
+        ]
         self.extract_jobs: list[tuple[dict, bool]] = []
         self.filetree_jobs: list[tuple[str]] = []
 
@@ -247,19 +256,24 @@ class GenerateData(object):
         BaseRequestResponse
 
         """
-        logging.debug(f"Querying github stars for {self.user_fmt}, {ic.format(page)}")
+        logging.debug(
+            "Querying github stars for {}, {}".format(
+                self.user_fmt, ic.format(page)))
         response = requests.get(
             self.base_url + str(page),
             auth=(self.client_id, self.client_secret))
 
         if response.status_code != 200:
-            logging.critical(f"Bad request {ic.format(response.status_code)}")
+            logging.critical(
+                "Bad request {}".format(ic.format(response.status_code)))
 
         out = BaseRequestResponse(
             responses=response.json(),
         )
         if len(out.responses) == 0:
-            logging.warning(f"No stars for {self.user_fmt}, {ic.format(page)} found!")
+            logging.warning(
+                "No stars for {}, {} found!".format(
+                    self.user_fmt, ic.format(page)))
         return out
 
     async def get_pages(self) -> BaseRequestResponse:
@@ -291,7 +305,8 @@ class GenerateData(object):
                 finished = True
             results += tmp.responses
             start += batch_size
-        return BaseRequestResponse(responses=results)
+        response = BaseRequestResponse(responses=results)
+        return response
 
     def extract_data(
             self,
@@ -316,7 +331,7 @@ class GenerateData(object):
         plugin_data = defaultdict()
         plugin_name = ""
 
-        for field in plugin_dict:
+        for field in plugin_dict.keys():
             if field == "name":
                 plugin_name = plugin_dict[field]
             if field in self.wanted_fields:
@@ -327,27 +342,31 @@ class GenerateData(object):
             time.sleep(random.random() * 3 + n_retries)
             commit_req = requests.get(
                 plugin_dict["commits_url"][:-6],
-                auth=(self.client_id, self.client_secret),
+                auth=(self.client_id2, self.client_secret2),
             )
 
             if commit_req.status_code == 200:
                 commit = commit_req.json()[-1]
                 plugin_data["commit"] = commit["sha"]
             else:
-                logging.critical(f"Bad request {ic.format(commit_req.status_code)}")
+                logging.critical(
+                    "Bad request {}".format(ic.format(commit_req.status_code)))
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
                     self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
 
-        plugin_data = dict(plugin_data)
+        plugin_data = {
+            k: v
+            for k, v in plugin_data.items()
+        }
 
         out = {
             "name": plugin_name,
-            "data": plugin_data,
-            "type": "plugin" if is_plugin else "dotfile",
+            "data": plugin_data
         }
+        out["type"] = "plugin" if is_plugin else "dotfile"
         ic.configureOutput(prefix="Parsed: ")
         logging.debug(ic.format(out["name"]))
 
@@ -383,7 +402,8 @@ class GenerateData(object):
 
         while url:
             if response.status_code != 200:
-                logging.critical(f"Bad request {ic.format(response.status_code)}")
+                logging.critical(
+                    "Bad request {}".format(ic.format(response.status_code)))
                 if response.status_code == 403 and n_retries < 10:
                     logging.info("Retrying...")
                     # self.client_id, self.client_secret = self.secret_key_switcher.switch_api_key(
@@ -391,6 +411,7 @@ class GenerateData(object):
                     self.get_filetree(d, n_retries + 1, url)
             data = response.json()
 
+            # have to check isntance
             if isinstance(data, list):
                 for item in data:
                     files.append(item["name"])
@@ -398,7 +419,10 @@ class GenerateData(object):
         return files
 
     def debug_print(self, x, y):
-        return x.lower() == "lua" if x is not None else False
+        if x is not None:
+            return x.lower() == "lua"
+        else:
+            return False
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -457,28 +481,34 @@ class GenerateData(object):
             (0, 1): "dotfile_count",
         }
 
-        # conds = (fixed_plugin_conds,fixed_dotfile_conds)
+        conds = (fixed_plugin_conds,fixed_dotfile_conds)
 
         def custom_case(x):
             if all(cn(x) for cn in both_conditions):
                 is_plugin = sum(cn(x) for cn in fixed_plugin_conds)
                 optional_plugin = sum(cn(x) for cn in optional_plugin_conds)
+                #  TODO: (vsedov) (17:39:16 - 07/03/24): Maybe remove this
+                #  condition, considering the way we will check the dotfiles, is
+                #  through the request based system instead, once that is up and
+                #  running
                 is_dotfile = sum(cn(x) for cn in fixed_dotfile_conds)
                 optional_dotfile = sum(cn(x) for cn in optional_dotfile_conds)
 
-                return (1, 0) if is_plugin + optional_plugin > 1 else (0, 1)
+                if is_plugin + optional_plugin > 1:
+                    return (1,0)
+                else:
+                    return (0,1)
             else:
                 return (0,0)
 
         def make_jobtype(response):
             plugin_data = response.dict()
-
-            # case = tuple(
-            #     min(1, sum(cn(plugin_data) for cn in c)) for c in conds)
             case = custom_case(plugin_data)
-
-            if case in cases:
-                return (plugin_data, bool(case[0])) if case == (1, 0) else (plugin_data, )
+            if case in cases.keys():
+                if case == (1, 0):
+                    return (plugin_data, bool(case[0]))
+                else:
+                    return (plugin_data,)
             else:
                 return (0,0,0)
 
@@ -490,7 +520,6 @@ class GenerateData(object):
         self.extract_jobs.extend([j for j in initial_jobs if len(j) == 2])
 
         type_counts = Counter(
-            # sourcery skip: swap-if-expression
             ["plugin" if not x[-1] else "dotfile" for x in self.extract_jobs])
         # __import__("pdb").set_trace()
 
@@ -500,8 +529,7 @@ class GenerateData(object):
         for res in filetrees:
             tree = res[-1]
             if "lua" in tree:
-                # breakpoint()
-                if [item for item in tree if "init" in item]:
+                if any("init" in item and (item.endswith("lua") or item.endswith("vim")) for item in tree):
                     self.extract_jobs.append((res[0], False))
                     type_counts.update(["dotfile"])
                     logging.info("Adding dotfile: {}".format(res[0]["name"]))
@@ -561,8 +589,8 @@ class GenerateData(object):
         ic.configureOutput("Group Counts: ")
         logging.info(ic.format(len(grouped["plugin"])))
         logging.info(ic.format(len(grouped["dotfile"])))
-        for v in grouped.values():
-            for item in v:
+        for k in grouped.keys():
+            for item in grouped[k]:
                 item.pop("type")
         return grouped
 
@@ -577,12 +605,16 @@ class GenerateData(object):
 
         """
         logging.info("writing plugins")
-        plugin_dict = {item["name"]: item["data"] for item in results["plugin"]}
+        plugin_dict = {}
+        for item in results["plugin"]:
+            plugin_dict[item["name"]] = item["data"]
         with open("database.json", "+w") as f:
             f.write(json.dumps(plugin_dict, sort_keys=True, indent=4))
 
         logging.info("writing dots")
-        dotfile_dict = {item["name"]: item["data"] for item in results["dotfile"]}
+        dotfile_dict = {}
+        for item in results["dotfile"]:
+            dotfile_dict[item["name"]] = item["data"]
         with open("dotfiles.json", "+w") as f:
             f.write(json.dumps(dotfile_dict, sort_keys=True, indent=4))
 
@@ -605,13 +637,13 @@ class GenerateData(object):
 
         """
         loop = get_or_create_eventloop()
-        logging.info(f"Getting stars for {self.user_fmt}")
+        logging.info("Getting stars for {}".format(self.user_fmt))
         base = asyncio.run(self.get_pages())
         self.make_jobs(base)
         ic.configureOutput(prefix="")
         logging.info(
-            f"Running {ic.format(len(self.filetree_jobs) + len(self.extract_jobs))} jobs!"
-        )
+            "Running {} jobs!".format(
+                ic.format(len(self.filetree_jobs) + len(self.extract_jobs))))
         results = self.async_helper(self.extract_data, self.extract_jobs)
         results_grouped = self.sort_results(results)
         if write_results:
@@ -621,7 +653,8 @@ class GenerateData(object):
 def main() -> None:
     """Main Function"""
     dg = GenerateData(batch_size=30)
-    return  dg()
+    dc = dg()
+    return dc
 
 if __name__ == "__main__":
     __import__("dotenv").load_dotenv(".env")
