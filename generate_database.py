@@ -13,6 +13,8 @@ import itertools as it
 import json
 import logging
 import os
+
+# stack and queue
 import queue
 import random
 import time
@@ -112,7 +114,29 @@ def key_mapper(key):
 
     return cond_mapper
 
-class GenerateData(object):
+
+class ClientKeySwitcher:
+    def __init__(self):
+        self.client_keys = [
+            {"id_env_var": "CLIENT_ID", "secret_env_var": "SECRET_ID"},
+            {"id_env_var": "CLIENT_ID2", "secret_env_var": "SECRET_ID2"},
+            {"id_env_var": "CLIENT_ID3", "secret_env_var": "SECRET_ID3"},
+            {"id_env_var": "CLIENT_ID4", "secret_env_var": "SECRET_ID4"},
+        ]
+        self.current_index = 0
+        self.client_id, self.client_secret = self.get_key()
+
+    def get_key(self):
+        current_keys = self.client_keys[self.current_index]
+        self.current_index = (self.current_index + 1) % len(self.client_keys)
+        client_id = os.environ.get(current_keys['id_env_var'])
+        client_secret = os.environ.get(current_keys['secret_env_var'])
+        return client_id, client_secret
+
+    def switch_api_key(self):
+        self.client_id, self.client_secret = self.get_key()
+
+class GenerateData( ClientKeySwitcher):
     """
 
     Attributes
@@ -141,6 +165,7 @@ class GenerateData(object):
         batch_size : int, batch size for asyncio, if < 1 do not use batches at all (saves a couple of requests, uses way more memory, batch size only really needed if github limits our concurrent api requests)
 
         """
+        super().__init__()
         ic.configureOutput(prefix="")
         self.batch_size = batch_size
         self.use_batches = self.batch_size > 0
@@ -149,32 +174,6 @@ class GenerateData(object):
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
             self.user)
 
-        # self.client_container = [
-        #     {
-        #         "id": os.environ["CLIENT_ID"],
-        #         "secret": os.environ["SECRET_ID"],
-        #     },
-        #     {
-        #         "id": os.environ["CLIENT_ID2"],
-        #         "secret": os.environ["SECRET_ID2"],
-        #     },
-        # ]
-        #
-        #
-        # for i, (k,v) in enumerate(self.client_container[0].items()):
-        #
-        #     if i == 0:
-        #         self.client_id = k
-        #         self.client_secret = v
-        #     else:
-        #         setattr(self, f"client_id{i+1}", k)
-        #         setattr(self, f"client_secret{i+1}", v)
-
-        self.client_id = os.environ["CLIENT_ID"]
-        self.client_secret = os.environ["SECRET_ID"]
-
-        self.client_id2 = os.environ["CLIENT_ID2"]
-        self.client_secret2 = os.environ["SECRET_ID2"]
 
 
         if not self.client_id or not self.client_secret:
@@ -263,6 +262,7 @@ class GenerateData(object):
             self.base_url + str(page),
             auth=(self.client_id, self.client_secret))
 
+
         if response.status_code != 200:
             logging.critical(
                 "Bad request {}".format(ic.format(response.status_code)))
@@ -342,7 +342,7 @@ class GenerateData(object):
             time.sleep(random.random() * 3 + n_retries)
             commit_req = requests.get(
                 plugin_dict["commits_url"][:-6],
-                auth=(self.client_id2, self.client_secret2),
+                auth=(self.client_id, self.client_secret),
             )
 
             if commit_req.status_code == 200:
@@ -353,6 +353,7 @@ class GenerateData(object):
                     "Bad request {}".format(ic.format(commit_req.status_code)))
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
+                    self.switch_api_key()
                     self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
@@ -406,8 +407,8 @@ class GenerateData(object):
                     "Bad request {}".format(ic.format(response.status_code)))
                 if response.status_code == 403 and n_retries < 10:
                     logging.info("Retrying...")
-                    # self.client_id, self.client_secret = self.secret_key_switcher.switch_api_key(
-                    # )
+                    self.switch_api_key()
+
                     self.get_filetree(d, n_retries + 1, url)
             data = response.json()
 
