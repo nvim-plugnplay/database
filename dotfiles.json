@@ -458,7 +458,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 12291,
+        "stargazers_count": 12294,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -467,7 +467,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-03-08T15:12:47Z"
+        "updated_at": "2024-03-08T19:20:37Z"
     },
     "NeoCode": {
         "archived": false,
@@ -643,13 +643,13 @@
             "url": "https://api.github.com/users/NormalNvim"
         },
         "private": false,
-        "stargazers_count": 282,
+        "stargazers_count": 283,
         "topics": [
             "nvim",
             "nvim-config",
             "nvim-configs"
         ],
-        "updated_at": "2024-03-08T04:58:59Z"
+        "updated_at": "2024-03-08T18:56:56Z"
     },
     "NvHack": {
         "archived": false,
@@ -1681,16 +1681,16 @@
     "kickstart.nvim": {
         "archived": false,
         "clone_url": "https://github.com/nvim-lua/kickstart.nvim.git",
-        "commit": "e39a8bce9d25b3bd8d50098fadf13575a4a71b4b",
+        "commit": "4d0dc8d4b1bd6b94e59f7773158149bb1b0ee5be",
         "contents_url": "https://api.github.com/repos/nvim-lua/kickstart.nvim/contents/{+path}",
         "created_at": "2022-06-24T03:11:24Z",
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 7994,
+        "forks_count": 8008,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
-        "open_issues_count": 24,
+        "open_issues_count": 25,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -1712,9 +1712,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 12665,
+        "stargazers_count": 12682,
         "topics": [],
-        "updated_at": "2024-03-08T15:48:44Z"
+        "updated_at": "2024-03-08T20:00:14Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -3234,44 +3234,6 @@
         "stargazers_count": 5,
         "topics": [],
         "updated_at": "2023-04-28T00:09:39Z"
-    },
-    "nvy": {
-        "archived": false,
-        "clone_url": "https://github.com/niyabits/nvy.git",
-        "commit": "a34026a27f7481c7aac51e1fad7d66e47d834a6d",
-        "contents_url": "https://api.github.com/repos/niyabits/nvy/contents/{+path}",
-        "created_at": "2021-05-10T20:11:02Z",
-        "default_branch": "main",
-        "description": "Neovim Config Files",
-        "fork": false,
-        "forks_count": 1,
-        "full_name": "niyabits/nvy",
-        "language": "Lua",
-        "open_issues_count": 0,
-        "owner": {
-            "avatar_url": "https://avatars.githubusercontent.com/u/36479718?v=4",
-            "events_url": "https://api.github.com/users/niyabits/events{/privacy}",
-            "followers_url": "https://api.github.com/users/niyabits/followers",
-            "following_url": "https://api.github.com/users/niyabits/following{/other_user}",
-            "gists_url": "https://api.github.com/users/niyabits/gists{/gist_id}",
-            "gravatar_id": "",
-            "html_url": "https://github.com/niyabits",
-            "id": 36479718,
-            "login": "niyabits",
-            "node_id": "MDQ6VXNlcjM2NDc5NzE4",
-            "organizations_url": "https://api.github.com/users/niyabits/orgs",
-            "received_events_url": "https://api.github.com/users/niyabits/received_events",
-            "repos_url": "https://api.github.com/users/niyabits/repos",
-            "site_admin": false,
-            "starred_url": "https://api.github.com/users/niyabits/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/niyabits/subscriptions",
-            "type": "User",
-            "url": "https://api.github.com/users/niyabits"
-        },
-        "private": false,
-        "stargazers_count": 18,
-        "topics": [],
-        "updated_at": "2023-09-21T09:23:12Z"
     },
     "omega-nvim": {
         "archived": false,
