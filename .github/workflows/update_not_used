@@ -1,0 +1,61 @@
+name: Update plugins database
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    workflow_dispatch:
+  schedule:
+    - cron: "0 0/4 * * *"
+
+jobs:
+  regenerate-database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Regenerate database
+        run: |
+          python -m pip install --upgrade pipenv wheel
+
+      - id: cache-pipenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
+          pipenv install --deploy --dev
+      - name: Create env file
+        run: |
+          touch .env
+          echo CLIENT_ID=${{ secrets.CLIENT_ID }} >> .env
+          echo SECRET_ID=${{ secrets.CLIENT_SECRET }} >> .env
+          cat .env
+      - name: Run pythonAuto
+        run: |
+          pipenv run python generate_database.py
+
+      - name: Commit database changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [[ ! -z $(git status -s) ]]; then
+            git add database.json
+            git commit -m "chore: update plugins database"
+            git add dotfiles.json
+            git commit -m "chore: update dotfiles database"
+          fi
+      - name: Push regenerated database
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

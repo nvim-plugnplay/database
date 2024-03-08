@@ -7,13 +7,15 @@
 __orgname__ = "PlugNPlay"
 __docformat__ = "numpy"
 __version__ = "0.0.2"
-
 import asyncio
 import functools
 import itertools as it
 import json
 import logging
 import os
+
+# stack and queue
+import queue
 import random
 import time
 from collections import Counter, defaultdict
@@ -103,14 +105,38 @@ def key_mapper(key):
         """
 
         def output(d: dict):
+            logging.info(ic.format(d))
             return sum(
                 fn(d[key], x) if key in d.keys() else 0 for x in iterable)
+
 
         return output
 
     return cond_mapper
 
-class GenerateData(object):
+
+class ClientKeySwitcher:
+    def __init__(self):
+        self.client_keys = [
+            {"id_env_var": "CLIENT_ID", "secret_env_var": "SECRET_ID"},
+            {"id_env_var": "CLIENT_ID2", "secret_env_var": "SECRET_ID2"},
+            {"id_env_var": "CLIENT_ID3", "secret_env_var": "SECRET_ID3"},
+            {"id_env_var": "CLIENT_ID4", "secret_env_var": "SECRET_ID4"},
+        ]
+        self.current_index = 0
+        self.client_id, self.client_secret = self.get_key()
+
+    def get_key(self):
+        current_keys = self.client_keys[self.current_index]
+        self.current_index = (self.current_index + 1) % len(self.client_keys)
+        client_id = os.environ.get(current_keys['id_env_var'])
+        client_secret = os.environ.get(current_keys['secret_env_var'])
+        return client_id, client_secret
+
+    def switch_api_key(self):
+        self.client_id, self.client_secret = self.get_key()
+
+class GenerateData( ClientKeySwitcher):
     """
 
     Attributes
@@ -139,6 +165,7 @@ class GenerateData(object):
         batch_size : int, batch size for asyncio, if < 1 do not use batches at all (saves a couple of requests, uses way more memory, batch size only really needed if github limits our concurrent api requests)
 
         """
+        super().__init__()
         ic.configureOutput(prefix="")
         self.batch_size = batch_size
         self.use_batches = self.batch_size > 0
@@ -147,8 +174,7 @@ class GenerateData(object):
         self.base_url = "https://api.github.com/users/{}/starred?per-page=1&per_page=100&page=".format(
             self.user)
 
-        self.client_id = os.environ['CLIENT_ID']
-        self.client_secret = os.environ['SECRET_ID']
+
 
         if not self.client_id or not self.client_secret:
             logging.info(
@@ -164,10 +190,9 @@ class GenerateData(object):
         # this is not accurate but it will be good enough for now.
         self.unwanted_config = [
             "dotfiles", "dots", "nvim-dotfiles", "nvim-qt", "nvim-config",
-            "neovim-lua", "vim-config", "nvim-lua", "config-nvim",
+             "vim-config", "config-nvim",
         ]
         self.ignore_list = [
-            "lspconfig", "lsp_config", "cmp", "coq", "neorg", "norg"
         ]
         self.extract_jobs: list[tuple[dict, bool]] = []
         self.filetree_jobs: list[tuple[str]] = []
@@ -236,11 +261,15 @@ class GenerateData(object):
         response = requests.get(
             self.base_url + str(page),
             auth=(self.client_id, self.client_secret))
+
+
         if response.status_code != 200:
             logging.critical(
                 "Bad request {}".format(ic.format(response.status_code)))
 
-        out = BaseRequestResponse(responses=response.json(),)
+        out = BaseRequestResponse(
+            responses=response.json(),
+        )
         if len(out.responses) == 0:
             logging.warning(
                 "No stars for {}, {} found!".format(
@@ -324,12 +353,15 @@ class GenerateData(object):
                     "Bad request {}".format(ic.format(commit_req.status_code)))
                 if commit_req.status_code == 403 and n_retries <= 10:
                     logging.info("Retrying!")
+                    self.switch_api_key()
                     self.extract_data(plugin_dict, is_plugin, n_retries + 1)
 
             del plugin_data["commits_url"]
 
-        plugin_data = {k: v
-                       for k, v in plugin_data.items()}
+        plugin_data = {
+            k: v
+            for k, v in plugin_data.items()
+        }
 
         out = {
             "name": plugin_name,
@@ -365,7 +397,9 @@ class GenerateData(object):
         #
         files = []
         time.sleep(random.random() * 3 + n_retries)
-        response = requests.get(url, auth=(self.client_id, self.client_secret),)
+        response = requests.get(
+            url, auth=(self.client_id, self.client_secret),
+        )
 
         while url:
             if response.status_code != 200:
@@ -373,17 +407,23 @@ class GenerateData(object):
                     "Bad request {}".format(ic.format(response.status_code)))
                 if response.status_code == 403 and n_retries < 10:
                     logging.info("Retrying...")
+                    self.switch_api_key()
+
                     self.get_filetree(d, n_retries + 1, url)
             data = response.json()
 
             # have to check isntance
             if isinstance(data, list):
                 for item in data:
-                    # Failures occour here - hence the double check
-                    if "type" in item and item['type'] == 'file':
-                        files.append(item['name'])
-            url = response.links.get('next', {}).get('url')
+                    files.append(item["name"])
+            url = response.links.get("next", {}).get("url")
         return files
+
+    def debug_print(self, x, y):
+        if x is not None:
+            return x.lower() == "lua"
+        else:
+            return False
 
     def make_jobs(self, base: BaseRequestResponse) -> None:
         """
@@ -401,48 +441,77 @@ class GenerateData(object):
         name_mapper = key_mapper("name")  # uses d['name']
         fullname_mapper = key_mapper("full_name")  # uses d['full_name']
         description_mapper = key_mapper("description")  # uses d['description']
+        language_mapper = key_mapper("language")
         ends_nvim = fullname_mapper(
-            lambda x, y: x.lower().endswith(y.lower()),
-            [".nvim", "-nvim", ".vim"
-            ])  # checks if d['full_name'] ends with .nvim, -nvim, .vim
+            lambda x,
+            y: x.lower().endswith(y.lower()), [".nvim", "-nvim", ".vim"],
+        )  # checks if d['full_name'] ends with .nvim, -nvim, .vim
         begins_dot = name_mapper(
             lambda x, y: x.lower().startswith(y.lower()),
             ".")  # check if d['name'] starts with '.'
-        plugin_conds = [
-            lambda d:
-            max(0,
-                ends_nvim(d) - begins_dot(d)
-               ),  # 1 if ends_nvim, 0 if ends_nvim and begins dot, 0 otherwise
-            name_mapper(
-                lambda x, y: y.lower() in x.lower(), self.ignore_list
-            ),  # checks if any values from the ignore list are present in d['name'], does this belong here or does this remove things to be requested?
+        fixed_plugin_conds = [
         ]
-        dotfile_conds = [
+        fixed_dotfile_conds = [
             fullname_mapper(
-                lambda x, y: y.lower() in x.lower(), self.unwanted_config
+                lambda x, y: y.lower() in x.lower(),self.unwanted_config
             ),  # checks if any of the unwanted config names are in d['full_name']
             description_mapper(
                 lambda x,
                 y: y.lower() in x.lower() if x is not None else 0,
                 self.unwanted_config,
             ),  # check if any of the unwanted config names are in d['description']
-            begins_dot,  # check if it begins with a dot
         ]
-        conds = (plugin_conds, dotfile_conds)
+        both_conditions = [
+            language_mapper(
+                # lambda x, y: x.lower() == "lua", ["lua"]
+                lambda x, y : self.debug_print(x,y), ["lua"]
+            )
+        ]
+
+        optional_plugin_conds = [
+            ends_nvim,
+
+
+        ]
+        optional_dotfile_conds = [
+            begins_dot,
+        ]
         cases = {
             # mappings for conditions based on conditions
             (1, 0): "plugin_count",
             (0, 1): "dotfile_count",
         }
 
+        conds = (fixed_plugin_conds,fixed_dotfile_conds)
+
+        def custom_case(x):
+            if all(cn(x) for cn in both_conditions):
+                is_plugin = sum(cn(x) for cn in fixed_plugin_conds)
+                optional_plugin = sum(cn(x) for cn in optional_plugin_conds)
+                #  TODO: (vsedov) (17:39:16 - 07/03/24): Maybe remove this
+                #  condition, considering the way we will check the dotfiles, is
+                #  through the request based system instead, once that is up and
+                #  running
+                is_dotfile = sum(cn(x) for cn in fixed_dotfile_conds)
+                optional_dotfile = sum(cn(x) for cn in optional_dotfile_conds)
+
+                if is_plugin + optional_plugin > 1:
+                    return (1,0)
+                else:
+                    return (0,1)
+            else:
+                return (0,0)
+
         def make_jobtype(response):
             plugin_data = response.dict()
-            case = tuple(map(lambda c: sum(cn(plugin_data) for cn in c), conds))
-            case = tuple(map(lambda x: min(1, x), case))
+            case = custom_case(plugin_data)
             if case in cases.keys():
-                return (plugin_data, bool(case[0]))
+                if case == (1, 0):
+                    return (plugin_data, bool(case[0]))
+                else:
+                    return (plugin_data,)
             else:
-                return (plugin_data,)
+                return (0,0,0)
 
         initial_jobs = Parallel(-1)(
             delayed(make_jobtype)(response) for response in base.responses
@@ -459,14 +528,16 @@ class GenerateData(object):
             lambda x: (x, self.get_filetree(x)), self.filetree_jobs)
         filetrees = [x for x in filetrees if x[-1] is not None]
         for res in filetrees:
-            # __import__('pdb').set_trace()
             tree = res[-1]
-            if "init.vim" in tree or "init.lua" in tree:
-                self.extract_jobs.append((res[0], False))
-                type_counts.update(["dotfile"])
-            else:
-                self.extract_jobs.append((res[0], True))
-                type_counts.update(["plugin"])
+            if "lua" in tree:
+                if any("init" in item and (item.endswith("lua") or item.endswith("vim")) for item in tree):
+                    self.extract_jobs.append((res[0], False))
+                    type_counts.update(["dotfile"])
+                    logging.info("Adding dotfile: {}".format(res[0]["name"]))
+                else:
+                    self.extract_jobs.append((res[0], True))
+                    type_counts.update(["plugin"])
+                    logging.info("Adding plugin: {}".format(res[0]["name"]))
 
         logging.info(ic.format(type_counts))
         ic.configureOutput("Created: ")
