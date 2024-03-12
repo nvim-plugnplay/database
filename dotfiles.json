@@ -55,7 +55,7 @@
         "forks_count": 836,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
-        "open_issues_count": 4,
+        "open_issues_count": 3,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/102238249?v=4",
             "events_url": "https://api.github.com/users/AstroNvim/events{/privacy}",
@@ -478,7 +478,7 @@
         "forks_count": 807,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 86,
+        "open_issues_count": 87,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -500,7 +500,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 12353,
+        "stargazers_count": 12361,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -509,7 +509,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-03-12T15:03:43Z"
+        "updated_at": "2024-03-12T19:09:19Z"
     },
     "LunarVim": {
         "archived": false,
@@ -545,7 +545,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 17256,
+        "stargazers_count": 17257,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -564,7 +564,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-03-12T15:24:58Z"
+        "updated_at": "2024-03-12T16:23:54Z"
     },
     "NeoCode": {
         "archived": false,
@@ -731,7 +731,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 5194,
+        "stargazers_count": 5195,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -742,18 +742,18 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2024-03-12T12:47:23Z"
+        "updated_at": "2024-03-12T20:05:07Z"
     },
     "NormalNvim": {
         "archived": false,
         "clone_url": "https://github.com/NormalNvim/NormalNvim.git",
-        "commit": "5869f72a2e9209c714fc1a8dc43efd9c70c1ad8e",
+        "commit": "7a2e075377c50d625eed6e16cb29d6912a9005f6",
         "contents_url": "https://api.github.com/repos/NormalNvim/NormalNvim/contents/{+path}",
         "created_at": "2023-05-12T18:07:04Z",
         "default_branch": "main",
         "description": "A normal Neovim distribution",
         "fork": false,
-        "forks_count": 92,
+        "forks_count": 93,
         "full_name": "NormalNvim/NormalNvim",
         "language": "Lua",
         "open_issues_count": 1,
@@ -795,7 +795,7 @@
         "default_branch": "v2.5",
         "description": "Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience.",
         "fork": false,
-        "forks_count": 1994,
+        "forks_count": 1993,
         "full_name": "NvChad/NvChad",
         "language": "Lua",
         "open_issues_count": 1,
@@ -820,7 +820,7 @@
             "url": "https://api.github.com/users/NvChad"
         },
         "private": false,
-        "stargazers_count": 22321,
+        "stargazers_count": 22325,
         "topics": [
             "dotfiles",
             "editor",
@@ -843,7 +843,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-03-12T15:39:29Z"
+        "updated_at": "2024-03-12T20:11:18Z"
     },
     "NvHack": {
         "archived": false,
@@ -1639,7 +1639,7 @@
             "url": "https://api.github.com/users/doom-neovim"
         },
         "private": false,
-        "stargazers_count": 998,
+        "stargazers_count": 997,
         "topics": [
             "doom-nvim",
             "hacktoberfest",
@@ -1649,7 +1649,7 @@
             "neovim-lsp",
             "neovim-lua"
         ],
-        "updated_at": "2024-03-10T16:47:13Z"
+        "updated_at": "2024-03-12T18:07:04Z"
     },
     "dope": {
         "archived": false,
@@ -1949,6 +1949,7 @@
     "erudite-vim": {
         "archived": false,
         "clone_url": "https://github.com/uncomfyhalomacro/erudite-vim.git",
+        "commit": "650b9b49d6b5192a04dc0aa8462b060327719c7f",
         "contents_url": "https://api.github.com/repos/uncomfyhalomacro/erudite-vim/contents/{+path}",
         "created_at": "2021-03-18T09:59:13Z",
         "default_branch": "main",
@@ -2203,7 +2204,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 8245,
+        "forks_count": 8249,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 24,
@@ -2228,9 +2229,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 12951,
+        "stargazers_count": 12964,
         "topics": [],
-        "updated_at": "2024-03-12T15:24:02Z"
+        "updated_at": "2024-03-12T19:57:52Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2548,6 +2549,7 @@
     "neocode": {
         "archived": false,
         "clone_url": "https://github.com/aserowy/neocode.git",
+        "commit": "f46410b4329fdeb5862109a6a3a8c33114c91ca2",
         "contents_url": "https://api.github.com/repos/aserowy/neocode/contents/{+path}",
         "created_at": "2021-04-07T07:01:33Z",
         "default_branch": "main",
@@ -3313,7 +3315,7 @@
             "url": "https://api.github.com/users/jdhao"
         },
         "private": false,
-        "stargazers_count": 3096,
+        "stargazers_count": 3098,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -3322,7 +3324,7 @@
             "neovim-dotfiles",
             "nvim"
         ],
-        "updated_at": "2024-03-12T12:20:50Z"
+        "updated_at": "2024-03-12T19:59:48Z"
     },
     "nvim-dots": {
         "archived": false,
