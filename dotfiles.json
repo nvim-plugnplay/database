@@ -476,10 +476,10 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 931,
+        "forks_count": 932,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 86,
+        "open_issues_count": 88,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -510,7 +510,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-06-02T22:20:54Z"
+        "updated_at": "2024-06-03T04:00:12Z"
     },
     "LunarVim": {
         "archived": false,
@@ -565,7 +565,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-06-02T23:25:53Z"
+        "updated_at": "2024-06-03T01:29:37Z"
     },
     "NeoCode": {
         "archived": false,
@@ -932,7 +932,6 @@
     "TNH-nvim": {
         "archived": false,
         "clone_url": "https://github.com/TheNerdyHamster/TNH-nvim.git",
-        "commit": "273f71a6edf747c47a2f642427ebdf6cef2a981c",
         "contents_url": "https://api.github.com/repos/TheNerdyHamster/TNH-nvim/contents/{+path}",
         "created_at": "2020-12-02T19:50:33Z",
         "default_branch": "main",
@@ -1051,7 +1050,7 @@
     "anvil": {
         "archived": false,
         "clone_url": "https://github.com/talha-akram/anvil.git",
-        "commit": "a48db8bee16d4dd07bd344927ce1537c07f24fda",
+        "commit": "6ca11a4efd5f40bbe275707f8859ea866e2b3dab",
         "contents_url": "https://api.github.com/repos/talha-akram/anvil/contents/{+path}",
         "created_at": "2019-09-16T11:27:00Z",
         "default_branch": "master",
@@ -1090,7 +1089,7 @@
             "neovim-configuration",
             "nvim"
         ],
-        "updated_at": "2024-05-26T06:57:07Z"
+        "updated_at": "2024-06-03T03:10:46Z"
     },
     "astro.nvim": {
         "archived": false,
@@ -1504,7 +1503,6 @@
     "dogemoon.nvim": {
         "archived": false,
         "clone_url": "https://github.com/abnt713/dogemoon.nvim.git",
-        "commit": "55416760c3eb8ee346274049e06a4715eaffcba5",
         "contents_url": "https://api.github.com/repos/abnt713/dogemoon.nvim/contents/{+path}",
         "created_at": "2021-04-20T23:18:26Z",
         "default_branch": "main",
@@ -1882,7 +1880,6 @@
     "erudite-vim": {
         "archived": false,
         "clone_url": "https://github.com/uncomfyhalomacro/erudite-vim.git",
-        "commit": "650b9b49d6b5192a04dc0aa8462b060327719c7f",
         "contents_url": "https://api.github.com/repos/uncomfyhalomacro/erudite-vim/contents/{+path}",
         "created_at": "2021-03-18T09:59:13Z",
         "default_branch": "main",
@@ -2137,10 +2134,10 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 14763,
+        "forks_count": 14769,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
-        "open_issues_count": 17,
+        "open_issues_count": 16,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -2162,9 +2159,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 15941,
+        "stargazers_count": 15946,
         "topics": [],
-        "updated_at": "2024-06-03T00:23:42Z"
+        "updated_at": "2024-06-03T03:35:53Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -3223,7 +3220,7 @@
         "default_branch": "master",
         "description": "A modern Neovim configuration with full battery for Python, Lua, C++, Markdown, LaTeX, and more...",
         "fork": false,
-        "forks_count": 489,
+        "forks_count": 490,
         "full_name": "jdhao/nvim-config",
         "language": "Lua",
         "open_issues_count": 8,
