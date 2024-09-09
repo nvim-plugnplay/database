@@ -53,7 +53,7 @@
         "default_branch": "main",
         "description": "AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins ",
         "fork": false,
-        "forks_count": 915,
+        "forks_count": 916,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
         "open_issues_count": 3,
@@ -78,7 +78,7 @@
             "url": "https://api.github.com/users/AstroNvim"
         },
         "private": false,
-        "stargazers_count": 12489,
+        "stargazers_count": 12497,
         "topics": [
             "astronvim",
             "astrovim",
@@ -97,7 +97,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2024-09-08T18:15:04Z"
+        "updated_at": "2024-09-09T03:25:21Z"
     },
     "BobVim": {
         "archived": true,
@@ -476,7 +476,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1150,
+        "forks_count": 1149,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 82,
@@ -501,7 +501,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 16429,
+        "stargazers_count": 16435,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -510,7 +510,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-09-08T18:43:26Z"
+        "updated_at": "2024-09-09T04:13:40Z"
     },
     "LunarVim": {
         "archived": false,
@@ -546,7 +546,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 18030,
+        "stargazers_count": 18031,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -565,7 +565,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-09-08T17:06:24Z"
+        "updated_at": "2024-09-09T01:05:58Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -660,7 +660,7 @@
         "default_branch": "main",
         "description": "A normal Neovim distribution",
         "fork": false,
-        "forks_count": 199,
+        "forks_count": 198,
         "full_name": "NormalNvim/NormalNvim",
         "language": "Lua",
         "open_issues_count": 1,
@@ -785,7 +785,7 @@
     "PoloVim": {
         "archived": false,
         "clone_url": "https://github.com/vsedov/PoloVim.git",
-        "commit": "b9e06d51a51060f7513dec607de4bb9c5b532ed9",
+        "commit": "67d904fdd6cffa08abdd2d34d9700975d47fb7b8",
         "contents_url": "https://api.github.com/repos/vsedov/PoloVim/contents/{+path}",
         "created_at": "2021-02-12T08:48:50Z",
         "default_branch": "master",
@@ -818,7 +818,7 @@
         "private": false,
         "stargazers_count": 85,
         "topics": [],
-        "updated_at": "2024-09-08T07:17:34Z"
+        "updated_at": "2024-09-09T02:31:52Z"
     },
     "StarVim": {
         "archived": true,
@@ -1344,6 +1344,7 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
+        "commit": "aedd05e342b04193e55e7e93a964f1df7c9800a7",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -2013,7 +2014,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 20162,
+        "forks_count": 20189,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 7,
@@ -2038,9 +2039,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 18249,
+        "stargazers_count": 18259,
         "topics": [],
-        "updated_at": "2024-09-08T20:03:39Z"
+        "updated_at": "2024-09-09T02:58:22Z"
     },
     "kyoto.nvim": {
         "archived": true,
