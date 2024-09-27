@@ -78,7 +78,7 @@
             "url": "https://api.github.com/users/AstroNvim"
         },
         "private": false,
-        "stargazers_count": 12590,
+        "stargazers_count": 12592,
         "topics": [
             "astronvim",
             "astrovim",
@@ -97,7 +97,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2024-09-27T00:55:16Z"
+        "updated_at": "2024-09-27T07:56:08Z"
     },
     "BobVim": {
         "archived": true,
@@ -476,7 +476,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1170,
+        "forks_count": 1173,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 70,
@@ -501,7 +501,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 16681,
+        "stargazers_count": 16685,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -510,7 +510,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-09-27T02:40:01Z"
+        "updated_at": "2024-09-27T07:56:02Z"
     },
     "LunarVim": {
         "archived": false,
@@ -565,7 +565,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-09-27T00:55:39Z"
+        "updated_at": "2024-09-27T05:24:55Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -638,7 +638,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 5391,
+        "stargazers_count": 5392,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -649,7 +649,7 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2024-09-27T02:53:36Z"
+        "updated_at": "2024-09-27T06:48:10Z"
     },
     "NormalNvim": {
         "archived": false,
@@ -2014,7 +2014,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 21189,
+        "forks_count": 21194,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 4,
@@ -2039,9 +2039,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 18709,
+        "stargazers_count": 18714,
         "topics": [],
-        "updated_at": "2024-09-27T04:10:47Z"
+        "updated_at": "2024-09-27T08:10:38Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2400,7 +2400,7 @@
             "nvim-configs",
             "nvim-settings"
         ],
-        "updated_at": "2024-09-18T11:47:41Z"
+        "updated_at": "2024-09-27T08:11:04Z"
     },
     "neorg-dev": {
         "archived": false,
@@ -2919,6 +2919,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
+        "commit": "43a4f1ee2827ce6f9454a0e83f0faa59e13fbf27",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
@@ -3412,6 +3413,7 @@
     "nvim-setup": {
         "archived": false,
         "clone_url": "https://github.com/Abhishek-More/nvim-setup.git",
+        "commit": "0aea8c922ceaa8d3d6e2e94c7bd3c4d84605ee5d",
         "contents_url": "https://api.github.com/repos/Abhishek-More/nvim-setup/contents/{+path}",
         "created_at": "2021-03-31T16:52:52Z",
         "default_branch": "main",
@@ -4604,7 +4606,7 @@
     "vin": {
         "archived": false,
         "clone_url": "https://github.com/nikbrunner/vin.git",
-        "commit": "c0521ff24e3fe5e5fa386cf1ad1b95b0987e05ea",
+        "commit": "ba1778ce5b9546478f3dd185f97192fa2cafc9bd",
         "contents_url": "https://api.github.com/repos/nikbrunner/vin/contents/{+path}",
         "created_at": "2021-04-01T19:58:59Z",
         "default_branch": "main",
@@ -4642,7 +4644,7 @@
             "vim-configuration",
             "vimrc"
         ],
-        "updated_at": "2024-09-25T11:50:26Z"
+        "updated_at": "2024-09-27T06:09:10Z"
     },
     "windows-nvim_packer2": {
         "archived": false,
