@@ -501,7 +501,7 @@
             "url": "https://api.github.com/users/LazyVim"
         },
         "private": false,
-        "stargazers_count": 16902,
+        "stargazers_count": 16905,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -510,7 +510,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-10-11T12:08:13Z"
+        "updated_at": "2024-10-11T15:21:02Z"
     },
     "LunarVim": {
         "archived": false,
@@ -521,7 +521,7 @@
         "default_branch": "master",
         "description": "\ud83c\udf19 LunarVim is an IDE layer for Neovim. Completely free and community driven.",
         "fork": false,
-        "forks_count": 1505,
+        "forks_count": 1506,
         "full_name": "LunarVim/LunarVim",
         "language": "Lua",
         "open_issues_count": 49,
@@ -638,7 +638,7 @@
             "url": "https://api.github.com/users/LunarVim"
         },
         "private": false,
-        "stargazers_count": 5402,
+        "stargazers_count": 5403,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -649,7 +649,7 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2024-10-11T08:09:15Z"
+        "updated_at": "2024-10-11T14:18:38Z"
     },
     "NormalNvim": {
         "archived": false,
@@ -685,7 +685,7 @@
             "url": "https://api.github.com/users/NormalNvim"
         },
         "private": false,
-        "stargazers_count": 498,
+        "stargazers_count": 499,
         "topics": [
             "neovim-config",
             "neovim-configuration",
@@ -694,7 +694,7 @@
             "nvim-config",
             "nvim-configs"
         ],
-        "updated_at": "2024-10-11T05:09:35Z"
+        "updated_at": "2024-10-11T13:32:38Z"
     },
     "NvHack": {
         "archived": false,
@@ -1166,7 +1166,7 @@
             "url": "https://api.github.com/users/Ultra-Code"
         },
         "private": false,
-        "stargazers_count": 176,
+        "stargazers_count": 177,
         "topics": [
             "awesome-neovim",
             "lspconfig",
@@ -1181,7 +1181,7 @@
             "nvim",
             "treesitter"
         ],
-        "updated_at": "2024-10-09T21:30:16Z"
+        "updated_at": "2024-10-11T15:22:34Z"
     },
     "base.nvim": {
         "archived": false,
@@ -2014,7 +2014,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 22091,
+        "forks_count": 22109,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 13,
@@ -2039,9 +2039,9 @@
             "url": "https://api.github.com/users/nvim-lua"
         },
         "private": false,
-        "stargazers_count": 19074,
+        "stargazers_count": 19081,
         "topics": [],
-        "updated_at": "2024-10-11T10:41:55Z"
+        "updated_at": "2024-10-11T16:10:29Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2919,6 +2919,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
+        "commit": "433ceda6350807f5ef4ffc2bd8ea9cb09d652da5",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
@@ -3529,7 +3530,7 @@
     "nvim.conf": {
         "archived": false,
         "clone_url": "https://github.com/datwaft/nvim.conf.git",
-        "commit": "d5c44ae172c8d17863ca4b1761ee3c732afa3b24",
+        "commit": "d575f1cf404bb364c2358a5be68646cba5ec753d",
         "contents_url": "https://api.github.com/repos/datwaft/nvim.conf/contents/{+path}",
         "created_at": "2019-12-22T05:34:53Z",
         "default_branch": "main",
@@ -3567,7 +3568,7 @@
             "neovim",
             "neovim-configuration"
         ],
-        "updated_at": "2024-10-10T14:48:30Z"
+        "updated_at": "2024-10-11T14:47:32Z"
     },
     "nvim.lua": {
         "archived": false,
@@ -4604,7 +4605,7 @@
     "vin": {
         "archived": false,
         "clone_url": "https://github.com/nikbrunner/vin.git",
-        "commit": "21adb308613e09a1fd4afcb72cbeb681b48aac65",
+        "commit": "7e2920f2e5e340a5b57b1a1ecf604fdcdb1b0dec",
         "contents_url": "https://api.github.com/repos/nikbrunner/vin/contents/{+path}",
         "created_at": "2021-04-01T19:58:59Z",
         "default_branch": "main",
@@ -4642,7 +4643,7 @@
             "vim-configuration",
             "vimrc"
         ],
-        "updated_at": "2024-10-11T08:14:08Z"
+        "updated_at": "2024-10-11T12:51:38Z"
     },
     "windows-nvim_packer2": {
         "archived": false,
