@@ -1,4 +1,50 @@
 {
+    ".sea.nvim": {
+        "archived": false,
+        "clone_url": "https://github.com/cstsunfu/.sea.nvim.git",
+        "commit": "0afa9ca2c5744e2a87f12c4440ccb3c905ac3a3a",
+        "contents_url": "https://api.github.com/repos/cstsunfu/.sea.nvim/contents/{+path}",
+        "created_at": "2017-10-09T11:28:35Z",
+        "default_branch": "master",
+        "description": "21st-century NeoVim. Personal IDE. Mainly implemented by Lua.",
+        "fork": false,
+        "forks_count": 5,
+        "full_name": "cstsunfu/.sea.nvim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/24812659?v=4",
+            "events_url": "https://api.github.com/users/cstsunfu/events{/privacy}",
+            "followers_url": "https://api.github.com/users/cstsunfu/followers",
+            "following_url": "https://api.github.com/users/cstsunfu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/cstsunfu/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/cstsunfu",
+            "id": 24812659,
+            "login": "cstsunfu",
+            "node_id": "MDQ6VXNlcjI0ODEyNjU5",
+            "organizations_url": "https://api.github.com/users/cstsunfu/orgs",
+            "received_events_url": "https://api.github.com/users/cstsunfu/received_events",
+            "repos_url": "https://api.github.com/users/cstsunfu/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/cstsunfu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/cstsunfu/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/cstsunfu",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 146,
+        "topics": [
+            "beautiful",
+            "ide",
+            "intelligence",
+            "neovim",
+            "personal",
+            "ui"
+        ],
+        "updated_at": "2024-09-03T06:56:34Z"
+    },
     "AstroNvim": {
         "archived": false,
         "clone_url": "https://github.com/AstroNvim/AstroNvim.git",
@@ -8,7 +54,7 @@
         "default_branch": "main",
         "description": "AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins ",
         "fork": false,
-        "forks_count": 922,
+        "forks_count": 923,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
         "open_issues_count": 3,
@@ -30,10 +76,11 @@
             "starred_url": "https://api.github.com/users/AstroNvim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/AstroNvim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/AstroNvim"
+            "url": "https://api.github.com/users/AstroNvim",
+            "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 12654,
+        "stargazers_count": 12656,
         "topics": [
             "astronvim",
             "astrovim",
@@ -52,7 +99,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2024-10-17T17:08:30Z"
+        "updated_at": "2024-10-18T00:42:39Z"
     },
     "BobVim": {
         "archived": true,
@@ -85,7 +132,8 @@
             "starred_url": "https://api.github.com/users/TarunDaCoder/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/TarunDaCoder/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/TarunDaCoder"
+            "url": "https://api.github.com/users/TarunDaCoder",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 13,
@@ -128,7 +176,8 @@
             "starred_url": "https://api.github.com/users/artart222/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/artart222/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/artart222"
+            "url": "https://api.github.com/users/artart222",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 886,
@@ -180,7 +229,8 @@
             "starred_url": "https://api.github.com/users/Manas140/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Manas140/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Manas140"
+            "url": "https://api.github.com/users/Manas140",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 136,
@@ -223,7 +273,8 @@
             "starred_url": "https://api.github.com/users/CosmicNvim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/CosmicNvim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/CosmicNvim"
+            "url": "https://api.github.com/users/CosmicNvim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1092,
@@ -279,7 +330,8 @@
             "starred_url": "https://api.github.com/users/SingularisArt/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/SingularisArt/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/SingularisArt"
+            "url": "https://api.github.com/users/SingularisArt",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 107,
@@ -323,7 +375,8 @@
             "starred_url": "https://api.github.com/users/ewheels44/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/ewheels44/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/ewheels44"
+            "url": "https://api.github.com/users/ewheels44",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -333,6 +386,45 @@
             "nvim"
         ],
         "updated_at": "2021-06-23T23:17:29Z"
+    },
+    "Forest.nvim": {
+        "archived": false,
+        "clone_url": "https://github.com/YmmitZtrol/Forest.nvim.git",
+        "commit": "c4db0b68e4911883eabc485abaa48f9c80473f79",
+        "contents_url": "https://api.github.com/repos/YmmitZtrol/Forest.nvim/contents/{+path}",
+        "created_at": "2021-08-08T10:18:32Z",
+        "default_branch": "main",
+        "description": null,
+        "fork": false,
+        "forks_count": 0,
+        "full_name": "YmmitZtrol/Forest.nvim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/78155592?v=4",
+            "events_url": "https://api.github.com/users/YmmitZtrol/events{/privacy}",
+            "followers_url": "https://api.github.com/users/YmmitZtrol/followers",
+            "following_url": "https://api.github.com/users/YmmitZtrol/following{/other_user}",
+            "gists_url": "https://api.github.com/users/YmmitZtrol/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/YmmitZtrol",
+            "id": 78155592,
+            "login": "YmmitZtrol",
+            "node_id": "MDQ6VXNlcjc4MTU1NTky",
+            "organizations_url": "https://api.github.com/users/YmmitZtrol/orgs",
+            "received_events_url": "https://api.github.com/users/YmmitZtrol/received_events",
+            "repos_url": "https://api.github.com/users/YmmitZtrol/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/YmmitZtrol/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/YmmitZtrol/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/YmmitZtrol",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 1,
+        "topics": [],
+        "updated_at": "2022-05-25T14:59:13Z"
     },
     "JENT": {
         "archived": true,
@@ -365,7 +457,8 @@
             "starred_url": "https://api.github.com/users/cccra/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/cccra/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/cccra"
+            "url": "https://api.github.com/users/cccra",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -396,7 +489,7 @@
         "forks_count": 1193,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 79,
+        "open_issues_count": 80,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -415,7 +508,8 @@
             "starred_url": "https://api.github.com/users/LazyVim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/LazyVim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/LazyVim"
+            "url": "https://api.github.com/users/LazyVim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 16992,
@@ -460,10 +554,11 @@
             "starred_url": "https://api.github.com/users/LunarVim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/LunarVim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/LunarVim"
+            "url": "https://api.github.com/users/LunarVim",
+            "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18290,
+        "stargazers_count": 18291,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -482,7 +577,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-10-17T17:37:00Z"
+        "updated_at": "2024-10-17T21:02:23Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -515,7 +610,8 @@
             "starred_url": "https://api.github.com/users/mayankdutta/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/mayankdutta/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/mayankdutta"
+            "url": "https://api.github.com/users/mayankdutta",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -553,7 +649,8 @@
             "starred_url": "https://api.github.com/users/LunarVim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/LunarVim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/LunarVim"
+            "url": "https://api.github.com/users/LunarVim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 5407,
@@ -600,7 +697,8 @@
             "starred_url": "https://api.github.com/users/NormalNvim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/NormalNvim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/NormalNvim"
+            "url": "https://api.github.com/users/NormalNvim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 502,
@@ -612,7 +710,7 @@
             "nvim-config",
             "nvim-configs"
         ],
-        "updated_at": "2024-10-17T18:31:32Z"
+        "updated_at": "2024-10-17T20:43:26Z"
     },
     "NvHack": {
         "archived": false,
@@ -645,7 +743,8 @@
             "starred_url": "https://api.github.com/users/bryant-the-coder/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/bryant-the-coder/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/bryant-the-coder"
+            "url": "https://api.github.com/users/bryant-the-coder",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 27,
@@ -694,7 +793,8 @@
             "starred_url": "https://api.github.com/users/Melkeydev/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Melkeydev/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Melkeydev"
+            "url": "https://api.github.com/users/Melkeydev",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 58,
@@ -732,12 +832,117 @@
             "starred_url": "https://api.github.com/users/vsedov/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/vsedov/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/vsedov"
+            "url": "https://api.github.com/users/vsedov",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 85,
         "topics": [],
         "updated_at": "2024-09-24T12:04:26Z"
+    },
+    "StarVim": {
+        "archived": true,
+        "clone_url": "https://github.com/ashincoder/StarVim.git",
+        "commit": "76b00e8abc8ec430479c8f2fdb2227a4bb2eeea8",
+        "contents_url": "https://api.github.com/repos/ashincoder/StarVim/contents/{+path}",
+        "created_at": "2021-07-10T09:35:39Z",
+        "default_branch": "main",
+        "description": "A neovim IDE which is beyond the moon \ud83c\udf1a ",
+        "fork": false,
+        "forks_count": 5,
+        "full_name": "ashincoder/StarVim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/83629316?v=4",
+            "events_url": "https://api.github.com/users/ashincoder/events{/privacy}",
+            "followers_url": "https://api.github.com/users/ashincoder/followers",
+            "following_url": "https://api.github.com/users/ashincoder/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ashincoder/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/ashincoder",
+            "id": 83629316,
+            "login": "ashincoder",
+            "node_id": "MDQ6VXNlcjgzNjI5MzE2",
+            "organizations_url": "https://api.github.com/users/ashincoder/orgs",
+            "received_events_url": "https://api.github.com/users/ashincoder/received_events",
+            "repos_url": "https://api.github.com/users/ashincoder/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/ashincoder/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ashincoder/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/ashincoder",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 44,
+        "topics": [
+            "beauty",
+            "lua",
+            "neovim",
+            "neovim-configuration",
+            "neovim-lua",
+            "nvim-lsp",
+            "nvim-lua",
+            "nvim-tel",
+            "nvim-treesitter",
+            "star",
+            "starvim"
+        ],
+        "updated_at": "2023-11-26T03:54:53Z"
+    },
+    "Svimming-in-NeoVim": {
+        "archived": false,
+        "clone_url": "https://github.com/yashsavani/Svimming-in-NeoVim.git",
+        "contents_url": "https://api.github.com/repos/yashsavani/Svimming-in-NeoVim/contents/{+path}",
+        "created_at": "2021-06-21T18:38:59Z",
+        "default_branch": "main",
+        "description": "A beautiful and fast neovim config written in lua.",
+        "fork": false,
+        "forks_count": 1,
+        "full_name": "yashsavani/Svimming-in-NeoVim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/6228832?v=4",
+            "events_url": "https://api.github.com/users/yashsavani/events{/privacy}",
+            "followers_url": "https://api.github.com/users/yashsavani/followers",
+            "following_url": "https://api.github.com/users/yashsavani/following{/other_user}",
+            "gists_url": "https://api.github.com/users/yashsavani/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/yashsavani",
+            "id": 6228832,
+            "login": "yashsavani",
+            "node_id": "MDQ6VXNlcjYyMjg4MzI=",
+            "organizations_url": "https://api.github.com/users/yashsavani/orgs",
+            "received_events_url": "https://api.github.com/users/yashsavani/received_events",
+            "repos_url": "https://api.github.com/users/yashsavani/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/yashsavani/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/yashsavani/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/yashsavani",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 6,
+        "topics": [
+            "lua",
+            "luajit",
+            "neovim",
+            "neovim-config",
+            "neovim-configuration",
+            "neovim-dotfiles",
+            "neovim-lua",
+            "nvim",
+            "nvim-configs",
+            "nvim-configuration",
+            "vim",
+            "vim-config",
+            "vim-configuration",
+            "vimrc"
+        ],
+        "updated_at": "2023-02-26T21:50:11Z"
     },
     "TNH-nvim": {
         "archived": false,
@@ -770,7 +975,8 @@
             "starred_url": "https://api.github.com/users/TheNerdyHamster/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/TheNerdyHamster/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/TheNerdyHamster"
+            "url": "https://api.github.com/users/TheNerdyHamster",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -808,7 +1014,8 @@
             "starred_url": "https://api.github.com/users/VapourNvim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/VapourNvim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/VapourNvim"
+            "url": "https://api.github.com/users/VapourNvim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 533,
@@ -823,7 +1030,6 @@
     "WVim": {
         "archived": false,
         "clone_url": "https://github.com/wmilou/WVim.git",
-        "commit": "c42f7f98d776279e62cbb3ba50af75aaee7a8fd7",
         "contents_url": "https://api.github.com/repos/wmilou/WVim/contents/{+path}",
         "created_at": "2021-03-13T04:51:36Z",
         "default_branch": "master",
@@ -851,7 +1057,8 @@
             "starred_url": "https://api.github.com/users/wmilou/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/wmilou/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/wmilou"
+            "url": "https://api.github.com/users/wmilou",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -889,7 +1096,8 @@
             "starred_url": "https://api.github.com/users/talha-akram/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/talha-akram/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/talha-akram"
+            "url": "https://api.github.com/users/talha-akram",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 42,
@@ -901,6 +1109,54 @@
             "nvim"
         ],
         "updated_at": "2024-09-21T11:08:08Z"
+    },
+    "astro.nvim": {
+        "archived": false,
+        "clone_url": "https://github.com/TeoDev1611/astro.nvim.git",
+        "commit": "77d697767e0676631aedf1f28247652ec9cf8052",
+        "contents_url": "https://api.github.com/repos/TeoDev1611/astro.nvim/contents/{+path}",
+        "created_at": "2021-01-17T20:41:07Z",
+        "default_branch": "astro",
+        "description": "Faster Neovim Configuration",
+        "fork": false,
+        "forks_count": 4,
+        "full_name": "TeoDev1611/astro.nvim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/73144037?v=4",
+            "events_url": "https://api.github.com/users/TeoDev1611/events{/privacy}",
+            "followers_url": "https://api.github.com/users/TeoDev1611/followers",
+            "following_url": "https://api.github.com/users/TeoDev1611/following{/other_user}",
+            "gists_url": "https://api.github.com/users/TeoDev1611/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/TeoDev1611",
+            "id": 73144037,
+            "login": "TeoDev1611",
+            "node_id": "MDQ6VXNlcjczMTQ0MDM3",
+            "organizations_url": "https://api.github.com/users/TeoDev1611/orgs",
+            "received_events_url": "https://api.github.com/users/TeoDev1611/received_events",
+            "repos_url": "https://api.github.com/users/TeoDev1611/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/TeoDev1611/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/TeoDev1611/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/TeoDev1611",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 21,
+        "topics": [
+            "file",
+            "lua",
+            "neovim",
+            "nvim",
+            "plug",
+            "vim",
+            "vim-configuration",
+            "vimrc"
+        ],
+        "updated_at": "2024-08-08T20:19:18Z"
     },
     "awesome-neovim": {
         "archived": false,
@@ -933,7 +1189,8 @@
             "starred_url": "https://api.github.com/users/Ultra-Code/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Ultra-Code/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Ultra-Code"
+            "url": "https://api.github.com/users/Ultra-Code",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 178,
@@ -984,7 +1241,8 @@
             "starred_url": "https://api.github.com/users/skbolton/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/skbolton/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/skbolton"
+            "url": "https://api.github.com/users/skbolton",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 10,
@@ -1022,7 +1280,8 @@
             "starred_url": "https://api.github.com/users/shanytc/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/shanytc/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/shanytc"
+            "url": "https://api.github.com/users/shanytc",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -1032,7 +1291,6 @@
     "cheovim": {
         "archived": false,
         "clone_url": "https://github.com/NTBBloodbath/cheovim.git",
-        "commit": "2be32c341cc7aec5b1eadb4315b9f98bc68e5ff3",
         "contents_url": "https://api.github.com/repos/NTBBloodbath/cheovim/contents/{+path}",
         "created_at": "2021-05-21T13:53:56Z",
         "default_branch": "main",
@@ -1060,7 +1318,8 @@
             "starred_url": "https://api.github.com/users/NTBBloodbath/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/NTBBloodbath/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/NTBBloodbath"
+            "url": "https://api.github.com/users/NTBBloodbath",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 332,
@@ -1104,7 +1363,8 @@
             "starred_url": "https://api.github.com/users/captainko/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/captainko/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/captainko"
+            "url": "https://api.github.com/users/captainko",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 4,
@@ -1142,7 +1402,8 @@
             "starred_url": "https://api.github.com/users/cynix/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/cynix/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/cynix"
+            "url": "https://api.github.com/users/cynix",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -1180,7 +1441,8 @@
             "starred_url": "https://api.github.com/users/kylechui/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/kylechui/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/kylechui"
+            "url": "https://api.github.com/users/kylechui",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 24,
@@ -1221,7 +1483,8 @@
             "starred_url": "https://api.github.com/users/ten3roberts/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/ten3roberts/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/ten3roberts"
+            "url": "https://api.github.com/users/ten3roberts",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 4,
@@ -1231,7 +1494,6 @@
     "dogemoon.nvim": {
         "archived": false,
         "clone_url": "https://github.com/abnt713/dogemoon.nvim.git",
-        "commit": "55416760c3eb8ee346274049e06a4715eaffcba5",
         "contents_url": "https://api.github.com/repos/abnt713/dogemoon.nvim/contents/{+path}",
         "created_at": "2021-04-20T23:18:26Z",
         "default_branch": "main",
@@ -1259,7 +1521,8 @@
             "starred_url": "https://api.github.com/users/abnt713/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/abnt713/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/abnt713"
+            "url": "https://api.github.com/users/abnt713",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -1297,7 +1560,8 @@
             "starred_url": "https://api.github.com/users/doom-neovim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/doom-neovim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/doom-neovim"
+            "url": "https://api.github.com/users/doom-neovim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1008,
@@ -1343,7 +1607,8 @@
             "starred_url": "https://api.github.com/users/nvimdev/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/nvimdev/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/nvimdev"
+            "url": "https://api.github.com/users/nvimdev",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 365,
@@ -1359,7 +1624,7 @@
     "dot-nvim": {
         "archived": false,
         "clone_url": "https://github.com/famiu/dot-nvim.git",
-        "commit": "3d8a26b4a0db170b068f6d26265e38b85e65d598",
+        "commit": "5de2a0d87715c46658a59d7a1efd8c9f535f197e",
         "contents_url": "https://api.github.com/repos/famiu/dot-nvim/contents/{+path}",
         "created_at": "2022-04-29T06:08:48Z",
         "default_branch": "master",
@@ -1387,12 +1652,13 @@
             "starred_url": "https://api.github.com/users/famiu/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/famiu/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/famiu"
+            "url": "https://api.github.com/users/famiu",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 33,
         "topics": [],
-        "updated_at": "2024-10-10T03:57:13Z"
+        "updated_at": "2024-10-17T22:46:34Z"
     },
     "dotfiles": {
         "archived": false,
@@ -1425,7 +1691,8 @@
             "starred_url": "https://api.github.com/users/Himujjal/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Himujjal/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Himujjal"
+            "url": "https://api.github.com/users/Himujjal",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 5,
@@ -1463,7 +1730,8 @@
             "starred_url": "https://api.github.com/users/s1n7ax/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/s1n7ax/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/s1n7ax"
+            "url": "https://api.github.com/users/s1n7ax",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 120,
@@ -1513,7 +1781,8 @@
             "starred_url": "https://api.github.com/users/mizlan/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/mizlan/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/mizlan"
+            "url": "https://api.github.com/users/mizlan",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 41,
@@ -1551,7 +1820,8 @@
             "starred_url": "https://api.github.com/users/mars90226/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/mars90226/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/mars90226"
+            "url": "https://api.github.com/users/mars90226",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 16,
@@ -1596,7 +1866,8 @@
             "starred_url": "https://api.github.com/users/DesantBucie/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/DesantBucie/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/DesantBucie"
+            "url": "https://api.github.com/users/DesantBucie",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -1639,7 +1910,8 @@
             "starred_url": "https://api.github.com/users/uncomfyhalomacro/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/uncomfyhalomacro/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/uncomfyhalomacro"
+            "url": "https://api.github.com/users/uncomfyhalomacro",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 33,
@@ -1685,7 +1957,8 @@
             "starred_url": "https://api.github.com/users/GustavoPrietoP/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/GustavoPrietoP/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/GustavoPrietoP"
+            "url": "https://api.github.com/users/GustavoPrietoP",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 41,
@@ -1697,10 +1970,54 @@
         ],
         "updated_at": "2024-07-01T06:10:03Z"
     },
+    "feline.nvim": {
+        "archived": true,
+        "clone_url": "https://github.com/famiu/feline.nvim.git",
+        "commit": "dd9e4199d1c05c3edc0f86820a83444486c84521",
+        "contents_url": "https://api.github.com/repos/famiu/feline.nvim/contents/{+path}",
+        "created_at": "2021-04-13T11:08:16Z",
+        "default_branch": "master",
+        "description": "A minimal, stylish and customizable statusline for Neovim written in Lua",
+        "fork": false,
+        "forks_count": 55,
+        "full_name": "famiu/feline.nvim",
+        "language": "Lua",
+        "open_issues_count": 6,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/29580810?v=4",
+            "events_url": "https://api.github.com/users/famiu/events{/privacy}",
+            "followers_url": "https://api.github.com/users/famiu/followers",
+            "following_url": "https://api.github.com/users/famiu/following{/other_user}",
+            "gists_url": "https://api.github.com/users/famiu/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/famiu",
+            "id": 29580810,
+            "login": "famiu",
+            "node_id": "MDQ6VXNlcjI5NTgwODEw",
+            "organizations_url": "https://api.github.com/users/famiu/orgs",
+            "received_events_url": "https://api.github.com/users/famiu/received_events",
+            "repos_url": "https://api.github.com/users/famiu/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/famiu/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/famiu/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/famiu",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 1041,
+        "topics": [
+            "lua",
+            "neovim",
+            "neovim-plugin",
+            "nvim",
+            "statusline"
+        ],
+        "updated_at": "2024-10-11T23:57:05Z"
+    },
     "init.vim": {
         "archived": false,
         "clone_url": "https://github.com/TaylorBeeston/init.vim.git",
-        "commit": "9bfb03247115b883154b16f4b9c1247dc61512c2",
         "contents_url": "https://api.github.com/repos/TaylorBeeston/init.vim/contents/{+path}",
         "created_at": "2021-01-03T13:53:36Z",
         "default_branch": "main",
@@ -1728,7 +2045,8 @@
             "starred_url": "https://api.github.com/users/TaylorBeeston/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/TaylorBeeston/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/TaylorBeeston"
+            "url": "https://api.github.com/users/TaylorBeeston",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 6,
@@ -1744,7 +2062,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 22487,
+        "forks_count": 22500,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 14,
@@ -1766,12 +2084,59 @@
             "starred_url": "https://api.github.com/users/nvim-lua/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/nvim-lua/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/nvim-lua"
+            "url": "https://api.github.com/users/nvim-lua",
+            "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19246,
+        "stargazers_count": 19250,
         "topics": [],
-        "updated_at": "2024-10-17T18:56:14Z"
+        "updated_at": "2024-10-17T23:52:48Z"
+    },
+    "kyoto.nvim": {
+        "archived": true,
+        "clone_url": "https://github.com/samrxth/kyoto.nvim.git",
+        "contents_url": "https://api.github.com/repos/samrxth/kyoto.nvim/contents/{+path}",
+        "created_at": "2021-05-26T05:16:05Z",
+        "default_branch": "main",
+        "description": "kyoto.nvim is a functional, beautiful, and highly customizable neovim configuration",
+        "fork": false,
+        "forks_count": 10,
+        "full_name": "samrxth/kyoto.nvim",
+        "language": "Lua",
+        "open_issues_count": 2,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/69572668?v=4",
+            "events_url": "https://api.github.com/users/samrxth/events{/privacy}",
+            "followers_url": "https://api.github.com/users/samrxth/followers",
+            "following_url": "https://api.github.com/users/samrxth/following{/other_user}",
+            "gists_url": "https://api.github.com/users/samrxth/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/samrxth",
+            "id": 69572668,
+            "login": "samrxth",
+            "node_id": "MDQ6VXNlcjY5NTcyNjY4",
+            "organizations_url": "https://api.github.com/users/samrxth/orgs",
+            "received_events_url": "https://api.github.com/users/samrxth/received_events",
+            "repos_url": "https://api.github.com/users/samrxth/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/samrxth/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/samrxth/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/samrxth",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 279,
+        "topics": [
+            "dotfiles",
+            "lua",
+            "neovim",
+            "neovim-dotfiles",
+            "vim",
+            "vimrc",
+            "vimrc-configuration"
+        ],
+        "updated_at": "2024-09-03T20:16:51Z"
     },
     "learn-neovim-lua": {
         "archived": false,
@@ -1804,7 +2169,8 @@
             "starred_url": "https://api.github.com/users/nshen/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/nshen/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/nshen"
+            "url": "https://api.github.com/users/nshen",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1215,
@@ -1850,7 +2216,8 @@
             "starred_url": "https://api.github.com/users/lspcontainers/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/lspcontainers/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/lspcontainers"
+            "url": "https://api.github.com/users/lspcontainers",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 311,
@@ -1895,7 +2262,8 @@
             "starred_url": "https://api.github.com/users/nickerdoodle/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/nickerdoodle/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/nickerdoodle"
+            "url": "https://api.github.com/users/nickerdoodle",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -1933,7 +2301,8 @@
             "starred_url": "https://api.github.com/users/lvim-tech/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/lvim-tech/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/lvim-tech"
+            "url": "https://api.github.com/users/lvim-tech",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 382,
@@ -1971,7 +2340,8 @@
             "starred_url": "https://api.github.com/users/maxmx03/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/maxmx03/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/maxmx03"
+            "url": "https://api.github.com/users/maxmx03",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 9,
@@ -2025,7 +2395,8 @@
             "starred_url": "https://api.github.com/users/y9c/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/y9c/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/y9c"
+            "url": "https://api.github.com/users/y9c",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 7,
@@ -2073,7 +2444,8 @@
             "starred_url": "https://api.github.com/users/aserowy/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/aserowy/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/aserowy"
+            "url": "https://api.github.com/users/aserowy",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 60,
@@ -2120,12 +2492,51 @@
             "starred_url": "https://api.github.com/users/vhyrro/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/vhyrro/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/vhyrro"
+            "url": "https://api.github.com/users/vhyrro",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 15,
         "topics": [],
         "updated_at": "2024-09-02T20:39:46Z"
+    },
+    "neovhy": {
+        "archived": false,
+        "clone_url": "https://github.com/vhyrro/neovhy.git",
+        "contents_url": "https://api.github.com/repos/vhyrro/neovhy/contents/{+path}",
+        "created_at": "2021-06-12T07:40:10Z",
+        "default_branch": "main",
+        "description": "I had no better name for it I swear",
+        "fork": false,
+        "forks_count": 1,
+        "full_name": "vhyrro/neovhy",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/76052559?v=4",
+            "events_url": "https://api.github.com/users/vhyrro/events{/privacy}",
+            "followers_url": "https://api.github.com/users/vhyrro/followers",
+            "following_url": "https://api.github.com/users/vhyrro/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vhyrro/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/vhyrro",
+            "id": 76052559,
+            "login": "vhyrro",
+            "node_id": "MDQ6VXNlcjc2MDUyNTU5",
+            "organizations_url": "https://api.github.com/users/vhyrro/orgs",
+            "received_events_url": "https://api.github.com/users/vhyrro/received_events",
+            "repos_url": "https://api.github.com/users/vhyrro/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/vhyrro/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vhyrro/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/vhyrro",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 24,
+        "topics": [],
+        "updated_at": "2024-07-22T17:17:17Z"
     },
     "neovim": {
         "archived": false,
@@ -2158,7 +2569,8 @@
             "starred_url": "https://api.github.com/users/amazingefren/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/amazingefren/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/amazingefren"
+            "url": "https://api.github.com/users/amazingefren",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -2198,7 +2610,8 @@
             "starred_url": "https://api.github.com/users/kkalamarski/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/kkalamarski/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/kkalamarski"
+            "url": "https://api.github.com/users/kkalamarski",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 10,
@@ -2248,7 +2661,8 @@
             "starred_url": "https://api.github.com/users/terrortylor/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/terrortylor/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/terrortylor"
+            "url": "https://api.github.com/users/terrortylor",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 8,
@@ -2286,7 +2700,8 @@
             "starred_url": "https://api.github.com/users/Syndim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Syndim/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Syndim"
+            "url": "https://api.github.com/users/Syndim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -2324,7 +2739,8 @@
             "starred_url": "https://api.github.com/users/danvg/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/danvg/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/danvg"
+            "url": "https://api.github.com/users/danvg",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -2362,7 +2778,8 @@
             "starred_url": "https://api.github.com/users/norcalli/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/norcalli/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/norcalli"
+            "url": "https://api.github.com/users/norcalli",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 35,
@@ -2400,7 +2817,8 @@
             "starred_url": "https://api.github.com/users/josephsdavid/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/josephsdavid/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/josephsdavid"
+            "url": "https://api.github.com/users/josephsdavid",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 8,
@@ -2438,7 +2856,8 @@
             "starred_url": "https://api.github.com/users/adishourya/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/adishourya/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/adishourya"
+            "url": "https://api.github.com/users/adishourya",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -2476,7 +2895,8 @@
             "starred_url": "https://api.github.com/users/otherJL0/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/otherJL0/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/otherJL0"
+            "url": "https://api.github.com/users/otherJL0",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -2514,7 +2934,8 @@
             "starred_url": "https://api.github.com/users/Theory-of-Everything/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Theory-of-Everything/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Theory-of-Everything"
+            "url": "https://api.github.com/users/Theory-of-Everything",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 107,
@@ -2530,6 +2951,45 @@
             "vim"
         ],
         "updated_at": "2024-07-01T06:09:41Z"
+    },
+    "nv": {
+        "archived": true,
+        "clone_url": "https://github.com/n-shift/nv.git",
+        "commit": "29339225b023d9b0dfa7b7959a2b9792a82d9d3f",
+        "contents_url": "https://api.github.com/repos/n-shift/nv/contents/{+path}",
+        "created_at": "2021-08-25T12:46:19Z",
+        "default_branch": "main",
+        "description": null,
+        "fork": false,
+        "forks_count": 3,
+        "full_name": "n-shift/nv",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/53366878?v=4",
+            "events_url": "https://api.github.com/users/n-shift/events{/privacy}",
+            "followers_url": "https://api.github.com/users/n-shift/followers",
+            "following_url": "https://api.github.com/users/n-shift/following{/other_user}",
+            "gists_url": "https://api.github.com/users/n-shift/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/n-shift",
+            "id": 53366878,
+            "login": "n-shift",
+            "node_id": "MDQ6VXNlcjUzMzY2ODc4",
+            "organizations_url": "https://api.github.com/users/n-shift/orgs",
+            "received_events_url": "https://api.github.com/users/n-shift/received_events",
+            "repos_url": "https://api.github.com/users/n-shift/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/n-shift/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/n-shift/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/n-shift",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 37,
+        "topics": [],
+        "updated_at": "2024-06-10T15:05:53Z"
     },
     "nv-ide": {
         "archived": false,
@@ -2562,7 +3022,8 @@
             "starred_url": "https://api.github.com/users/crivotz/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/crivotz/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/crivotz"
+            "url": "https://api.github.com/users/crivotz",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 591,
@@ -2606,7 +3067,8 @@
             "starred_url": "https://api.github.com/users/glepnir/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/glepnir/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/glepnir"
+            "url": "https://api.github.com/users/glepnir",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 735,
@@ -2647,7 +3109,8 @@
             "starred_url": "https://api.github.com/users/Shintenza/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Shintenza/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Shintenza"
+            "url": "https://api.github.com/users/Shintenza",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 8,
@@ -2694,7 +3157,8 @@
             "starred_url": "https://api.github.com/users/b0o/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/b0o/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/b0o"
+            "url": "https://api.github.com/users/b0o",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 152,
@@ -2738,7 +3202,8 @@
             "starred_url": "https://api.github.com/users/jdhao/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/jdhao/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/jdhao"
+            "url": "https://api.github.com/users/jdhao",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3508,
@@ -2785,7 +3250,8 @@
             "starred_url": "https://api.github.com/users/kunzaatko/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/kunzaatko/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/kunzaatko"
+            "url": "https://api.github.com/users/kunzaatko",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 5,
@@ -2823,7 +3289,8 @@
             "starred_url": "https://api.github.com/users/johnsci911/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/johnsci911/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/johnsci911"
+            "url": "https://api.github.com/users/johnsci911",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 37,
@@ -2867,7 +3334,8 @@
             "starred_url": "https://api.github.com/users/VonHeikemen/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/VonHeikemen/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/VonHeikemen"
+            "url": "https://api.github.com/users/VonHeikemen",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 27,
@@ -2905,7 +3373,8 @@
             "starred_url": "https://api.github.com/users/Giangvp99/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Giangvp99/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Giangvp99"
+            "url": "https://api.github.com/users/Giangvp99",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -2943,7 +3412,8 @@
             "starred_url": "https://api.github.com/users/ur4ltz/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/ur4ltz/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/ur4ltz"
+            "url": "https://api.github.com/users/ur4ltz",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -2981,7 +3451,8 @@
             "starred_url": "https://api.github.com/users/doctorfree/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/doctorfree/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/doctorfree"
+            "url": "https://api.github.com/users/doctorfree",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3019,7 +3490,8 @@
             "starred_url": "https://api.github.com/users/onsails/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/onsails/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/onsails"
+            "url": "https://api.github.com/users/onsails",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -3057,7 +3529,8 @@
             "starred_url": "https://api.github.com/users/Abhishek-More/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Abhishek-More/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Abhishek-More"
+            "url": "https://api.github.com/users/Abhishek-More",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -3095,7 +3568,8 @@
             "starred_url": "https://api.github.com/users/mbriggs/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/mbriggs/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/mbriggs"
+            "url": "https://api.github.com/users/mbriggs",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -3133,7 +3607,8 @@
             "starred_url": "https://api.github.com/users/abyo/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/abyo/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/abyo"
+            "url": "https://api.github.com/users/abyo",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 34,
@@ -3176,7 +3651,8 @@
             "starred_url": "https://api.github.com/users/datwaft/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/datwaft/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/datwaft"
+            "url": "https://api.github.com/users/datwaft",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 114,
@@ -3219,7 +3695,8 @@
             "starred_url": "https://api.github.com/users/fwar34/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/fwar34/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/fwar34"
+            "url": "https://api.github.com/users/fwar34",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3257,7 +3734,8 @@
             "starred_url": "https://api.github.com/users/cossonleo/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/cossonleo/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/cossonleo"
+            "url": "https://api.github.com/users/cossonleo",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3295,7 +3773,8 @@
             "starred_url": "https://api.github.com/users/XiaoConstantine/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/XiaoConstantine/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/XiaoConstantine"
+            "url": "https://api.github.com/users/XiaoConstantine",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -3333,7 +3812,8 @@
             "starred_url": "https://api.github.com/users/alohaia/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/alohaia/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/alohaia"
+            "url": "https://api.github.com/users/alohaia",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 25,
@@ -3383,7 +3863,8 @@
             "starred_url": "https://api.github.com/users/wtchrs/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/wtchrs/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/wtchrs"
+            "url": "https://api.github.com/users/wtchrs",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
@@ -3427,12 +3908,64 @@
             "starred_url": "https://api.github.com/users/JorriFransen/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/JorriFransen/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/JorriFransen"
+            "url": "https://api.github.com/users/JorriFransen",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
         "topics": [],
         "updated_at": "2023-01-28T00:39:39Z"
+    },
+    "nvimdots": {
+        "archived": false,
+        "clone_url": "https://github.com/ayamir/nvimdots.git",
+        "contents_url": "https://api.github.com/repos/ayamir/nvimdots/contents/{+path}",
+        "created_at": "2021-06-19T04:03:23Z",
+        "default_branch": "main",
+        "description": "A well configured and structured Neovim.",
+        "fork": false,
+        "forks_count": 461,
+        "full_name": "ayamir/nvimdots",
+        "language": "Lua",
+        "open_issues_count": 8,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/61657399?v=4",
+            "events_url": "https://api.github.com/users/ayamir/events{/privacy}",
+            "followers_url": "https://api.github.com/users/ayamir/followers",
+            "following_url": "https://api.github.com/users/ayamir/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ayamir/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/ayamir",
+            "id": 61657399,
+            "login": "ayamir",
+            "node_id": "MDQ6VXNlcjYxNjU3Mzk5",
+            "organizations_url": "https://api.github.com/users/ayamir/orgs",
+            "received_events_url": "https://api.github.com/users/ayamir/received_events",
+            "repos_url": "https://api.github.com/users/ayamir/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/ayamir/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ayamir/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/ayamir",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 2919,
+        "topics": [
+            "dotfiles",
+            "editor",
+            "ide",
+            "neovim-config",
+            "neovim-configuration",
+            "neovim-dotfiles",
+            "neovim-lua",
+            "neovim-setup",
+            "nvim",
+            "nvim-configs",
+            "vim",
+            "vimrc"
+        ],
+        "updated_at": "2024-10-16T12:14:18Z"
     },
     "nvimrc": {
         "archived": false,
@@ -3465,7 +3998,8 @@
             "starred_url": "https://api.github.com/users/mnabila/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/mnabila/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/mnabila"
+            "url": "https://api.github.com/users/mnabila",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 133,
@@ -3514,7 +4048,8 @@
             "starred_url": "https://api.github.com/users/klooj/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/klooj/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/klooj"
+            "url": "https://api.github.com/users/klooj",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3552,7 +4087,8 @@
             "starred_url": "https://api.github.com/users/0oAstro/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/0oAstro/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/0oAstro"
+            "url": "https://api.github.com/users/0oAstro",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 5,
@@ -3590,7 +4126,8 @@
             "starred_url": "https://api.github.com/users/niyabits/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/niyabits/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/niyabits"
+            "url": "https://api.github.com/users/niyabits",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 20,
@@ -3628,12 +4165,60 @@
             "starred_url": "https://api.github.com/users/cenk1cenk2/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/cenk1cenk2/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/cenk1cenk2"
+            "url": "https://api.github.com/users/cenk1cenk2",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 4,
         "topics": [],
         "updated_at": "2023-01-28T03:22:24Z"
+    },
+    "plain-nvim": {
+        "archived": true,
+        "clone_url": "https://github.com/iveahugeship/plain-nvim.git",
+        "contents_url": "https://api.github.com/repos/iveahugeship/plain-nvim/contents/{+path}",
+        "created_at": "2021-04-10T23:57:11Z",
+        "default_branch": "master",
+        "description": "The plain NeoVim easy-to-use configuration builded with Lua. Just few plugins adding the only necessary functionality.",
+        "fork": false,
+        "forks_count": 0,
+        "full_name": "iveahugeship/plain-nvim",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/75507477?v=4",
+            "events_url": "https://api.github.com/users/iveahugeship/events{/privacy}",
+            "followers_url": "https://api.github.com/users/iveahugeship/followers",
+            "following_url": "https://api.github.com/users/iveahugeship/following{/other_user}",
+            "gists_url": "https://api.github.com/users/iveahugeship/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/iveahugeship",
+            "id": 75507477,
+            "login": "iveahugeship",
+            "node_id": "MDQ6VXNlcjc1NTA3NDc3",
+            "organizations_url": "https://api.github.com/users/iveahugeship/orgs",
+            "received_events_url": "https://api.github.com/users/iveahugeship/received_events",
+            "repos_url": "https://api.github.com/users/iveahugeship/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/iveahugeship/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/iveahugeship/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/iveahugeship",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 1,
+        "topics": [
+            "config",
+            "dotfiles",
+            "lua",
+            "neovim",
+            "nvim",
+            "snippets",
+            "vim",
+            "vimrc"
+        ],
+        "updated_at": "2023-03-30T10:00:18Z"
     },
     "prgn-nvim": {
         "archived": false,
@@ -3666,7 +4251,8 @@
             "starred_url": "https://api.github.com/users/prgn-nvim/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/prgn-nvim/subscriptions",
             "type": "Organization",
-            "url": "https://api.github.com/users/prgn-nvim"
+            "url": "https://api.github.com/users/prgn-nvim",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -3704,7 +4290,8 @@
             "starred_url": "https://api.github.com/users/krissemicolon/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/krissemicolon/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/krissemicolon"
+            "url": "https://api.github.com/users/krissemicolon",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3748,7 +4335,8 @@
             "starred_url": "https://api.github.com/users/Shadorain/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Shadorain/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Shadorain"
+            "url": "https://api.github.com/users/Shadorain",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 75,
@@ -3799,7 +4387,8 @@
             "starred_url": "https://api.github.com/users/joalon/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/joalon/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/joalon"
+            "url": "https://api.github.com/users/joalon",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -3837,7 +4426,8 @@
             "starred_url": "https://api.github.com/users/CadeMichael/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/CadeMichael/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/CadeMichael"
+            "url": "https://api.github.com/users/CadeMichael",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3875,7 +4465,8 @@
             "starred_url": "https://api.github.com/users/n-shift/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/n-shift/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/n-shift"
+            "url": "https://api.github.com/users/n-shift",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 8,
@@ -3913,7 +4504,8 @@
             "starred_url": "https://api.github.com/users/thorlucas/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/thorlucas/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/thorlucas"
+            "url": "https://api.github.com/users/thorlucas",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 1,
@@ -3951,7 +4543,8 @@
             "starred_url": "https://api.github.com/users/alemidev/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/alemidev/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/alemidev"
+            "url": "https://api.github.com/users/alemidev",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 3,
@@ -3995,7 +4588,8 @@
             "starred_url": "https://api.github.com/users/Aetf/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/Aetf/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/Aetf"
+            "url": "https://api.github.com/users/Aetf",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 4,
@@ -4036,12 +4630,58 @@
             "starred_url": "https://api.github.com/users/weilbith/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/weilbith/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/weilbith"
+            "url": "https://api.github.com/users/weilbith",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 9,
         "topics": [],
         "updated_at": "2024-07-01T07:21:22Z"
+    },
+    "vim-gasm": {
+        "archived": false,
+        "clone_url": "https://github.com/marromlam/vim-gasm.git",
+        "commit": "0d9346bc046b9bea212b845b6dcb05d54e070ba9",
+        "contents_url": "https://api.github.com/repos/marromlam/vim-gasm/contents/{+path}",
+        "created_at": "2021-08-05T11:59:20Z",
+        "default_branch": "conf23",
+        "description": null,
+        "fork": false,
+        "forks_count": 0,
+        "full_name": "marromlam/vim-gasm",
+        "language": "Lua",
+        "open_issues_count": 0,
+        "owner": {
+            "avatar_url": "https://avatars.githubusercontent.com/u/41004396?v=4",
+            "events_url": "https://api.github.com/users/marromlam/events{/privacy}",
+            "followers_url": "https://api.github.com/users/marromlam/followers",
+            "following_url": "https://api.github.com/users/marromlam/following{/other_user}",
+            "gists_url": "https://api.github.com/users/marromlam/gists{/gist_id}",
+            "gravatar_id": "",
+            "html_url": "https://github.com/marromlam",
+            "id": 41004396,
+            "login": "marromlam",
+            "node_id": "MDQ6VXNlcjQxMDA0Mzk2",
+            "organizations_url": "https://api.github.com/users/marromlam/orgs",
+            "received_events_url": "https://api.github.com/users/marromlam/received_events",
+            "repos_url": "https://api.github.com/users/marromlam/repos",
+            "site_admin": false,
+            "starred_url": "https://api.github.com/users/marromlam/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/marromlam/subscriptions",
+            "type": "User",
+            "url": "https://api.github.com/users/marromlam",
+            "user_view_type": "public"
+        },
+        "private": false,
+        "stargazers_count": 3,
+        "topics": [
+            "configuration",
+            "dotfiles",
+            "lua",
+            "neovim",
+            "nvim"
+        ],
+        "updated_at": "2023-03-07T23:21:16Z"
     },
     "vimrc": {
         "archived": false,
@@ -4074,7 +4714,8 @@
             "starred_url": "https://api.github.com/users/willfish/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/willfish/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/willfish"
+            "url": "https://api.github.com/users/willfish",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 7,
@@ -4112,7 +4753,8 @@
             "starred_url": "https://api.github.com/users/nikbrunner/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/nikbrunner/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/nikbrunner"
+            "url": "https://api.github.com/users/nikbrunner",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 16,
@@ -4155,7 +4797,8 @@
             "starred_url": "https://api.github.com/users/dineshKumar777/starred{/owner}{/repo}",
             "subscriptions_url": "https://api.github.com/users/dineshKumar777/subscriptions",
             "type": "User",
-            "url": "https://api.github.com/users/dineshKumar777"
+            "url": "https://api.github.com/users/dineshKumar777",
+            "user_view_type": "public"
         },
         "private": false,
         "stargazers_count": 2,
