@@ -54,7 +54,7 @@
         "default_branch": "main",
         "description": "AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins ",
         "fork": false,
-        "forks_count": 931,
+        "forks_count": 932,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
         "open_issues_count": 4,
@@ -347,6 +347,7 @@
     "Eth0nvim": {
         "archived": false,
         "clone_url": "https://github.com/ewheels44/Eth0nvim.git",
+        "commit": "8bd7209c63872088a8c0a59fe01dc7f4b2044427",
         "contents_url": "https://api.github.com/repos/ewheels44/Eth0nvim/contents/{+path}",
         "created_at": "2021-03-25T19:02:52Z",
         "default_branch": "main",
@@ -479,16 +480,16 @@
     "LazyVim": {
         "archived": false,
         "clone_url": "https://github.com/LazyVim/LazyVim.git",
-        "commit": "a03f796097878881509f6f8c3b572319c7095aff",
+        "commit": "eb525c680d0423f5addb12e10f87ce5b81fc0d9e",
         "contents_url": "https://api.github.com/repos/LazyVim/LazyVim/contents/{+path}",
         "created_at": "2022-12-30T16:31:42Z",
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1251,
+        "forks_count": 1252,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 16,
+        "open_issues_count": 15,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -511,7 +512,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 17684,
+        "stargazers_count": 17685,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -520,7 +521,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-12-02T01:26:44Z"
+        "updated_at": "2024-12-02T06:36:07Z"
     },
     "LunarVim": {
         "archived": false,
@@ -531,7 +532,7 @@
         "default_branch": "master",
         "description": "\ud83c\udf19 LunarVim is an IDE layer for Neovim. Completely free and community driven.",
         "fork": false,
-        "forks_count": 1512,
+        "forks_count": 1511,
         "full_name": "LunarVim/LunarVim",
         "language": "Lua",
         "open_issues_count": 48,
@@ -557,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18456,
+        "stargazers_count": 18457,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -576,7 +577,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-12-02T00:21:12Z"
+        "updated_at": "2024-12-02T07:39:32Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -2059,7 +2060,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 24683,
+        "forks_count": 24688,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 4,
@@ -2085,9 +2086,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 20205,
+        "stargazers_count": 20210,
         "topics": [],
-        "updated_at": "2024-12-02T04:14:29Z"
+        "updated_at": "2024-12-02T08:18:59Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -3242,7 +3243,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 3604,
+        "stargazers_count": 3606,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -3253,7 +3254,7 @@
             "nvim-config",
             "nvim-configuration"
         ],
-        "updated_at": "2024-12-01T14:41:37Z"
+        "updated_at": "2024-12-02T05:20:31Z"
     },
     "nvim-dots": {
         "archived": false,
