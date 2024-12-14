@@ -486,10 +486,10 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1267,
+        "forks_count": 1268,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
-        "open_issues_count": 13,
+        "open_issues_count": 15,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/122150220?v=4",
             "events_url": "https://api.github.com/users/LazyVim/events{/privacy}",
@@ -512,7 +512,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 17845,
+        "stargazers_count": 17849,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -521,7 +521,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-12-13T23:49:16Z"
+        "updated_at": "2024-12-14T03:36:03Z"
     },
     "LunarVim": {
         "archived": false,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18482,
+        "stargazers_count": 18483,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -577,7 +577,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-12-13T19:25:02Z"
+        "updated_at": "2024-12-14T03:05:35Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -626,7 +626,7 @@
         "default_branch": "master",
         "description": "\ud83d\udcda A Neovim config designed from scratch to be understandable",
         "fork": false,
-        "forks_count": 1165,
+        "forks_count": 1164,
         "full_name": "LunarVim/Neovim-from-scratch",
         "language": "Lua",
         "open_issues_count": 80,
@@ -2060,7 +2060,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 25267,
+        "forks_count": 25271,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 5,
@@ -2086,9 +2086,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 20456,
+        "stargazers_count": 20460,
         "topics": [],
-        "updated_at": "2024-12-14T00:46:19Z"
+        "updated_at": "2024-12-14T02:54:39Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -3031,6 +3031,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
+        "commit": "1199eb77245ce49d2cff73f64ab366354f735eac",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
