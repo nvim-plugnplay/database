@@ -80,7 +80,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 12913,
+        "stargazers_count": 12914,
         "topics": [
             "astronvim",
             "astrovim",
@@ -99,7 +99,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2024-12-25T16:35:46Z"
+        "updated_at": "2024-12-25T23:57:35Z"
     },
     "BobVim": {
         "archived": true,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18475,
+        "stargazers_count": 18476,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2024-12-25T19:21:24Z"
+        "updated_at": "2024-12-25T23:57:17Z"
     },
     "LunarVim": {
         "archived": false,
@@ -604,7 +604,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18509,
+        "stargazers_count": 18511,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -623,7 +623,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2024-12-25T04:43:41Z"
+        "updated_at": "2024-12-26T00:56:08Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -721,7 +721,7 @@
         "default_branch": "main",
         "description": "A normal Neovim distribution",
         "fork": false,
-        "forks_count": 240,
+        "forks_count": 241,
         "full_name": "NormalNvim/NormalNvim",
         "language": "Lua",
         "open_issues_count": 1,
@@ -747,7 +747,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 555,
+        "stargazers_count": 557,
         "topics": [
             "neovim-config",
             "neovim-configuration",
@@ -756,7 +756,7 @@
             "nvim-config",
             "nvim-configs"
         ],
-        "updated_at": "2024-12-25T17:25:20Z"
+        "updated_at": "2024-12-25T21:47:19Z"
     },
     "NvHack": {
         "archived": false,
@@ -1114,7 +1114,7 @@
     "anvil": {
         "archived": false,
         "clone_url": "https://github.com/talha-akram/anvil.git",
-        "commit": "985cb29adc8a56db2009ae4bbc0f393f63f7eb13",
+        "commit": "f5705dc5b3d1407a9d8dbb73e9a1f9d110915577",
         "contents_url": "https://api.github.com/repos/talha-akram/anvil/contents/{+path}",
         "created_at": "2019-09-16T11:27:00Z",
         "default_branch": "master",
@@ -1154,7 +1154,7 @@
             "neovim-configuration",
             "nvim"
         ],
-        "updated_at": "2024-12-24T06:30:34Z"
+        "updated_at": "2024-12-25T22:01:07Z"
     },
     "astro.nvim": {
         "archived": false,
@@ -1420,6 +1420,7 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
+        "commit": "9fa0ab49bea3846fe3ffb65da88f71067b726838",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -1458,6 +1459,7 @@
     "config.nvim": {
         "archived": false,
         "clone_url": "https://github.com/kylechui/config.nvim.git",
+        "commit": "8572223280f08ad7806c3d555f40231e341beed2",
         "contents_url": "https://api.github.com/repos/kylechui/config.nvim/contents/{+path}",
         "created_at": "2021-05-13T23:01:15Z",
         "default_branch": "main",
@@ -2106,7 +2108,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 25826,
+        "forks_count": 25833,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 10,
@@ -2132,9 +2134,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 20708,
+        "stargazers_count": 20714,
         "topics": [],
-        "updated_at": "2024-12-25T18:01:16Z"
+        "updated_at": "2024-12-25T23:58:29Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2630,6 +2632,7 @@
     "neovim": {
         "archived": false,
         "clone_url": "https://github.com/amazingefren/neovim.git",
+        "commit": "14840d8d716e722e0402833f73a01311edf0bf3f",
         "contents_url": "https://api.github.com/repos/amazingefren/neovim/contents/{+path}",
         "created_at": "2021-04-06T10:44:07Z",
         "default_branch": "main",
@@ -3082,6 +3085,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
+        "commit": "0736e920961930095b102c296fdb1d3ac035b8eb",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
@@ -3113,7 +3117,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 604,
+        "stargazers_count": 605,
         "topics": [
             "lua",
             "neovim",
@@ -3121,7 +3125,7 @@
             "nvim-compe",
             "vim-plugins"
         ],
-        "updated_at": "2024-12-24T12:03:55Z"
+        "updated_at": "2024-12-25T20:23:11Z"
     },
     "nvim": {
         "archived": false,
@@ -3666,6 +3670,7 @@
     "nvim-windows": {
         "archived": false,
         "clone_url": "https://github.com/abyo/nvim-windows.git",
+        "commit": "43ffb4db8d1c8e4722f7b4250302afcae35d8b65",
         "contents_url": "https://api.github.com/repos/abyo/nvim-windows/contents/{+path}",
         "created_at": "2021-03-27T18:36:47Z",
         "default_branch": "main",
@@ -4145,7 +4150,6 @@
     "nvy": {
         "archived": false,
         "clone_url": "https://github.com/niyabits/nvy.git",
-        "commit": "a34026a27f7481c7aac51e1fad7d66e47d834a6d",
         "contents_url": "https://api.github.com/repos/niyabits/nvy/contents/{+path}",
         "created_at": "2021-05-10T20:11:02Z",
         "default_branch": "main",
