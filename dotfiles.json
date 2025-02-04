@@ -99,7 +99,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2025-02-04T14:35:48Z"
+        "updated_at": "2025-02-04T18:54:03Z"
     },
     "BobVim": {
         "archived": true,
@@ -277,7 +277,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 1114,
+        "stargazers_count": 1115,
         "topics": [
             "dotfiles",
             "ide",
@@ -297,7 +297,7 @@
             "vscode",
             "vue"
         ],
-        "updated_at": "2025-01-29T10:18:48Z"
+        "updated_at": "2025-02-04T20:10:39Z"
     },
     "DeathVim": {
         "archived": true,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19078,
+        "stargazers_count": 19081,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2025-02-04T13:23:05Z"
+        "updated_at": "2025-02-04T19:48:27Z"
     },
     "LunarVim": {
         "archived": false,
@@ -1420,7 +1420,6 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
-        "commit": "e809fb6e7bf5ce75c7f93a9432be51f2f73c954a",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -2106,7 +2105,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 27804,
+        "forks_count": 27808,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 14,
@@ -2134,7 +2133,7 @@
         "private": false,
         "stargazers_count": 21584,
         "topics": [],
-        "updated_at": "2025-02-04T16:10:08Z"
+        "updated_at": "2025-02-04T19:47:36Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2459,7 +2458,7 @@
     "nbr.nvim": {
         "archived": false,
         "clone_url": "https://github.com/nikbrunner/nbr.nvim.git",
-        "commit": "fcae8464d180a465718f516b93abf7c1008e6a05",
+        "commit": "e5e659a04b2de4b1a782340f616cdf4d3ebd4373",
         "contents_url": "https://api.github.com/repos/nikbrunner/nbr.nvim/contents/{+path}",
         "created_at": "2021-04-01T19:58:59Z",
         "default_branch": "main",
@@ -2498,7 +2497,7 @@
             "vim-configuration",
             "vimrc"
         ],
-        "updated_at": "2025-02-03T21:00:55Z"
+        "updated_at": "2025-02-04T18:53:54Z"
     },
     "neocode": {
         "archived": false,
@@ -3108,7 +3107,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 612,
+        "stargazers_count": 613,
         "topics": [
             "lua",
             "neovim",
@@ -3116,7 +3115,7 @@
             "nvim-compe",
             "vim-plugins"
         ],
-        "updated_at": "2025-02-04T15:11:23Z"
+        "updated_at": "2025-02-04T20:11:10Z"
     },
     "nvim": {
         "archived": false,
@@ -3863,7 +3862,7 @@
     "nvimcfg": {
         "archived": false,
         "clone_url": "https://github.com/alohaia/nvimcfg.git",
-        "commit": "eec9a83dba3496f5489ef4173486725ddf448c22",
+        "commit": "9d0d5f075b99dbce2d59c307a8957749d565e6ac",
         "contents_url": "https://api.github.com/repos/alohaia/nvimcfg/contents/{+path}",
         "created_at": "2020-08-06T12:34:03Z",
         "default_branch": "lua",
@@ -3909,7 +3908,7 @@
             "nvimrc",
             "vim"
         ],
-        "updated_at": "2024-12-21T17:13:21Z"
+        "updated_at": "2025-02-04T18:17:21Z"
     },
     "nvimconf": {
         "archived": false,
@@ -4554,6 +4553,7 @@
     "tinker.nvim": {
         "archived": false,
         "clone_url": "https://github.com/alemidev/tinker.nvim.git",
+        "commit": "5ffa0d858c6697da63dc06e1bea319397e4a3c97",
         "contents_url": "https://api.github.com/repos/alemidev/tinker.nvim/contents/{+path}",
         "created_at": "2022-08-18T01:23:21Z",
         "default_branch": "main",
