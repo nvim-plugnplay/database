@@ -526,13 +526,13 @@
     "LazyVim": {
         "archived": false,
         "clone_url": "https://github.com/LazyVim/LazyVim.git",
-        "commit": "d6829fb82cb2df7970d8312c2ed74d235b5760b9",
+        "commit": "b4c24a3fe882c21555e60a1ec44087526e856eb9",
         "contents_url": "https://api.github.com/repos/LazyVim/LazyVim/contents/{+path}",
         "created_at": "2022-12-30T16:31:42Z",
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1357,
+        "forks_count": 1358,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 40,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19269,
+        "stargazers_count": 19274,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2025-02-16T08:06:39Z"
+        "updated_at": "2025-02-16T12:23:00Z"
     },
     "LunarVim": {
         "archived": false,
@@ -746,7 +746,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 570,
+        "stargazers_count": 571,
         "topics": [
             "neovim-config",
             "neovim-configuration",
@@ -755,7 +755,7 @@
             "nvim-config",
             "nvim-configs"
         ],
-        "updated_at": "2025-02-15T16:37:02Z"
+        "updated_at": "2025-02-16T12:24:28Z"
     },
     "NvHack": {
         "archived": false,
@@ -2060,7 +2060,6 @@
     "init.vim": {
         "archived": false,
         "clone_url": "https://github.com/TaylorBeeston/init.vim.git",
-        "commit": "7c8856b43cae7ea6131eb9d1feebcc6245ee61b2",
         "contents_url": "https://api.github.com/repos/TaylorBeeston/init.vim/contents/{+path}",
         "created_at": "2021-01-03T13:53:36Z",
         "default_branch": "main",
@@ -2105,7 +2104,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 28350,
+        "forks_count": 28356,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 7,
@@ -2131,9 +2130,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 21822,
+        "stargazers_count": 21827,
         "topics": [],
-        "updated_at": "2025-02-16T06:30:39Z"
+        "updated_at": "2025-02-16T11:50:25Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2217,7 +2216,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 1241,
+        "stargazers_count": 1242,
         "topics": [
             "learn-vim",
             "learning-by-doing",
@@ -2227,7 +2226,7 @@
             "vim",
             "vimrc"
         ],
-        "updated_at": "2025-02-07T00:48:40Z"
+        "updated_at": "2025-02-16T08:33:57Z"
     },
     "lspcontainers.nvim": {
         "archived": false,
@@ -2458,7 +2457,7 @@
     "nbr.nvim": {
         "archived": false,
         "clone_url": "https://github.com/nikbrunner/nbr.nvim.git",
-        "commit": "38cc1fde24314e8651e543ac3447c443d3d6dddd",
+        "commit": "700fe814e4458c311fc8eecff5bf3ab2950af20a",
         "contents_url": "https://api.github.com/repos/nikbrunner/nbr.nvim/contents/{+path}",
         "created_at": "2021-04-01T19:58:59Z",
         "default_branch": "main",
@@ -2497,7 +2496,7 @@
             "vim-configuration",
             "vimrc"
         ],
-        "updated_at": "2025-02-14T14:17:32Z"
+        "updated_at": "2025-02-16T11:25:53Z"
     },
     "neocode": {
         "archived": false,
@@ -3076,7 +3075,6 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
-        "commit": "1d9567cf86b1c51541a627459e1c4df8eb62c0c3",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
