@@ -80,7 +80,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 13057,
+        "stargazers_count": 13059,
         "topics": [
             "astronvim",
             "astrovim",
@@ -99,7 +99,7 @@
             "nvim",
             "vim"
         ],
-        "updated_at": "2025-02-16T04:59:46Z"
+        "updated_at": "2025-02-16T14:40:13Z"
     },
     "BobVim": {
         "archived": true,
@@ -532,7 +532,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1358,
+        "forks_count": 1357,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 40,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19274,
+        "stargazers_count": 19278,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2025-02-16T12:23:00Z"
+        "updated_at": "2025-02-16T16:12:40Z"
     },
     "LunarVim": {
         "archived": false,
@@ -698,7 +698,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 5479,
+        "stargazers_count": 5480,
         "topics": [
             "hacktoberfest",
             "hacktoberfest2022",
@@ -709,7 +709,7 @@
             "nvim-plugin",
             "nvimrc"
         ],
-        "updated_at": "2025-02-16T04:51:49Z"
+        "updated_at": "2025-02-16T14:58:19Z"
     },
     "NormalNvim": {
         "archived": false,
@@ -1420,6 +1420,7 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
+        "commit": "e809fb6e7bf5ce75c7f93a9432be51f2f73c954a",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -2104,10 +2105,10 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 28356,
+        "forks_count": 28373,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
-        "open_issues_count": 7,
+        "open_issues_count": 9,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -2130,9 +2131,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 21827,
+        "stargazers_count": 21835,
         "topics": [],
-        "updated_at": "2025-02-16T11:50:25Z"
+        "updated_at": "2025-02-16T16:01:13Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -4392,7 +4393,7 @@
             "rust",
             "shadotheme"
         ],
-        "updated_at": "2025-02-12T15:38:58Z"
+        "updated_at": "2025-02-16T13:55:00Z"
     },
     "stgit-unofficial.nvim": {
         "archived": false,
