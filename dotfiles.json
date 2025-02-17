@@ -1420,7 +1420,6 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
-        "commit": "e809fb6e7bf5ce75c7f93a9432be51f2f73c954a",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -2061,6 +2060,7 @@
     "init.vim": {
         "archived": false,
         "clone_url": "https://github.com/TaylorBeeston/init.vim.git",
+        "commit": "7c8856b43cae7ea6131eb9d1feebcc6245ee61b2",
         "contents_url": "https://api.github.com/repos/TaylorBeeston/init.vim/contents/{+path}",
         "created_at": "2021-01-03T13:53:36Z",
         "default_branch": "main",
@@ -2099,16 +2099,16 @@
     "kickstart.nvim": {
         "archived": false,
         "clone_url": "https://github.com/nvim-lua/kickstart.nvim.git",
-        "commit": "d452633b35d4dd9ada06efeca95750beaf0f584f",
+        "commit": "e4a5300bdbdc644a3a265513b386aa30c2337088",
         "contents_url": "https://api.github.com/repos/nvim-lua/kickstart.nvim/contents/{+path}",
         "created_at": "2022-06-24T03:11:24Z",
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 28400,
+        "forks_count": 28404,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
-        "open_issues_count": 10,
+        "open_issues_count": 9,
         "owner": {
             "avatar_url": "https://avatars.githubusercontent.com/u/67477499?v=4",
             "events_url": "https://api.github.com/users/nvim-lua/events{/privacy}",
@@ -2131,9 +2131,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 21858,
+        "stargazers_count": 21862,
         "topics": [],
-        "updated_at": "2025-02-17T01:07:25Z"
+        "updated_at": "2025-02-17T03:42:26Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -3076,6 +3076,7 @@
     "nv-ide": {
         "archived": false,
         "clone_url": "https://github.com/crivotz/nv-ide.git",
+        "commit": "65fa5057aad3380ccddfd7d06532af6664acbd1c",
         "contents_url": "https://api.github.com/repos/crivotz/nv-ide/contents/{+path}",
         "created_at": "2020-01-10T09:05:12Z",
         "default_branch": "master",
@@ -3298,7 +3299,7 @@
             "nvim-config",
             "nvim-configuration"
         ],
-        "updated_at": "2025-02-16T20:03:21Z"
+        "updated_at": "2025-02-17T03:20:48Z"
     },
     "nvim-dots": {
         "archived": false,
@@ -4028,7 +4029,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 3018,
+        "stargazers_count": 3019,
         "topics": [
             "dotfiles",
             "editor",
@@ -4043,7 +4044,7 @@
             "vim",
             "vimrc"
         ],
-        "updated_at": "2025-02-15T22:46:20Z"
+        "updated_at": "2025-02-17T03:16:05Z"
     },
     "nvimrc": {
         "archived": false,
