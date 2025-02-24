@@ -54,7 +54,7 @@
         "default_branch": "main",
         "description": "AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins ",
         "fork": false,
-        "forks_count": 944,
+        "forks_count": 943,
         "full_name": "AstroNvim/AstroNvim",
         "language": "Lua",
         "open_issues_count": 3,
@@ -532,7 +532,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1363,
+        "forks_count": 1362,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 45,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19372,
+        "stargazers_count": 19373,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2025-02-24T15:28:29Z"
+        "updated_at": "2025-02-24T19:22:29Z"
     },
     "LunarVim": {
         "archived": false,
@@ -720,7 +720,7 @@
         "default_branch": "main",
         "description": "A normal Neovim distribution",
         "fork": false,
-        "forks_count": 272,
+        "forks_count": 271,
         "full_name": "NormalNvim/NormalNvim",
         "language": "Lua",
         "open_issues_count": 2,
@@ -2022,6 +2022,7 @@
     "init.vim": {
         "archived": false,
         "clone_url": "https://github.com/TaylorBeeston/init.vim.git",
+        "commit": "7c8856b43cae7ea6131eb9d1feebcc6245ee61b2",
         "contents_url": "https://api.github.com/repos/TaylorBeeston/init.vim/contents/{+path}",
         "created_at": "2021-01-03T13:53:36Z",
         "default_branch": "main",
@@ -2066,7 +2067,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 28781,
+        "forks_count": 28793,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 10,
@@ -2092,9 +2093,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 22048,
+        "stargazers_count": 22049,
         "topics": [],
-        "updated_at": "2025-02-24T15:13:27Z"
+        "updated_at": "2025-02-24T18:03:10Z"
     },
     "kyoto.nvim": {
         "archived": true,
@@ -2419,7 +2420,7 @@
     "nbr.nvim": {
         "archived": false,
         "clone_url": "https://github.com/nikbrunner/nbr.nvim.git",
-        "commit": "9dac6b4491f545eae55fad33425511898ff3ac8a",
+        "commit": "ede48fe32e3f3f122bd31a2cde7d030f22b32756",
         "contents_url": "https://api.github.com/repos/nikbrunner/nbr.nvim/contents/{+path}",
         "created_at": "2021-04-01T19:58:59Z",
         "default_branch": "main",
@@ -2458,7 +2459,7 @@
             "vim-configuration",
             "vimrc"
         ],
-        "updated_at": "2025-02-24T16:08:03Z"
+        "updated_at": "2025-02-24T18:10:46Z"
     },
     "neocode": {
         "archived": false,
@@ -3222,7 +3223,7 @@
         "default_branch": "main",
         "description": "A modern Neovim configuration with full battery for Python, Lua, C++, Markdown, LaTeX, and more...",
         "fork": false,
-        "forks_count": 550,
+        "forks_count": 549,
         "full_name": "jdhao/nvim-config",
         "language": "Lua",
         "open_issues_count": 8,
@@ -3701,7 +3702,7 @@
             "neovim",
             "neovim-configuration"
         ],
-        "updated_at": "2025-02-24T15:05:22Z"
+        "updated_at": "2025-02-24T16:41:49Z"
     },
     "nvim.lua": {
         "archived": false,
