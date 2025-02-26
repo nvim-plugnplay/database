@@ -532,7 +532,7 @@
         "default_branch": "main",
         "description": "Neovim config for the lazy",
         "fork": false,
-        "forks_count": 1363,
+        "forks_count": 1364,
         "full_name": "LazyVim/LazyVim",
         "language": "Lua",
         "open_issues_count": 45,
@@ -558,7 +558,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 19406,
+        "stargazers_count": 19408,
         "topics": [
             "neovim",
             "neovim-conf",
@@ -567,7 +567,7 @@
             "neovim-plugin",
             "nvim"
         ],
-        "updated_at": "2025-02-26T15:09:34Z"
+        "updated_at": "2025-02-26T19:26:35Z"
     },
     "LunarVim": {
         "archived": false,
@@ -604,7 +604,7 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 18652,
+        "stargazers_count": 18653,
         "topics": [
             "formatters",
             "hacktoberfest",
@@ -623,7 +623,7 @@
             "vimrc",
             "vscode"
         ],
-        "updated_at": "2025-02-26T16:12:41Z"
+        "updated_at": "2025-02-26T19:48:59Z"
     },
     "NeoVim_lua": {
         "archived": false,
@@ -1381,7 +1381,6 @@
     "config-nvim": {
         "archived": false,
         "clone_url": "https://github.com/cynix/config-nvim.git",
-        "commit": "e809fb6e7bf5ce75c7f93a9432be51f2f73c954a",
         "contents_url": "https://api.github.com/repos/cynix/config-nvim/contents/{+path}",
         "created_at": "2018-03-11T13:01:41Z",
         "default_branch": "master",
@@ -2067,7 +2066,7 @@
         "default_branch": "master",
         "description": "A launch point for your personal nvim configuration",
         "fork": false,
-        "forks_count": 28878,
+        "forks_count": 28882,
         "full_name": "nvim-lua/kickstart.nvim",
         "language": "Lua",
         "open_issues_count": 10,
@@ -2093,9 +2092,9 @@
             "user_view_type": "public"
         },
         "private": false,
-        "stargazers_count": 22091,
+        "stargazers_count": 22097,
         "topics": [],
-        "updated_at": "2025-02-26T15:58:39Z"
+        "updated_at": "2025-02-26T18:50:43Z"
     },
     "kyoto.nvim": {
         "archived": true,
